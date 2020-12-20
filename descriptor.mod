@@ -1,4 +1,8 @@
-name="Kaiserredux"
+version="1.10.3"
+tags={
+	"Alternative History"
+}
+name="Kx Github Version"
 replace_path="common/abilities"
 replace_path="common/ai_areas"
 replace_path="common/ai_equipment"
@@ -60,14 +64,4 @@ replace_path="history/units"
 replace_path="map/strategicregions"
 replace_path="map/supplyareas"
 replace_path="portraits"
-
-version="0.01"
-tags={
-	"Alternative History"
-	"Events"
-	"Gameplay"
-	"National Focuses"
-}
-supported_version="1.10.*"
-path="C:/Users/User/Documents/Paradox Interactive/Hearts of Iron IV/mod/kx"
-remote_file_id="2206134307"
+supported_version="1.10.3"
