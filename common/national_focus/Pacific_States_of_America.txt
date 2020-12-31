@@ -3747,6 +3747,9 @@ focus_tree = {
 			NOT = {
 			has_country_leader = { ruling_only = yes name = "William Randolph Hearst" } 
 			}
+			NOT = {
+			has_country_leader = { ruling_only = yes name = "Walt Disney" }
+			}
 		}
 		ai_will_do = {
 			factor = 5
@@ -17144,6 +17147,7 @@ focus_tree = {
 					long_name = "Royalist Party"
 					name = "Royalist Party"
 				}
+				set_country_flag = CAL_Norton_PSA
 			}
 		}
 	}
