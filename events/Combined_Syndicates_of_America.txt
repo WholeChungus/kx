@@ -6130,12 +6130,6 @@ country_event = { # Goodbye, Old Freind
 			ideology = totalist
 			popularity = -0.05
 		}
-		hidden_effect = {
-			country_event = {
-				id = csa.252
-				days = 100
-			}
-		}
 		set_country_flag = CSA_cabinet_criminals
 	}
 }
@@ -13389,51 +13383,3 @@ country_event = { #The Dutch Fold
 		add_political_power = 10
 	}
 }
-
-country_event = {# catgirls?
-	id = csa.700
-	immediate = {log = "[GetDateText]: [Root.GetName]: event csa.700"}
-	title = csa.700.t
-	desc = csa.700.d
-	picture = GFX_report_event_CSA_cuck
-
-	fire_only_once = yes
-	
-	trigger = {
-		date > 1937.3.16
-		CSA = {
-			exists = yes
-		}
-		tag = CSA
-	}
-	
-	mean_time_to_happen = {
-		days = 3
-	}
-
-	option = {
-		name = csa.700.a
-                load_oob = CSA_CATGIRL
-                create_corps_commander = { #Auto-Generated
-				name = "Louise 'Whiskers' Bryant"
-				portrait_path = "gfx/leaders/CSA/CSA_Catgirl.dds"
-				traits = {
-					commando
-				}
-				skill = 1
-				attack_skill = 0
-				defense_skill = 0
-				planning_skill = 0
-				logistics_skill = 0
-			}
-                
-	}
-	
-
-	option = {
-		name = csa.700.b
-                add_manpower = -1
-		
-	}
-}
-
