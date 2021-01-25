@@ -2528,9 +2528,6 @@ country_event = { # The 1936 Election - Coalition
 		ai_chance = {
 			factor = 10
 			modifier = {
-		    factor = 0
-			}
-			modifier = {
 				factor = 2
 				check_variable = { ODP_strength > 2 }
 			}
@@ -5740,6 +5737,7 @@ country_event = { # March on Detroit
     fire_only_once = yes
 
 	trigger = {
+		tag = USA
 		OR = {
 		NOT = { has_country_flag = USA_macarthur_coup } 
 		NOT = { has_country_flag = USA_negotiations_begun }
@@ -8081,7 +8079,7 @@ country_event = { # Trial of the Weapons companies
 	}
 
 	mean_time_to_happen = {
-		months = 6
+		months = 2
 	}
 
 	immediate = {
@@ -8926,7 +8924,7 @@ country_event = { # William McAdoo has died
 		create_country_leader = {
 					name = "Earl Warren"
 					desc = "POLITICS_EARL_WARREN_DESC"
-					picture = "Portrait_USA_Earl_Warren.tga"
+					picture = "gfx/leaders/CAL/Portrait_CAL_Earl_Warren.tga"
 					expire = "1965.1.1"
 					ideology = social_liberal_subtype
 					traits = { backroom_backstabber }
@@ -13462,6 +13460,7 @@ country_event = { # Remove the League idea
 		NOT = {
 		tag = USA
 		tag = WCC
+		tag = CAL
 		}
 		OR = {
 			has_idea = USA_league_of_america_1
@@ -16967,6 +16966,15 @@ country_event = { # Fifth Political System
 	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
+
+	trigger = {
+	NOT = {
+		OR = {
+		has_idea = USA_REP_NAZBOL
+		has_idea = USA_Mckinley
+		}
+	}
+	}
 	
 	desc = {
 	text = ustates.3150.d.progs
@@ -17034,6 +17042,15 @@ country_event = { # Fifth Political System
 	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
+
+	trigger = {
+	NOT = {
+		OR = {
+		has_idea = USA_REP_NAZBOL
+		has_idea = USA_Mckinley
+		}
+	}
+	}
 	
 	desc = {
 	text = ustates.3151.d.replibs
@@ -17101,6 +17118,15 @@ country_event = { # Fifth Political System
 	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
+
+	trigger = {
+	NOT = {
+		OR = {
+		has_idea = USA_REP_NAZBOL
+		has_idea = USA_Mckinley
+		}
+	}
+	}
 	
 	desc = {
 	text = ustates.3152.d.repcons
@@ -17168,6 +17194,15 @@ country_event = { # Fifth Political System
 	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
+
+	trigger = {
+	NOT = {
+		OR = {
+		has_idea = USA_REP_NAZBOL
+		has_idea = USA_Mckinley
+		}
+	}
+	}
 	
 	desc = {
 	text = ustates.3153.d.demlibs
@@ -17235,6 +17270,15 @@ country_event = { # Fifth Political System
 	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
+
+	trigger = {
+	NOT = {
+		OR = {
+		has_idea = USA_REP_NAZBOL
+		has_idea = USA_Mckinley
+		}
+	}
+	}
 	
 	desc = {
 	text = ustates.3154.d.demcons
@@ -17302,12 +17346,20 @@ country_event = { # Fifth Political System
 	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
+
+	trigger = {
+	NOT = {
+		OR = {
+		has_idea = USA_REP_NAZBOL
+		has_idea = USA_Mckinley
+		}
+	}
+	}
 	
 	desc = {
 	text = ustates.3155.d.progs
 	trigger = {
 			has_country_flag = USA_1940_election_progressive
-			NOT = { has_country_flag = USA_new_party_system }
 		}
 	}
 	option = { # Very Well
@@ -17370,12 +17422,20 @@ country_event = { # Fifth Political System
 	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
+
+	trigger = {
+	NOT = {
+		OR = {
+		has_idea = USA_REP_NAZBOL
+		has_idea = USA_Mckinley
+		}
+	}
+	}
 	
 	desc = {
 	text = ustates.3156.d.replibs
 	trigger = {
 			has_country_flag = USA_1940_election_lib_republican
-			NOT = { has_country_flag = USA_new_party_system }
 		}
 	}
 	option = { # Very Well
@@ -17438,12 +17498,20 @@ country_event = { # Fifth Political System
 	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
+
+	trigger = {
+	NOT = {
+		OR = {
+		has_idea = USA_REP_NAZBOL
+		has_idea = USA_Mckinley
+		}
+	}
+	}
 	
 	desc = {
 	text = ustates.3157.d.repcons
 	trigger = {
 			has_country_flag = USA_1940_election_con_republican
-			NOT = { has_country_flag = USA_new_party_system }
 		}
 	}
 	option = { # Very Well
@@ -17506,12 +17574,20 @@ country_event = { # Fifth Political System
 	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
+
+	trigger = {
+	NOT = {
+		OR = {
+		has_idea = USA_REP_NAZBOL
+		has_idea = USA_Mckinley
+		}
+	}
+	}
 	
 	desc = {
 	text = ustates.3158.d.demlibs
 	trigger = {
 			has_country_flag = USA_1940_election_lib_democrat
-			NOT = { has_country_flag = USA_new_party_system }
 		}
 	}
 	option = { # Very Well
@@ -17574,12 +17650,20 @@ country_event = { # Fifth Political System
 	picture = GFX_report_event_USA_congress
 
 	is_triggered_only = yes
+
+	trigger = {
+	NOT = {
+		OR = {
+		has_idea = USA_REP_NAZBOL
+		has_idea = USA_Mckinley
+		}
+	}
+	}
 	
 	desc = {
 	text = ustates.3159.d.demcons
 	trigger = {
 			has_country_flag = USA_1940_election_con_democrat
-			NOT = { has_country_flag = USA_new_party_system }
 		}
 	}
 	option = { # Very Well
