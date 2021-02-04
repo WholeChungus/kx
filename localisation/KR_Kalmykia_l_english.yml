@@ -67,6 +67,8 @@ KLM_Buddhist_faith_desc:0 "The Kalmyks remain as the only natural grouping of Bu
 
 KLY_nationalism:0 "Nationalist Rhetoric"
 KLY_nationalism_desc:0 "Our administration has doubled down on nationalist propaganda efforts, blanketing the air waves and filling the papers with our rhetoric to drive the people to a nationalistic furor."
+KLY_nationalism_2:0 "Nationalist Foundations"
+KLY_nationalism_2_desc:0 "Our initial efforts in fostering a new national identity for our people have proven far more effective than we initially planned. It seems the mountains of propaganda and rhetoric we spewed forth has worked, cementing a modern nationalist identity for all Kalmyks to rally around."
 KLY_revolutionary_republic:0 "Kalmyk Socialism"
 KLY_revolutionary_republic_desc:0 "Focusing on collectivization and “De-Cossackification”, the Kalmyk Socialist will set our people on their destiny that was robbed from them during the Civil War. The Red state of the Kalmyk state has risen."
 KLY_democratic_republic:0 "Kalmyk Democracy"
@@ -107,7 +109,7 @@ KLY_Collectivization:0 "Collectivization"
 KLY_Collectivization_desc:0 "We don't need peasants to become richer, nor to own or to sell land and private property. Instead, with the process of collectivization, we will be able to improve our country's agriculture while fostering closer bonds of cooperation and comradery between our citizens."
 
 KLY_Decossackisation:0 "Decossackization"
-KLY_Decossackization:0 "The cossacks' presence in our state's politics and army for so long has definitely hindered our development and modernization efforts. We should equalize peasants, workers, and cossacks in rights, privileges, and means of production to completely strip the atmosphere of Cossack dominance in our state."
+KLY_Decossackisation_desc:0 "The cossacks' presence in our state's politics and army for so long has definitely hindered our development and modernization efforts. We should equalize peasants, workers, and cossacks in rights, privileges, and means of production to completely strip the atmosphere of Cossack dominance in our state."
 
 
 KLY_Elections:0 "Elections"
