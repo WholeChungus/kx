@@ -367,6 +367,7 @@ NEE_legitimate_america_flag:0 "§GNew England is seen as the legitimate America 
 NEE_united_america:0 "America is united"
 NEE_remnant_victory:0 "The Remnant held Congress"
 NEE_sentinels:0 "The Sentinels have taken charge"
+NEE_sentinel_wealth_flag:0 "§YSentinel Wealth Will Increase§!"
 radical_victory:0 "The Radicals have overtaken the Republic of New England!"
 NEE_Radicals_Win:0 "The Radicals have taken control of New England!"
 NEE_WASHINGTON_MYTH:0"The Washington Myth has become accepted"
@@ -1713,7 +1714,7 @@ newengland.55.a:0 "Let us pray the violence will end soon."
 
 #TEX
 newengland.56.t:0 "Refugees from the AUS"
-newengland.56.d:0 "Although the journey is full of peril and even though bandits and/or criminals stalk the trails from the deep South all the way to Connecticut, thousands still depart on the journey hoping that they may find peace and a protector in our nation."
+newengland.56.d:0 "Although the journey is full of peril and even though bandits and/or criminals stalk the trails from the Great Plains all the way to Connecticut, thousands still depart on the journey hoping that they may find peace and a protector in our nation."
 newengland.56.a:0 "Welcome to New England!"
 
 newengland.57.t:0 "Pelley asserts control in the AUS"
