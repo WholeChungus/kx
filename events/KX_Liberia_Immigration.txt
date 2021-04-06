@@ -355,6 +355,7 @@ country_event = { #france accepts demand
 			factor = 99
 		}
 		add_political_power = 250
+		set_country_flag = LIB_ate_french_land
 		increase_ruling_party_popularity_by_10 = yes
 		every_state = {
 			limit = {
@@ -809,7 +810,14 @@ country_event = { #A Flag from the Exiles
 		name = liberianumbahone.19.b
 		add_political_power = -35
 		increase_ruling_party_popularity_by_5 = yes
-		set_cosmetic_tag = LIB_DORNAN
+		if = {
+			limit = {
+				NOT = {
+					has_cosmetic_tag = LIB_COMMONWEALTH
+				}
+			}
+			set_cosmetic_tag = LIB_DORNAN
+		}
 		set_country_flag = LIB_dornan_liberia
 	}
 
@@ -820,7 +828,14 @@ country_event = { #A Flag from the Exiles
 		}
 		add_political_power = -35
 		increase_ruling_party_popularity_by_5 = yes
-		set_cosmetic_tag = LIB_DORNANENCLAVE
+		if = {
+			limit = {
+				NOT = {
+					has_cosmetic_tag = LIB_COMMONWEALTH
+				}
+			}
+			set_cosmetic_tag = LIB_DORNANENCLAVE
+		}
 		set_country_flag = LIB_dornan_enclave
 	}
 }
@@ -1126,7 +1141,7 @@ country_event = { #Liberia Syndie Exiles
 		CSA = {
 			every_unit_leader = {
 				limit = {
-					has_id = 6942069
+					has_id = 42069
 				}
 				set_nationality = LIB
 			}

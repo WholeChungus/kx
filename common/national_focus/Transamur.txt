@@ -1729,6 +1729,7 @@ focus_tree = {
 		available = {
 			has_idea = TRM_dream
 			has_war = no
+			is_subject = no
 			OR = {
 				GER = {
 					has_war_with = RUS
@@ -1795,6 +1796,7 @@ focus_tree = {
 			country_exists = SOV
 			has_idea = TRM_dream
 			has_war = no
+			is_subject = no
 		}
 		x = 3
 		y = 1
@@ -6046,7 +6048,6 @@ focus = {
 							has_country_flag = TRM_Mlad_in_power
 							has_government = totalist
 						}
-				}
 			RUS = {
 				NOT = {
 					OR = {
@@ -6058,6 +6059,7 @@ focus = {
 					}
 				}
 			}
+		}
 		x = 20
 		y = 13
 			completion_reward = {
