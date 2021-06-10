@@ -419,6 +419,22 @@ soundeffect =
 
 soundeffect =
 {
+	name = "superev_SOV_bolsheviksreturn"
+	sounds = {
+		sound = "super_SOV_bolsheviksreturn"
+	}
+	volume = 0.9
+}
+soundeffect =
+{
+	name = "superev_SOV_gastevtechnocracy"
+	sounds = {
+		sound = "super_SOV_gastevtechnocracy"
+	}
+	volume = 0.9
+}
+soundeffect =
+{
 	name = "superev_MAF_goeringafrika"
 	sounds = {
 		sound = "super_MAF_goeringafrika"
@@ -458,6 +474,15 @@ soundeffect =
 	name = "superev_CIV_bushwar"
 	sounds = {
 		sound = "super_CIV_bushwar"
+	}
+	volume = 0.9
+}
+
+soundeffect =
+{
+	name = "superev_ALA_redman"
+	sounds = {
+		sound = "super_ALA_redman"
 	}
 	volume = 0.9
 }

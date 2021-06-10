@@ -821,7 +821,7 @@ RUS_Economy_decisions = {
 				has_completed_focus = RUS_State_Capitalism
 				has_completed_focus = RUS_Perestroika
 				has_completed_focus = TRM_Ind_Russia
-				has_completed_focus = RUS_Agrarian_Socialism
+				has_completed_focus = SOV_Create_the_VSR
 				has_completed_focus = RUS_Promote_Industrialization
 				has_completed_focus = RUS_Industrial_Socialism
 				has_completed_focus = DKB_Industrialize_The_Motherland
@@ -870,7 +870,7 @@ RUS_Economy_decisions = {
 				has_completed_focus = TRM_Ind_Russia
 				has_completed_focus = RUS_Khozraschyot
 				has_completed_focus = RUS_Mechanization
-				has_completed_focus = SOV_Village_Communes
+				has_completed_focus = SOV_Voluntary_Collectivisation
 				has_completed_focus = DKB_Industrialize_The_Motherland
 				has_completed_focus = DKB_Rebuild_Industry
 				has_completed_focus = RUS_EUR_Launch_Industrialization
@@ -918,6 +918,7 @@ RUS_Economy_decisions = {
 				has_completed_focus = RUS_Allow_Small_Traders
 				has_completed_focus = RUS_GOELRO
 				has_completed_focus = SOV_Cooperative_Unions
+				has_completed_focus = RUS_Industrial_Socialism
 				has_completed_focus = DKB_Industrialize_The_Motherland
 				has_completed_focus = DKB_Rebuild_Industry
 				has_completed_focus = RUS_EUR_Launch_Industrialization
@@ -975,7 +976,7 @@ RUS_Economy_decisions = {
 				has_completed_focus = RUS_Labour_Camps_Abakumov
 				has_completed_focus = RUS_Right_Syndicalism
 				has_completed_focus = TRM_Ind_Russia
-				has_completed_focus = RUS_Agrarian_Socialism
+				has_completed_focus = SOV_Create_the_VSR
 				has_completed_focus = RUS_Promote_Industrialization
 				has_completed_focus = RUS_Industrial_Socialism
 				has_completed_focus = RUS_Let_The_Peasantry_Prosper
@@ -1022,7 +1023,7 @@ RUS_Economy_decisions = {
 				has_completed_focus = RUS_Labour_Camps_Abakumov
 				has_completed_focus = RUS_Right_Syndicalism
 				has_completed_focus = TRM_Ind_Russia
-				has_completed_focus = RUS_Agrarian_Socialism
+				has_completed_focus = SOV_Create_the_VSR
 				has_completed_focus = RUS_Promote_Industrialization
 				has_completed_focus = RUS_Industrial_Socialism
 				has_completed_focus = RUS_Let_The_Peasantry_Prosper
@@ -1072,6 +1073,7 @@ RUS_Economy_decisions = {
 				has_completed_focus = RUS_Allow_Small_Traders
 				has_completed_focus = RUS_GOELRO
 				has_completed_focus = SOV_Cooperative_Unions
+				has_completed_focus = RUS_Industrial_Socialism
 				has_completed_focus = RUS_Let_The_Peasantry_Prosper
 				has_completed_focus = DKB_Industrialize_The_Motherland
 				has_completed_focus = DKB_Rebuild_Industry
@@ -1132,7 +1134,7 @@ RUS_Economy_decisions = {
 				has_completed_focus = TRM_Ind_Russia
 				has_completed_focus = RUS_Khozraschyot
 				has_completed_focus = RUS_Mechanization
-				has_completed_focus = SOV_Village_Communes
+				has_completed_focus = SOV_Voluntary_Collectivisation
 				has_completed_focus = RUS_Let_The_Peasantry_Prosper
 				has_completed_focus = DKB_Industrialize_The_Motherland
 				has_completed_focus = DKB_Rebuild_Industry
@@ -1178,7 +1180,7 @@ RUS_Economy_decisions = {
 				has_completed_focus = TRM_Ind_Russia
 				has_completed_focus = RUS_Khozraschyot
 				has_completed_focus = RUS_Mechanization
-				has_completed_focus = SOV_Village_Communes
+				has_completed_focus = SOV_Voluntary_Collectivisation
 				has_completed_focus = RUS_Let_The_Peasantry_Prosper
 				has_completed_focus = DKB_Industrialize_The_Motherland
 				has_completed_focus = DKB_Rebuild_Industry
@@ -4980,7 +4982,7 @@ RUS_Foreign_Policy_decisions = {
 			can_declare_war_on = FROM
 		}
 
-		targets = { KLY MTR GEO AZE ARM }
+		targets = { KLY MTR GEO AZE ARM DAG }
 		target_root_trigger = {
 			has_completed_focus = RUS_Into_The_Caucasus
 			NOT = { has_country_flag = RUS_GER_blocks_caucasus }
@@ -5107,6 +5109,41 @@ RUS_Foreign_Policy_decisions = {
 				country_event = {
 					id = rusfor.1294
 					days = 1
+				}
+				hidden_effect = { #temporary before annexation MTR fixed
+					every_state = {
+						limit ={
+							is_owned_and_controlled_by = MTR
+							is_core_of = MTR
+						}
+						add_claim_by = ROOT
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = { tag = DAG }
+				}
+				country_event = {
+					id = rusfor.1294
+					days = 1
+				}
+				hidden_effect = { #temporary before annexation MTR fixed
+					every_state = {
+						limit ={
+							OR = {
+								AND = {
+									is_owned_and_controlled_by = MTR
+									is_core_of = MTR
+								}
+								AND = {
+									is_owned_and_controlled_by = DAG
+									is_core_of = DAG
+								}
+							}
+						}
+						add_claim_by = ROOT
+					}
 				}
 			}
 		}
@@ -6012,7 +6049,7 @@ RUS_Foreign_Policy_decisions = {
 					value = 1000
 				}
 			}
-			RUS = {
+			ROOT = {
 				country_event = {
 					id = rusfor.1157
 					days = 2
@@ -9010,7 +9047,7 @@ RUS_Integration_decisions = {
 		cancel_if_not_visible = yes
 
 		state_target = yes
-		targets = { 78 146 147 213 215 216 329 537 722 420 418 804 1101 }
+		targets = { 78 146 147 213 215 216 329 537 722 420 418 804 1191 }
 		target_root_trigger = {
 			has_country_flag = RUS_can_integrate
 		}
@@ -9042,17 +9079,28 @@ RUS_Integration_decisions = {
 		}
 
 		visible = {
-			is_faction_leader = yes
-			is_subject = no
+			is_subject_of = ROOT
 		}
 
 		targets = { ALO TRK KYR UZB DKB KUB KLY MTR GEO AZE ARM }
 		target_root_trigger = {
-			is_faction_leader = yes
-			is_subject = no
+			is_subject_of = ROOT
 		}
 		target_trigger = {
 			FROM = { is_subject_of = ROOT }
+			if = {
+				limit = {
+					FROM = {
+						tag = ALO
+					}
+				}
+				FROM = {
+					OR = {
+						has_country_flag = ALO_RUS
+						has_completed_focus = ALO_Autonomy
+					}
+				}
+			}
 		}
 
 		cost = 100
@@ -9129,7 +9177,10 @@ political_actions = {
 				RUS_russian_monarch = yes
 				has_government = social_conservative
 				has_government = market_liberal
-				has_government = paternal_autocrat
+				AND = {
+					has_government = paternal_autocrat
+					RUS_kornilov_in_power = no
+				}
 			}
 		}
 		cost = 0
@@ -9202,10 +9253,12 @@ political_actions = {
 				name = "Boris Savinkov"
 				ruling_only = yes
 			}
+			has_country_flag = PORTRAIT_PICKER_ACTIVE
+			is_ai = no
 		}
 		cost = 0
 		fire_only_once = no
-		days_re_enable = 30
+		days_re_enable = 1
 		ai_will_do = {
 			factor = 100
 		}

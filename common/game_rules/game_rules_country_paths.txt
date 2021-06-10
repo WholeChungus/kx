@@ -68,9 +68,33 @@ RUS_post_assassination = {
 		allow_achievements = yes
 	}
 	option = {
+		name = RULE_OPTION_RUS_POST_ASSASSINATION_DENIKIN
+		text = "RULE_OPTION_RUS_POST_ASSASSINATION_DENIKIN"
+		desc = "RULE_OPTION_RUS_POST_ASSASSINATION_DENIKIN_DESC"
+		allow_achievements = yes
+	}
+	option = {
 		name = RULE_OPTION_RUS_POST_ASSASSINATION_GORGULOV
 		text = "RULE_OPTION_RUS_POST_ASSASSINATION_GORGULOV"
 		desc = "RULE_OPTION_RUS_POST_ASSASSINATION_GORGULOV_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RULE_OPTION_RUS_POST_ASSASSINATION_SOLIDARISTS
+		text = "RULE_OPTION_RUS_POST_ASSASSINATION_SOLIDARISTS"
+		desc = "RULE_OPTION_RUS_POST_ASSASSINATION_SOLIDARISTS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RULE_OPTION_RUS_POST_ASSASSINATION_ABUKUMOV
+		text = "RULE_OPTION_RUS_POST_ASSASSINATION_ABUKUMOV"
+		desc = "RULE_OPTION_RUS_POST_ASSASSINATION_ABUKUMOV_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RUS_POST_ASSASSINATION_DMITRIY_ARISTOCRATIC_REPUBLIC
+		text = "RULE_OPTION_RUS_POST_ASSASSINATION_DMITRIY_ARISTOCRATIC_REPUBLIC"
+		desc = "RULE_OPTION_RUS_POST_ASSASSINATION_DMITRIY_ARISTOCRATIC_REPUBLIC_DESC"
 		allow_achievements = yes
 	}
 	option = {
@@ -79,10 +103,57 @@ RUS_post_assassination = {
 		desc = "RULE_OPTION_RUS_POST_ASSASSINATION_EURASIAN_UNION_DESC"
 		allow_achievements = yes
 	}
+}
+
+RUS_Eurasia_path = {
+	name = "RUS_EURASIA_PATH"
+	group = "RULE_GROUP_KAISERREICH_RULES_EUROPE"
 	option = {
-		name = RUS_POST_ASSASSINATION_DMITRIY_ARISTOCRATIC_REPUBLIC
-		text = "RULE_OPTION_RUS_POST_ASSASSINATION_DMITRIY_ARISTOCRATIC_REPUBLIC"
-		desc = "RULE_OPTION_RUS_POST_ASSASSINATION_DMITRIY_ARISTOCRATIC_REPUBLIC_DESC"
+		name = RULE_OPTION_RUS_EURASIA_PATH_RANDOM
+		text = "RULE_OPTION_RUS_EURASIA_PATH_RANDOM"
+		desc = "RULE_OPTION_RUS_EURASIA_PATH_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RULE_OPTION_RUS_EURASIA_PATH_LEFT_BOLSHEVIKS
+		text = "RULE_OPTION_RUS_EURASIA_PATH_LEFT_BOLSHEVIKS"
+		desc = "RULE_OPTION_RUS_EURASIA_PATH_LEFT_BOLSHEVIKS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RULE_OPTION_RUS_EURASIA_PATH_LEFT_NAZBOL
+		text = "RULE_OPTION_RUS_EURASIA_PATH_LEFT_NAZBOL"
+		desc = "RULE_OPTION_RUS_EURASIA_PATH_LEFT_NAZBOL_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RULE_OPTION_RUS_EURASIA_PATH_REVOLUTION
+		text = "RULE_OPTION_RUS_EURASIA_PATH_REVOLUTION"
+		desc = "RULE_OPTION_RUS_EURASIA_PATH_REVOLUTION_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RULE_OPTION_RUS_EURASIA_PATH_ORTHODOX
+		text = "RULE_OPTION_RUS_EURASIA_PATH_ORTHODOX"
+		desc = "RULE_OPTION_RUS_EURASIA_PATH_ORTHODOX_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RULE_OPTION_RUS_EURASIA_PATH_ORTHODOX_EMPIRE
+		text = "RULE_OPTION_RUS_EURASIA_PATH_ORTHODOX_EMPIRE"
+		desc = "RULE_OPTION_RUS_EURASIA_PATH_ORTHODOX_EMPIRE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RULE_OPTION_RUS_EURASIA_PATH_YOUNG_NRPR
+		text = "RULE_OPTION_RUS_EURASIA_PATH_YOUNG_NRPR"
+		desc = "RULE_OPTION_RUS_EURASIA_PATH_YOUNG_NRPR_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RULE_OPTION_RUS_EURASIA_PATH_YOUNG_SOLIDARISTS
+		text = "RULE_OPTION_RUS_EURASIA_PATH_YOUNG_SOLIDARISTS"
+		desc = "RULE_OPTION_RUS_EURASIA_PATH_YOUNG_SOLIDARISTS_DESC"
 		allow_achievements = yes
 	}
 }
@@ -102,6 +173,90 @@ SOV_path = {
 		allow_achievements = yes
 	}
 	option = {
+		name = RULE_OPTION_SOV_PATH_TUKHA
+		text = "RULE_OPTION_SOV_PATH_TUKHA"
+		desc = "RULE_OPTION_SOV_PATH_TUKHA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RULE_OPTION_SOV_PATH_FRUNZE
+		text = "RULE_OPTION_SOV_PATH_FRUNZE"
+		desc = "RULE_OPTION_SOV_PATH_FRUNZE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RULE_OPTION_SOV_PATH_MAYAKOVSKY
+		text = "RULE_OPTION_SOV_PATH_MAYAKOVSKY"
+		desc = "RULE_OPTION_SOV_PATH_MAYAKOVSKY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RULE_OPTION_SOV_PATH_GASTEV
+		text = "RULE_OPTION_SOV_PATH_GASTEV"
+		desc = "RULE_OPTION_SOV_PATH_GASTEV_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RULE_OPTION_SOV_PATH_LUNACHARSKY
+		text = "RULE_OPTION_SOV_PATH_LUNACHARSKY"
+		desc = "RULE_OPTION_SOV_PATH_LUNACHARSKY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RULE_OPTION_SOV_PATH_ZINOVIEV
+		text = "RULE_OPTION_SOV_PATH_ZINOVIEV"
+		desc = "RULE_OPTION_SOV_PATH_ZINOVIEV_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RULE_OPTION_SOV_PATH_KAMENEV
+		text = "RULE_OPTION_SOV_PATH_KAMENEV"
+		desc = "RULE_OPTION_SOV_PATH_KAMENEV_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RULE_OPTION_SOV_PATH_SOKOLNIKOV
+		text = "RULE_OPTION_SOV_PATH_SOKOLNIKOV"
+		desc = "RULE_OPTION_SOV_PATH_SOKOLNIKOV_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RULE_OPTION_SOV_PATH_CHICHERIN
+		text = "RULE_OPTION_SOV_PATH_CHICHERIN"
+		desc = "RULE_OPTION_SOV_PATH_CHICHERIN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RULE_OPTION_SOV_PATH_MOLOTOV
+		text = "RULE_OPTION_SOV_PATH_MOLOTOV"
+		desc = "RULE_OPTION_SOV_PATH_MOLOTOV_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RULE_OPTION_SOV_PATH_YAGODA
+		text = "RULE_OPTION_SOV_PATH_YAGODA"
+		desc = "RULE_OPTION_SOV_PATH_YAGODA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RULE_OPTION_SOV_PATH_KAGANOVICH
+		text = "RULE_OPTION_SOV_PATH_KAGANOVICH"
+		desc = "RULE_OPTION_SOV_PATH_KAGANOVICH_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RULE_OPTION_SOV_PATH_YEZHOV
+		text = "RULE_OPTION_SOV_PATH_YEZHOV"
+		desc = "RULE_OPTION_SOV_PATH_YEZHOV_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RULE_OPTION_SOV_PATH_TSENTROBALT
+		text = "RULE_OPTION_SOV_PATH_TSENTROBALT"
+		desc = "RULE_OPTION_SOV_PATH_TSENTROBALT_DESC"
+		allow_achievements = yes
+	}
+	option = {
 		name = RULE_OPTION_SOV_PATH_BOLSHEVIKS
 		text = "RULE_OPTION_SOV_PATH_BOLSHEVIKS"
 		desc = "RULE_OPTION_SOV_PATH_BOLSHEVIKS_DESC"
@@ -114,33 +269,27 @@ SOV_path = {
 		allow_achievements = yes
 	}
 	option = {
+		name = RULE_OPTION_SOV_PATH_TRADEUNIONISTS
+		text = "RULE_OPTION_SOV_PATH_TRADEUNIONISTS"
+		desc = "RULE_OPTION_SOV_PATH_TRADEUNIONISTS_DESC"
+		allow_achievements = yes
+	}
+	option = {
 		name = RULE_OPTION_SOV_PATH_NSP
 		text = "RULE_OPTION_SOV_PATH_NSP"
 		desc = "RULE_OPTION_SOV_PATH_NSP_DESC"
 		allow_achievements = yes
 	}
 	option = {
-		name = RULE_OPTION_SOV_PATH_DECISTS
-		text = "RULE_OPTION_SOV_PATH_DECISTS"
-		desc = "RULE_OPTION_SOV_PATH_DECISTS_DESC"
+		name = RULE_OPTION_SOV_PATH_PSR
+		text = "RULE_OPTION_SOV_PATH_PSR"
+		desc = "RULE_OPTION_SOV_PATH_PSR_DESC"
 		allow_achievements = yes
 	}
 	option = {
 		name = RULE_OPTION_SOV_PATH_MENSHEVIKS
 		text = "RULE_OPTION_SOV_PATH_MENSHEVIKS"
 		desc = "RULE_OPTION_SOV_PATH_MENSHEVIKS_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = RULE_OPTION_SOV_PATH_TUKHA
-		text = "RULE_OPTION_SOV_PATH_TUKHA"
-		desc = "RULE_OPTION_SOV_PATH_TUKHA_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = RULE_OPTION_SOV_PATH_FRUNZE
-		text = "RULE_OPTION_SOV_PATH_FRUNZE"
-		desc = "RULE_OPTION_SOV_PATH_FRUNZE_DESC"
 		allow_achievements = yes
 	}
 }
@@ -187,6 +336,24 @@ ENG_revolution = {
 		name = ENG_REVOLUTION_SUCCESS
 		text = "RULE_OPTION_ENG_REVOLUTION_SUCCESS"
 		desc = "RULE_OPTION_ENG_REVOLUTION_SUCCESS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ENG_REVOLUTION_EXPLOSION
+		text = "RULE_OPTION_ENG_REVOLUTION_EXPLOSION"
+		desc = "RULE_OPTION_ENG_REVOLUTION_EXPLOSION_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ENG_REVOLUTION_CROMWELL
+		text = "RULE_OPTION_ENG_REVOLUTION_CROMWELL"
+		desc = "RULE_OPTION_ENG_REVOLUTION_CROMWELL_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ENG_REVOLUTION_CINCINNATUS
+		text = "RULE_OPTION_ENG_REVOLUTION_CINCINNATUS"
+		desc = "RULE_OPTION_ENG_REVOLUTION_CINCINNATUS_DESC"
 		allow_achievements = yes
 	}
 	option = {
@@ -810,6 +977,13 @@ SRI_start_election = {
 		desc = "RULE_OPTION_SRI_START_ELECTION_NEOSANFEDISTI_DESC"
 		allow_achievements = yes
 	}
+	
+	option = {
+		name = SRI_START_ELECTION_PIO
+		text = "RULE_OPTION_SRI_START_ELECTION_PIO"
+		desc = "RULE_OPTION_SRI_START_ELECTION_PIO_DESC"
+		allow_achievements = yes
+	}
 }
 
 SRI_neosanfedisti_terror = {
@@ -1081,6 +1255,82 @@ SPR_civil_war = {
 	}
 }
 
+SPR_politics = {
+	name = "SPR_POLITICS"
+	group = "RULE_GROUP_KAISERREICH_RULES_EUROPE"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_SPR_POLITICS_RANDOM"
+		desc = "RULE_OPTION_SPR_POLITICS_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SPR_POLITICS_AUTHDEM
+		text = "RULE_OPTION_SPR_POLITICS_AUTHDEM"
+		desc = "RULE_OPTION_SPR_POLITICS_AUTHDEM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SPR_POLITICS_SOCCON
+		text = "RULE_OPTION_SPR_POLITICS_SOCCON"
+		desc = "RULE_OPTION_SPR_POLITICS_SOCCON_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SPR_POLITICS_MARLIB
+		text = "RULE_OPTION_SPR_POLITICS_MARLIB"
+		desc = "RULE_OPTION_SPR_POLITICS_MARLIB_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SPR_POLITICS_SOCLIB
+		text = "RULE_OPTION_SPR_POLITICS_SOCLIB"
+		desc = "RULE_OPTION_SPR_POLITICS_SOCLIB_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SPR_POLITICS_SOCDEM
+		text = "RULE_OPTION_SPR_POLITICS_SOCDEM"
+		desc = "RULE_OPTION_SPR_POLITICS_SOCDEM_DESC"
+		allow_achievements = yes
+	}
+}
+
+CAR_foreign_policy = {
+	name = "CAR_FOREIGN_POLICY"
+	group = "RULE_GROUP_KAISERREICH_RULES_EUROPE"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_CAR_RANDOM"
+		desc = "RULE_OPTION_CAR_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CAR_ENTENTE
+		text = "RULE_OPTION_CAR_ENTENTE"
+		desc = "RULE_OPTION_CAR_ENTENTE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CAR_MED_PACT
+		text = "RULE_OPTION_CAR_MED_PACT"
+		desc = "RULE_OPTION_CAR_MED_PACT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CAR_MED_PACT_ILLYRIA
+		text = "RULE_OPTION_CAR_MED_PACT_ILLYRIA"
+		desc = "RULE_OPTION_CAR_MED_PACT_ILLYRIA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CAR_MED_PACT_AUSTRIA
+		text = "RULE_OPTION_CAR_MED_PACT_AUSTRIA"
+		desc = "RULE_OPTION_CAR_MED_PACT_AUSTRIA_DESC"
+		allow_achievements = yes
+	}
+}
+
 AUS_start_election = {
 	name = "AUS_START_ELECTION"
 	group = "RULE_GROUP_KAISERREICH_RULES_EUROPE"
@@ -1100,6 +1350,12 @@ AUS_start_election = {
 		name = AUS_START_SOCIAL_DEMOCRAT
 		text = "RULE_OPTION_AUS_START_ELECTION_SOCIAL_DEMOCRAT_SDAP"
 		desc = "RULE_OPTION_AUS_START_ELECTION_SOCIAL_DEMOCRAT_SDAP_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = AUS_START_NATIONAL_POPULIST
+		text = "RULE_OPTION_AUS_START_ELECTION_NATIONAL_POPULIST_DOLFUSS"
+		desc = "RULE_OPTION_AUS_START_ELECTION_NATIONAL_POPULIST_DOLFUSS_DESC"
 		allow_achievements = yes
 	}
 }
@@ -2076,6 +2332,12 @@ ALB_election = {
 		desc = "RULE_OPTION_ALB_ELECTION_SOCCON_DESC"
 		allow_achievements = yes
 	}
+	option = {
+		name = ALB_ELECTION_KING_ZOGU
+		text = "RULE_OPTION_ALB_ELECTION_KING_ZOGU"
+		desc = "RULE_OPTION_ALB_ELECTION_KING_ZOGU_DESC"
+		allow_achievements = yes
+	}
 }
 ### Kuban ###
 DKB_path = {
@@ -2465,9 +2727,45 @@ ALA_POLITICAL_PATH = {
 		allow_achievements = yes
 	}
 	option = {
+		name = ALA_WICKERSHAM_PLAN
+		text = "RULE_OPTION_ALA_WICKERSHAM_PLAN"
+		desc = "RULE_OPTION_ALA_WICKERSHAM_PLAN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ALA_SYNDICALISM
+		text = "RULE_OPTION_ALA_SYNDICALISM"
+		desc = "RULE_OPTION_ALA_SYNDICALISM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ALA_LOVESTONE
+		text = "RULE_OPTION_ALA_LOVESTONE"
+		desc = "RULE_OPTION_ALA_LOVESTONE_DESC"
+		allow_achievements = yes
+	}
+	option = {
 		name = ALA_DEMOCRATIC
 		text = "RULE_OPTION_ALA_DEMOCRATIC"
 		desc = "RULE_OPTION_ALA_DEMOCRATIC_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ALA_SOCCON
+		text = "RULE_OPTION_ALA_SOCCON"
+		desc = "RULE_OPTION_ALA_SOCCON_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ALA_SOCDEM
+		text = "RULE_OPTION_ALA_SOCDEM"
+		desc = "RULE_OPTION_ALA_SOCDEM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ALA_MARLIB
+		text = "RULE_OPTION_ALA_MARLIB"
+		desc = "RULE_OPTION_ALA_MARLIB_DESC"
 		allow_achievements = yes
 	}
 	option = {
@@ -2477,9 +2775,27 @@ ALA_POLITICAL_PATH = {
 		allow_achievements = yes
 	}
 	option = {
+		name = ALA_LIECHTENSTEIN
+		text = "RULE_OPTION_ALA_LIECHTENSTEIN"
+		desc = "RULE_OPTION_ALA_LIECHTENSTEIN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ALA_ISRAEL
+		text = "RULE_OPTION_ALA_ISRAEL"
+		desc = "RULE_OPTION_ALA_ISRAEL_DESC"
+		allow_achievements = yes
+	}
+	option = {
 		name = ALA_TOWNER
 		text = "RULE_OPTION_ALA_TOWNER"
 		desc = "RULE_OPTION_ALA_TOWNER_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ALA_DIXON
+		text = "RULE_OPTION_ALA_DIXON"
+		desc = "RULE_OPTION_ALA_DIXON_DESC"
 		allow_achievements = yes
 	}
 }
@@ -2690,6 +3006,18 @@ NEE_start_path = {
 		allow_achievements = yes
 	}
 	option = {
+		name = NEE_KENNEDY_MONARCHY
+		text = "RULE_OPTION_NEE_KENNEDY_MONARCHY"
+		desc = "RULE_OPTION_NEE_KENNEDY_MONARCHY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NEE_ASTOR_MONARCHY
+		text = "RULE_OPTION_NEE_ASTOR_MONARCHY"
+		desc = "RULE_OPTION_NEE_ASTOR_MONARCHY_DESC"
+		allow_achievements = yes
+	}
+	option = {
 		name = NEE_MILITARY_COUP
 		text = "RULE_OPTION_NEE_MILITARY_COUP"
 		desc = "RULE_OPTION_NEE_MILITARY_COUP_DESC"
@@ -2713,6 +3041,21 @@ NEE_start_path = {
 		desc = "RULE_OPTION_NEE_PROHIBITION_DESC"
 		allow_achievements = yes
 	}
+
+	option = {
+		name = NEE_START_PATH_RADSOC #Radsoc
+		text = "RULE_OPTION_NEE_START_PATH_RADSOC"
+		desc = "RULE_OPTION_NEE_START_PATH_RADSOC_DESC"
+		allow_achievements = yes
+	}
+
+	option = {
+		name = NEE_START_PATH_SYNDIE #Syndie
+		text = "RULE_OPTION_NEE_START_PATH_SYNDIE"
+		desc = "RULE_OPTION_NEE_START_PATH_SYNDIE_DESC"
+		allow_achievements = yes
+	}
+
 
 #	option = {
 #		name = NEE_START_PATH_LIBPROG_1940
@@ -2762,9 +3105,21 @@ CSA_post_civil_war = {
 		allow_achievements = yes
 	}
 	option = {
+		name = CSA_POST_CIVIL_WAR_BUTLER
+		text = "RULE_OPTION_CSA_POST_CIVIL_WAR_BUTLER"
+		desc = "RULE_OPTION_CSA_POST_CIVIL_WAR_BUTLER_DESC"
+		allow_achievements = yes
+	}
+	option = {
 		name = CSA_POST_CIVIL_WAR_BURNHAM
 		text = "RULE_OPTION_CSA_POST_CIVIL_WAR_BURNHAM"
 		desc = "RULE_OPTION_CSA_POST_CIVIL_WAR_BURNHAM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CSA_POST_CIVIL_WAR_LOVESTONE
+		text = "RULE_OPTION_CSA_POST_CIVIL_WAR_LOVESTONE"
+		desc = "RULE_OPTION_CSA_POST_CIVIL_WAR_LOVESTONE_DESC"
 		allow_achievements = yes
 	}
 	option = {
@@ -3101,6 +3456,13 @@ CAL_political = {
 	}
 	
 	option = {
+		name = CAL_POLITICAL_PATH_AISO_YAMAGUCHI
+		text = "RULE_OPTION_CAL_POLITICAL_PATH_AISO_YAMAGUCHI"
+		desc = "RULE_OPTION_CAL_POLITICAL_PATH_AISO_YAMAGUCHI_DESC"
+		allow_achievements = yes
+	}
+	
+	option = {
 		name = CAL_POLITICAL_PATH_DISNEY
 		text = "RULE_OPTION_CAL_POLITICAL_PATH_DISNEY"
 		desc = "RULE_OPTION_CAL_POLITICAL_PATH_DISNEY_DESC"
@@ -3118,6 +3480,20 @@ CAL_political = {
 		name = CAL_POLITICAL_PATH_NORTON
 		text = "RULE_OPTION_CAL_POLITICAL_PATH_NORTON"
 		desc = "RULE_OPTION_CAL_POLITICAL_PATH_NORTON_DESC"
+		allow_achievements = yes
+	}
+	
+	option = {
+		name = CAL_POLITICAL_PATH_COMMONWEALTH_SECESSIONIST
+		text = "RULE_OPTION_CAL_POLITICAL_PATH_COMMONWEALTH_SECESSIONIST"
+		desc = "RULE_OPTION_CAL_POLITICAL_PATH_COMMONWEALTH_SECESSIONIST_DESC"
+		allow_achievements = yes
+	}
+	
+	option = {
+		name = CAL_POLITICAL_PATH_HEARST_SECESSIONIST
+		text = "RULE_OPTION_CAL_POLITICAL_PATH_HEARST_SECESSIONIST"
+		desc = "RULE_OPTION_CAL_POLITICAL_PATH_HEARST_SECESSIONIST_DESC"
 		allow_achievements = yes
 	}
 }
@@ -3178,6 +3554,13 @@ USA_rep_nomination = {
 		desc = "RULE_OPTION_USA_REP_NOM_LANDON_DESC"
 		allow_achievements = yes
 	}
+	
+	option = {
+		name = USA_REP_NOM_HOOVER
+		text = "RULE_OPTION_USA_REP_NOM_HOOVER"
+		desc = "RULE_OPTION_USA_REP_NOM_HOOVER_DESC"
+		allow_achievements = yes
+	}
 }
 
 USA_civil_war = {
@@ -3203,6 +3586,34 @@ USA_civil_war = {
 		desc = "RULE_OPTION_USA_CIVIL_WAR_1937_DESC"
 		allow_achievements = yes
 	}
+	
+	option = {
+		name = USA_CIVIL_WAR_1937_HUEY
+		text = "RULE_OPTION_USA_CIVIL_WAR_1937_HUEY"
+		desc = "RULE_OPTION_USA_CIVIL_WAR_1937_HUEY_DESC"
+		allow_achievements = yes
+	}
+
+	option = {
+		name = USA_CIVIL_WAR_1937_MURRAY
+		text = "RULE_OPTION_USA_CIVIL_WAR_1937_MURRAY"
+		desc = "RULE_OPTION_USA_CIVIL_WAR_1937_MURRAY_DESC"
+		allow_achievements = yes
+	}
+	
+	option = {
+		name = USA_CIVIL_WAR_1937_HAYWOOD
+		text = "RULE_OPTION_USA_CIVIL_WAR_1937_HAYWOOD"
+		desc = "RULE_OPTION_USA_CIVIL_WAR_1937_HAYWOOD_DESC"
+		allow_achievements = yes
+	}
+
+	option = {
+		name = USA_CIVIL_WAR_1937_ESTABLISHMENT
+		text = "RULE_OPTION_USA_CIVIL_WAR_1937_ESTABLISHMENT"
+		desc = "RULE_OPTION_USA_CIVIL_WAR_1937_ESTABLISHMENT_DESC"
+		allow_achievements = yes
+	}
 
 	option = {
 		name = USA_CIVIL_WAR_AVOIDED_CURDON
@@ -3222,6 +3633,13 @@ USA_civil_war = {
 		name = USA_CIVIL_WAR_AVOIDED_NORRIS
 		text = "RULE_OPTION_USA_CIVIL_WAR_AVOIDED_NORRIS"
 		desc = "RULE_OPTION_USA_CIVIL_WAR_AVOIDED_NORRIS_DESC"
+		allow_achievements = yes
+	}
+	
+	option = {
+		name = USA_CIVIL_WAR_AVOIDED_HOOVER_HARDLINE
+		text = "RULE_OPTION_USA_CIVIL_WAR_AVOIDED_HOOVER_HARDLINE"
+		desc = "RULE_OPTION_USA_CIVIL_WAR_AVOIDED_HOOVER_HARDLINE_DESC"
 		allow_achievements = yes
 	}
 }
@@ -3360,6 +3778,18 @@ USA_post_civil_war_macarthur = {
 		name = USA_POST_CIVIL_WAR_MACARTHUR_HOLD_ON
 		text = "RULE_OPTION_USA_POST_CIVIL_WAR_MACARTHUR_HOLD_ON"
 		desc = "RULE_OPTION_USA_POST_CIVIL_WAR_MACARTHUR_HOLD_ON_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = USA_POST_CIVIL_WAR_MACARTHUR_NAVY_COUP_KING
+		text = "RULE_OPTION_USA_POST_CIVIL_WAR_MACARTHUR_NAVY_COUP_KING"
+		desc = "RULE_OPTION_USA_POST_CIVIL_WAR_MACARTHUR_NAVY_COUP_KING_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = USA_POST_CIVIL_WAR_MACARTHUR_NAVY_COUP_LEAHY
+		text = "RULE_OPTION_USA_POST_CIVIL_WAR_MACARTHUR_NAVY_COUP_LEAHY"
+		desc = "RULE_OPTION_USA_POST_CIVIL_WAR_MACARTHUR_NAVY_COUP_LEAHY_DESC"
 		allow_achievements = yes
 	}
 }
@@ -4546,6 +4976,18 @@ FNG_jap_path = {
 		desc = "RULE_OPTION_FNG_OBEDIENCE_DESC"
 		allow_achievements = yes
 	}
+	option = {
+		name = FNG_MING
+		text = "RULE_OPTION_FNG_MING"
+		desc = "RULE_OPTION_FNG_MING_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FNG_YAMATO
+		text = "RULE_OPTION_FNG_YAMATO"
+		desc = "RULE_OPTION_FNG_YAMATO_DESC"
+		allow_achievements = yes
+	}
 }
 
 LEC_path = {
@@ -4585,6 +5027,30 @@ LEC_path = {
 		name = LEC_COLLAPSE
 		text = "RULE_OPTION_LEC_COLLAPSE"
 		desc = "RULE_OPTION_LEC_COLLAPSE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = LEC_TRIADS
+		text = "RULE_OPTION_LEC_TRIADS"
+		desc = "RULE_OPTION_LEC_TRIADS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = LEC_TRIADS_JIANG
+		text = "RULE_OPTION_LEC_TRIADS_JIANG"
+		desc = "RULE_OPTION_LEC_TRIADS_JIANG_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = LEC_TRIADS_SEN
+		text = "RULE_OPTION_LEC_TRIADS_SEN"
+		desc = "RULE_OPTION_LEC_TRIADS_SEN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = LEC_TRIADS_JINRONG
+		text = "RULE_OPTION_LEC_TRIADS_JINRONG"
+		desc = "RULE_OPTION_LEC_TRIADS_JINRONG_DESC"
 		allow_achievements = yes
 	}
 }
@@ -4666,6 +5132,214 @@ TIB_path = {
 		name = TIB_SOCIALIST
 		text = "RULE_OPTION_TIB_SOCIALIST"
 		desc = "RULE_OPTION_TIB_SOCIALIST_DESC"
+		allow_achievements = yes
+	}
+}
+
+MON_path = {
+	name = "MON_UNGERN_PATHS"
+	group = "RULE_GROUP_KAISERREICH_RULES_ASIA_OCEANIA"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_MON_UNGERN_RANDOM"
+		desc = "RULE_OPTION_MON_UNGERN_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_UNGERN_ALIVE
+		text = "RULE_OPTION_MON_UNGERN_ALIVE"
+		desc = "RULE_OPTION_MON_UNGERN_ALIVE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_UNGERN_ISOLATION
+		text = "RULE_OPTION_MON_UNGERN_ISOLATION"
+		desc = "RULE_OPTION_MON_UNGERN_ISOLATION_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_UNGERN_PAN_MONGOL
+		text = "RULE_OPTION_MON_UNGERN_PAN_MONGOL"
+		desc = "RULE_OPTION_MON_UNGERN_PAN_MONGOL_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_UNGERN_QING
+		text = "RULE_OPTION_MON_UNGERN_QING"
+		desc = "RULE_OPTION_MON_UNGERN_KHAN_QING_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_UNGERN_JAPAN
+		text = "RULE_OPTION_MON_UNGERN_JAPAN"
+		desc = "RULE_OPTION_MON_UNGERN_JAPAN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_UNGERN_KHAN
+		text = "RULE_OPTION_MON_UNGERN_KHAN"
+		desc = "RULE_OPTION_MON_UNGERN_KHAN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_UNGERN_KHAN_WARPATH
+		text = "RULE_OPTION_MON_UNGERN_KHAN_WARPATH"
+		desc = "RULE_OPTION_MON_UNGERN_KHAN_WARPATH_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_UNGERN_KHAN_SOLO
+		text = "RULE_OPTION_MON_UNGERN_KHAN_SOLO"
+		desc = "RULE_OPTION_MON_UNGERN_KHAN_SOLO_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_UNGERN_KHAN_QING
+		text = "RULE_OPTION_MON_UNGERN_KHAN_QING"
+		desc = "RULE_OPTION_MON_UNGERN_KHAN_QING_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_UNGERN_KHAN_JAPAN
+		text = "RULE_OPTION_MON_UNGERN_KHAN_JAPAN"
+		desc = "RULE_OPTION_MON_UNGERN_KHAN_JAPAN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_UNGERN_IS_FUCKING_DEAD
+		text = "RULE_OPTION_MON_UNGERN_IS_FUCKING_DEAD"
+		desc = "RULE_OPTION_MON_UNGERN_IS_FUCKING_DEAD_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_UNGERN_DIES_DEMOCRACY
+		text = "RULE_OPTION_MON_UNGERN_DIES_DEMOCRACY"
+		desc = "RULE_OPTION_MON_UNGERN_DIES_DEMOCRACY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_UNGERN_DIES_MAN
+		text = "RULE_OPTION_MON_UNGERN_DIES_MAN"
+		desc = "RULE_OPTION_MON_UNGERN_DIES_MAN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_UNGERN_DIES_SOCDEM
+		text = "RULE_OPTION_MON_UNGERN_DIES_SOCDEM"
+		desc = "RULE_OPTION_MON_UNGERN_DIES_SOCDEM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_UNGERN_DIES_SOCCON
+		text = "RULE_OPTION_MON_UNGERN_DIES_SOCCON"
+		desc = "RULE_OPTION_MON_UNGERN_DIES_SOCCON_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_UNGERN_DIES_MARLIB
+		text = "RULE_OPTION_MON_UNGERN_DIES_MARLIB"
+		desc = "RULE_OPTION_MON_UNGERN_DIES_MARLIB_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_UNGERN_DIES_SOCLIB
+		text = "RULE_OPTION_MON_UNGERN_DIES_SOCLIB"
+		desc = "RULE_OPTION_MON_UNGERN_DIES_SOCLIB_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_UNGERN_DIES_NOBLES
+		text = "RULE_OPTION_MON_UNGERN_DIES_NOBLES"
+		desc = "RULE_OPTION_MON_UNGERN_DIES_NOBLES_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_UNGERN_DIES_BUDDHISTS
+		text = "RULE_OPTION_MON_UNGERN_DIES_BUDDHISTS"
+		desc = "RULE_OPTION_MON_UNGERN_DIES_BUDDHISTS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_UNGERN_DIES_JA_LAMA
+		text = "RULE_OPTION_MON_UNGERN_DIES_JA_LAMA"
+		desc = "RULE_OPTION_MON_UNGERN_DIES_JA_LAMA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_UNGERN_DIES_GADA_MIEREN
+		text = "RULE_OPTION_MON_UNGERN_DIES_GADA_MIEREN"
+		desc = "RULE_OPTION_MON_UNGERN_DIES_GADA_MIEREN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_UNGERN_DIES_ANFU
+		text = "RULE_OPTION_MON_UNGERN_DIES_ANFU"
+		desc = "RULE_OPTION_MON_UNGERN_DIES_ANFU_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_UNGERN_DIES_ANFU_EMPIRE
+		text = "RULE_OPTION_MON_UNGERN_DIES_ANFU_EMPIRE"
+		desc = "RULE_OPTION_MON_UNGERN_DIES_ANFU_EMPIRE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_UNGERN_DIES_SOYOMBO
+		text = "RULE_OPTION_MON_UNGERN_DIES_SOYOMBO"
+		desc = "RULE_OPTION_MON_UNGERN_DIES_SOYOMBO_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_UNGERN_DIES_SOYOMBO_TRM
+		text = "RULE_OPTION_MON_UNGERN_DIES_SOYOMBO_TRM"
+		desc = "RULE_OPTION_MON_UNGERN_DIES_SOYOMBO_TRM_DESC"
+		allow_achievements = yes
+	}
+}
+
+MON_mandate_path = {
+	name = "MON_UNGERN_MANDATE_PATHS"
+	group = "RULE_GROUP_KAISERREICH_RULES_ASIA_OCEANIA"
+	option = {
+		name = DEFAULT
+		text = "RULE_OPTION_MON_MANDATE_RANDOM"
+		desc = "RULE_OPTION_MON_MANDATE_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_MANDATE_YUAN
+		text = "RULE_OPTION_MON_MANDATE_YUAN"
+		desc = "RULE_OPTION_MON_MANDATE_YUAN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_MANDATE_MING
+		text = "RULE_OPTION_MON_MANDATE_MING"
+		desc = "RULE_OPTION_MON_MANDATE_MING_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_MANDATE_MONGOL
+		text = "RULE_OPTION_MON_MANDATE_MONGOL"
+		desc = "RULE_OPTION_MON_MANDATE_MONGOL_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_MANDATE_YAMATO
+		text = "RULE_OPTION_MON_MANDATE_YAMATO"
+		desc = "RULE_OPTION_MON_MANDATE_YAMATO_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_MANDATE_QING
+		text = "RULE_OPTION_MON_MANDATE_QING"
+		desc = "RULE_OPTION_MON_MANDATE_QING_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MON_MANDATE_YIGUANDAO
+		text = "RULE_OPTION_MON_MANDATE_YIGUANDAO"
+		desc = "RULE_OPTION_MON_MANDATE_YIGUANDAO_DESC"
 		allow_achievements = yes
 	}
 }
@@ -4817,6 +5491,12 @@ YUN_path = {
 		name = YUN_isolationist
 		text = "RULE_OPTION_YUN_isolationist"
 		desc = "RULE_OPTION_YUN_isolationist_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = YUN_larp_rule
+		text = "RULE_OPTION_YUN_larp_rule"
+		desc = "RULE_OPTION_YUN_larp_rule_DESC"
 		allow_achievements = yes
 	}
 	option = {

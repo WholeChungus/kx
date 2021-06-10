@@ -10,8 +10,13 @@ focus_tree = {
 			add = 0
 			tag = MON
 		}
+		modifier = {
+			add = 10
+			NOT = { tag = MON }
+			original_tag = MON
+		}
 	}
-
+	shared_focus = MON_under_the_chinese
 	### Shared - Economy + Army
 	focus = {
 		id = MON_nomadic_economy
@@ -351,9 +356,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MON_recruit_to_the_army"
 			swap_ideas = {
-				remove_idea = MON_scourge_of_the_steppes
-				add_idea = MON_scourge_of_the_steppes_idea2
+				remove_idea = MON_scourge_of_the_steppes_idea2
+				add_idea = MON_scourge_of_the_steppes_idea3
 			}
+			add_stability = -0.05
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER }
 	}
@@ -371,9 +377,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MON_recruit_nomads"
 			swap_ideas = {
-				remove_idea = MON_scourge_of_the_steppes_idea2
-				add_idea = MON_scourge_of_the_steppes_idea3
+				remove_idea = MON_scourge_of_the_steppes_idea3
+				add_idea = MON_scourge_of_the_steppes_idea4
 			}
+			add_stability = -0.05
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
 	}
@@ -391,9 +398,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MON_recruit_from_tribes"
 			swap_ideas = {
-				remove_idea = MON_scourge_of_the_steppes_idea3
-				add_idea = MON_scourge_of_the_steppes_idea4
+				remove_idea = MON_scourge_of_the_steppes_idea4
+				add_idea = MON_scourge_of_the_steppes_idea5
 			}
+			add_stability = -0.05
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
 	}
@@ -448,17 +456,17 @@ focus_tree = {
 		###Shared - Democratic
 focus = {
 	id = MON_democratic_mongolia
-	icon = GFX_goal_support_democracy
+	icon = GFX_goal_MON_democratic_mongolia
 	cost = 0
 	x = -41
 	y = 0
 	available = {
-		has_country_flag = MON_democracy_in_power_flag
+		OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
 		has_country_flag = MON_focus_starts_flag
-		has_elected_government = yes
+		OR = { has_elected_government = yes has_government = radical_socialist }
 	}
 	bypass = {
-		has_country_flag = MON_democracy_in_power_flag
+		OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
 		has_country_flag = MON_focus_starts_flag
 	}
 	ai_will_do = {
@@ -476,8 +484,8 @@ focus = {
 	x = -1
 	y = 1
 	available = {
-		has_country_flag = MON_democracy_in_power_flag
-		has_elected_government = yes
+		OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+		OR = { has_elected_government = yes has_government = radical_socialist }
 	}
 	prerequisite = { focus = MON_democratic_mongolia }
 	ai_will_do = {
@@ -486,9 +494,7 @@ focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MON_pro_republican_leaflets"
 		add_political_power = 25
-		add_popularity = {
-			ideology = social_democrat popularity = 0.02
-		}
+		increase_ruling_party_popularity_by_5 = yes
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
 }
@@ -500,8 +506,8 @@ focus = {
 	x = -2
 	y = 2
 	available = {
-		has_country_flag = MON_democracy_in_power_flag
-		has_elected_government = yes
+		OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+		OR = { has_elected_government = yes has_government = radical_socialist }
 	}
 	prerequisite = { focus = MON_pro_republican_leaflets }
 	ai_will_do = {
@@ -530,8 +536,8 @@ focus = {
 	x = 1
 	y = 1
 	available = {
-		has_country_flag = MON_democracy_in_power_flag
-		has_elected_government = yes
+		OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+		OR = { has_elected_government = yes has_government = radical_socialist }
 	}
 	prerequisite = { focus = MON_democratic_mongolia }
 	ai_will_do = {
@@ -540,9 +546,7 @@ focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MON_peasant_march_in_urga"
 		add_stability = 0.02
-		add_popularity = {
-			ideology = social_democrat popularity = 0.02
-		}
+		increase_ruling_party_popularity_by_5 = yes
 	}
 	search_filters = { FOCUS_FILTER_STABILITY }
 }
@@ -554,8 +558,8 @@ focus = {
 	x = 2
 	y = 2
 	available = {
-		has_country_flag = MON_democracy_in_power_flag
-		has_elected_government = yes
+		OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+		OR = { has_elected_government = yes has_government = radical_socialist }
 	}
 	prerequisite = { focus = MON_peasant_march_in_urga }
 	ai_will_do = {
@@ -579,8 +583,8 @@ focus = {
 	x = 0
 	y = 2
 	available = {
-		has_country_flag = MON_democracy_in_power_flag
-		has_elected_government = yes
+		OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+		OR = { has_elected_government = yes has_government = radical_socialist }
 	}
 	prerequisite = { focus = MON_democratic_mongolia }
 	ai_will_do = {
@@ -590,7 +594,7 @@ focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MON_cooperate_with_monasteries"
 		add_political_power = 25
 		add_popularity = {
-			ideology = national_populist popularity = -0.02
+			ideology = paternal_autocrat popularity = -0.02
 		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -603,8 +607,8 @@ focus = {
 	x = 1
 	y = 3
 	available = {
-		has_country_flag = MON_democracy_in_power_flag
-		has_elected_government = yes
+		OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+		OR = { has_elected_government = yes has_government = radical_socialist }
 	}
 	prerequisite = { focus = MON_seize_princes_wealth }
 	prerequisite = { focus = MON_cooperate_with_monasteries }
@@ -628,8 +632,8 @@ focus = {
 	x = -1
 	y = 3
 	available = {
-		has_country_flag = MON_democracy_in_power_flag
-		has_elected_government = yes
+		OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+		OR = { has_elected_government = yes has_government = radical_socialist }
 	}
 	prerequisite = { focus = MON_declare_sternberg_a_traitor }
 	prerequisite = { focus = MON_cooperate_with_monasteries }
@@ -654,8 +658,8 @@ focus = {
 	x = 0
 	y = 4
 	available = {
-		has_country_flag = MON_democracy_in_power_flag
-		has_elected_government = yes
+		OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+		OR = { has_elected_government = yes has_government = radical_socialist }
 		NOT = {
 			has_country_flag = MON_bandits_occupy_uliastai
 			has_country_flag = MON_bandits_occupy_tuva
@@ -677,36 +681,75 @@ focus = {
 		remove_unit_leader = 1153
 		remove_unit_leader = 1152
 		remove_unit_leader = 1151
+		remove_unit_leader = 11523
+		remove_unit_leader = 11524
+		remove_unit_leader = 11525
+		remove_unit_leader = 11526
 		hidden_effect = { # Democratic flavor Events
-			country_event = {
-				id = mon.414
-				days = 120
-				random = 10
-			}
-			country_event = {
-				id = mon.415
-				days = 200
-				random = 10
-			}
-			country_event = {
-				id = mon.416
-				days = 280
-				random = 20
-			}
-			country_event = {
-				id = mon.418
-				days = 440
-				random = 30
-			}
-			country_event = {
-				id = mon.419
-				days = 520
-				random = 30
-			}
-			country_event = {
-				id = mon.421
-				days = 680
-				random = 40
+			if = {
+				limit = {
+					has_elected_government = yes
+				}
+				country_event = {
+					id = mon.414
+					days = 120
+					random = 10
+				}
+				country_event = {
+					id = mon.415
+					days = 200
+					random = 10
+				}
+				country_event = {
+					id = mon.416
+					days = 280
+					random = 20
+				}
+				country_event = {
+					id = mon.418
+					days = 440
+					random = 30
+				}
+				country_event = {
+					id = mon.419
+					days = 520
+					random = 30
+				}
+				country_event = {
+					id = mon.421
+					days = 680
+					random = 40
+				}
+			}		
+			if = {
+				limit = {
+					has_government = radical_socialist
+				}
+				country_event = {
+					id = mon.457
+					days = 120
+					random = 10
+				}
+				country_event = {
+					id = mon.458
+					days = 200
+					random = 10
+				}
+				country_event = {
+					id = mon.459
+					days = 280
+					random = 20
+				}
+				country_event = {
+					id = mon.460
+					days = 440
+					random = 30
+				}
+				country_event = {
+					id = mon.461
+					days = 520
+					random = 30
+				}
 			}
 		}
 		hidden_effect = {
@@ -717,24 +760,47 @@ focus = {
 			country_event = { id = mon.60 days = 13 }
 			}
 			country_event = { id = mon.122 days = 1 }
-			country_event = { id = mon.131 days = 25 }
 			TRM = {
 				country_event = { id = mon.80 days = 14 }
 			}
 		}
 		hidden_effect = {
-			every_country = {
+			if = {
 				limit = {
-					OR = {
-						is_chinese_tag = yes
-						tag = RUS
-						tag = JAP
-						tag = TRM
+					has_elected_government = yes
+				}
+				every_country = {
+					limit = {
+						OR = {
+							is_chinese_tag = yes
+							tag = RUS
+							tag = JAP
+							tag = TRM
+						}
+					}
+					news_event = { #
+						id = mon.653
+						days = 1
 					}
 				}
-				news_event = { #
-					id = mon.653
-					days = 1
+			}
+			if = {
+				limit = {
+					has_government = radical_socialist
+				}
+				every_country = {
+					limit = {
+						OR = {
+							is_chinese_tag = yes
+							tag = RUS
+							tag = JAP
+							tag = TRM
+						}
+					}
+					news_event = { #
+						id = mon.654
+						days = 1
+					}
 				}
 			}
 		}
@@ -752,8 +818,8 @@ focus = {
 		x = 0
 		y = 1
 		available = {
-			has_country_flag = MON_democracy_in_power_flag
-			has_elected_government = yes
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+			OR = { has_elected_government = yes has_government = radical_socialist }
 		}
 		prerequisite = { focus = MON_declare_the_mongolian_republic }
 		ai_will_do = {
@@ -773,8 +839,8 @@ focus = {
 		x = 1
 		y = 2
 		available = {
-			has_country_flag = MON_democracy_in_power_flag
-			has_elected_government = yes
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+			OR = { has_elected_government = yes has_government = radical_socialist }
 		}
 		prerequisite = { focus = MON_empower_the_workers }
 		ai_will_do = {
@@ -797,8 +863,8 @@ focus = {
 		x = 2
 		y = 3
 		available = {
-			has_country_flag = MON_democracy_in_power_flag
-			has_elected_government = yes
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+			OR = { has_elected_government = yes has_government = radical_socialist }
 		}
 		prerequisite = { focus = MON_redistribute_wealth }
 		ai_will_do = {
@@ -817,8 +883,8 @@ focus = {
 		x = -1
 		y = 2
 		available = {
-			has_country_flag = MON_democracy_in_power_flag
-			has_elected_government = yes
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+			OR = { has_elected_government = yes has_government = radical_socialist }
 		}
 		prerequisite = { focus = MON_empower_the_workers }
 		ai_will_do = {
@@ -846,8 +912,8 @@ focus = {
 		x = -2
 		y = 3
 		available = {
-			has_country_flag = MON_democracy_in_power_flag
-			has_elected_government = yes
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+			OR = { has_elected_government = yes has_government = radical_socialist }
 		}
 		prerequisite = { focus = MON_seize_land_from_rich_landowners }
 		ai_will_do = {
@@ -870,8 +936,11 @@ focus = {
 		x = 0
 		y = 3
 		available = {
-			has_country_flag = MON_democracy_in_power_flag
-			has_elected_government = yes
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+			OR = { has_elected_government = yes has_government = radical_socialist }
+		}
+		bypass = {	
+			has_government = radical_socialist
 		}
 		prerequisite = { focus = MON_redistribute_wealth }
 		prerequisite = { focus = MON_seize_land_from_rich_landowners }
@@ -893,8 +962,8 @@ focus = {
 		x = 4
 		y = 1
 		available = {
-			has_country_flag = MON_democracy_in_power_flag
-			has_elected_government = yes
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+			OR = { has_elected_government = yes has_government = radical_socialist }
 		}
 		prerequisite = { focus = MON_declare_the_mongolian_republic }
 		ai_will_do = {
@@ -915,8 +984,8 @@ focus = {
 		x = 4
 		y = 2
 		available = {
-			has_country_flag = MON_democracy_in_power_flag
-			has_elected_government = yes
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+			OR = { has_elected_government = yes has_government = radical_socialist }
 		}
 		prerequisite = { focus = MON_end_old_institutions }
 		ai_will_do = {
@@ -938,8 +1007,8 @@ focus = {
 		x = 4
 		y = 3
 		available = {
-			has_country_flag = MON_democracy_in_power_flag
-			has_elected_government = yes
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+			OR = { has_elected_government = yes has_government = radical_socialist }
 		}
 		prerequisite = { focus = MON_legitimise_government }
 		ai_will_do = {
@@ -960,8 +1029,8 @@ focus = {
 		x = -4
 		y = 1
 		available = {
-			has_country_flag = MON_democracy_in_power_flag
-			has_elected_government = yes
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+			OR = { has_elected_government = yes has_government = radical_socialist }
 		}
 		prerequisite = { focus = MON_declare_the_mongolian_republic }
 		ai_will_do = {
@@ -981,8 +1050,8 @@ focus = {
 		x = -4
 		y = 2
 		available = {
-			has_country_flag = MON_democracy_in_power_flag
-			has_elected_government = yes
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+			OR = { has_elected_government = yes has_government = radical_socialist }
 		}
 		prerequisite = { focus = MON_revolutionary_military }
 		ai_will_do = {
@@ -1005,8 +1074,8 @@ focus = {
 		x = -4
 		y = 3
 		available = {
-			has_country_flag = MON_democracy_in_power_flag
-			has_elected_government = yes
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+			OR = { has_elected_government = yes has_government = radical_socialist }
 		}
 		prerequisite = { focus = MON_defensive_approach }
 		ai_will_do = {
@@ -1018,6 +1087,39 @@ focus = {
 				remove_idea = MON_revolutionary_army_idea2
 				add_idea = MON_revolutionary_army_idea3
 			}
+			add_state_claim = 616
+			add_state_claim = 348
+			add_state_claim = 617
+			add_state_claim = 618
+			add_state_claim = 604
+			add_state_claim = 283
+			add_state_claim = 774
+			add_state_claim = 287
+			add_state_claim = 619
+			create_wargoal = {
+					type = annex_everything
+					target = XSM
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = SIK
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = ETS
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = TAN
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = FNG
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = QIE
+				}
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER }
 	}
@@ -1040,6 +1142,8 @@ focus = {
 				has_country_flag = MON_MAN_victory_flag
 				has_country_flag = MON_MLN_victory_flag
 				has_country_flag = MON_MAN_dictatorship_flag
+				has_country_flag = MON_MUK_victory_flag
+				has_government = radical_socialist
 			}
 		}
 		prerequisite = { focus = MON_mongolian_consitution }
@@ -1049,11 +1153,11 @@ focus = {
 		}
 	}
 	focus = {
-		id = MON_KAN_win_election
-		icon = GFX_goal_ideology_social_conservative
+		id = MON_UKN_win_election
+		icon = GFX_goal_MON_constitutionalists
 		cost = 1
 		relative_position_id = MON_declare_the_mongolian_republic
-		x = -5
+		x = 0
 		y = 5
 		available = {
 			has_country_flag = MON_KAN_victory_flag
@@ -1064,7 +1168,7 @@ focus = {
 			factor = 50
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus MON_KAN_win_election"
+			log = "[GetDateText]: [Root.GetName]: Focus MON_UKN_win_election"
 			add_political_power = 25
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1073,14 +1177,14 @@ focus = {
 		id = MON_reimburse_nobles
 		icon = GFX_goal_bag_of_money
 		cost = 8
-		relative_position_id = MON_declare_the_mongolian_republic
-		x = -4
-		y = 6
+		relative_position_id = MON_UKN_win_election
+		x = 1
+		y = 1
 		available = {
-			has_country_flag = MON_democracy_in_power_flag
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
 			has_government = social_conservative
 		}
-		prerequisite = { focus = MON_KAN_win_election }
+		prerequisite = { focus = MON_UKN_win_election }
 		ai_will_do = {
 			factor = 10
 		}
@@ -1098,11 +1202,11 @@ focus = {
 		id = MON_encourage_investment
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 8
-		relative_position_id = MON_declare_the_mongolian_republic
-		x = -4
-		y = 7
+		relative_position_id = MON_UKN_win_election
+		x = 1
+		y = 2
 		available = {
-			has_country_flag = MON_democracy_in_power_flag
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
 			has_government = social_conservative
 		}
 		prerequisite = { focus = MON_reimburse_nobles }
@@ -1119,14 +1223,14 @@ focus = {
 		id = MON_traditional_values
 		icon = GFX_goal_generic_national_unity
 		cost = 8
-		relative_position_id = MON_declare_the_mongolian_republic
-		x = -6
-		y = 6
+		relative_position_id = MON_UKN_win_election
+		x = -1
+		y = 1
 		available = {
-			has_country_flag = MON_democracy_in_power_flag
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
 			has_government = social_conservative
 		}
-		prerequisite = { focus = MON_KAN_win_election }
+		prerequisite = { focus = MON_UKN_win_election }
 		ai_will_do = {
 			factor = 10
 		}
@@ -1140,11 +1244,11 @@ focus = {
 		id = MON_political_freedoms
 		icon = GFX_goal_broken_red_star
 		cost = 8
-		relative_position_id = MON_declare_the_mongolian_republic
-		x = -6
-		y = 7
+		relative_position_id = MON_UKN_win_election
+		x = -1
+		y = 2
 		available = {
-			has_country_flag = MON_democracy_in_power_flag
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
 			has_government = social_conservative
 		}
 		prerequisite = { focus = MON_traditional_values }
@@ -1171,11 +1275,11 @@ focus = {
 		id = MON_status_of_prince_de
 		icon = GFX_goal_MON_The_Popular_Prince
 		cost = 8
-		relative_position_id = MON_declare_the_mongolian_republic
-		x = -5
-		y = 8
+		relative_position_id = MON_UKN_win_election
+		x = 0
+		y = 3
 		available = {
-			has_country_flag = MON_democracy_in_power_flag
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
 			has_government = social_conservative
 		}
 		prerequisite = { focus = MON_political_freedoms }
@@ -1190,16 +1294,19 @@ focus = {
 	}
 	focus = {
 		id = MON_MAN_win_election
-		icon = GFX_goal_ideology_social_democrat
+		icon = GFX_goal_MON_MAN
 		cost = 1
-		relative_position_id = MON_declare_the_mongolian_republic
-		x = -1
-		y = 5
+		relative_position_id = MON_first_presidential_election
+		x = -6
+		y = 1
 		mutually_exclusive = {
-			focus = MON_MAN_dictators
+			focus = MON_gada_meiren_victory
 		}
 		available = {
-			has_country_flag = MON_MAN_victory_flag
+			OR = {
+				has_country_flag = MON_MAN_victory_flag
+				has_country_flag = MON_MAN_dictatorship_flag
+			}
 			has_government = social_democrat
 		}
 		prerequisite = { focus = MON_first_presidential_election }
@@ -1216,11 +1323,11 @@ focus = {
 		id = MON_freedom_of_press
 		icon = GFX_goal_big_news
 		cost = 8
-		relative_position_id = MON_declare_the_mongolian_republic
-		x = -2
-		y = 6
+		relative_position_id = MON_MAN_win_election
+		x = -1
+		y = 1
 		available = {
-			has_country_flag = MON_democracy_in_power_flag
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
 			has_government = social_democrat
 		}
 		prerequisite = { focus = MON_MAN_win_election }
@@ -1229,7 +1336,24 @@ focus = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MON_freedom_of_press"
-			add_ideas = MON_free_nation_idea
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = MON_MAN_dictatorship_flag
+					}
+				}
+				add_ideas = MON_free_nation_idea
+			}
+			if = {
+				limit = {
+					has_country_flag = MON_MAN_dictatorship_flag
+				}
+				add_ideas = MON_secure_dictatorship_idea
+				add_popularity = {
+					ideology = social_democrat
+					popularity = 0.10
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	}
@@ -1237,11 +1361,11 @@ focus = {
 		id = MON_equal_opportunity
 		icon = GFX_goal_generic_improve_relations
 		cost = 8
-		relative_position_id = MON_declare_the_mongolian_republic
-		x = -2
-		y = 7
+		relative_position_id = MON_MAN_win_election
+		x = -1
+		y = 2
 		available = {
-			has_country_flag = MON_democracy_in_power_flag
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
 			has_government = social_democrat
 		}
 		prerequisite = { focus = MON_freedom_of_press }
@@ -1250,26 +1374,46 @@ focus = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MON_equal_opportunity"
-			swap_ideas = {
-				remove_idea = MON_free_nation_idea
-				add_idea = MON_free_nation_idea2
+			
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = MON_MAN_dictatorship_flag
+					}
+				}
+				swap_ideas = {
+					remove_idea = MON_free_nation_idea
+					add_idea = MON_free_nation_idea2
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = MON_MAN_dictatorship_flag
+				}
+				swap_ideas = {
+					remove_idea = MON_secure_dictatorship_idea
+					add_idea = MON_secure_dictatorship_idea2
+				}
+				add_popularity = {
+					ideology = social_democrat
+					popularity = 0.05
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 	}
 	focus = {
-		id = MON_MAN_dictators
-		icon = GFX_goal_authoritarian
+		id = MON_gada_meiren_victory
+		icon = GFX_goal_MON_Gada_Meiren
 		cost = 1
-		relative_position_id = MON_declare_the_mongolian_republic
-		x = 1
-		y = 5
+		relative_position_id = MON_first_presidential_election
+		x = -4
+		y = 1
 		mutually_exclusive = {
 			focus = MON_MAN_win_election
 		}
 		available = {
-			has_country_flag = MON_MAN_dictatorship_flag
-			has_government = social_democrat
+			has_government = radical_socialist
 		}
 		prerequisite = { focus = MON_first_presidential_election }
 		ai_will_do = {
@@ -1282,58 +1426,51 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 	focus = {
-		id = MON_secure_dictatorship
-		icon = GFX_goal_generic_small_arms
+		id = MON_seize_wealth_from_the_chinese
+		icon = GFX_goal_generic_seize_money
 		cost = 8
-		relative_position_id = MON_declare_the_mongolian_republic
-		x = 2
-		y = 6
+		relative_position_id = MON_gada_meiren_victory
+		x = 1
+		y = 1
 		available = {
-			has_country_flag = MON_democracy_in_power_flag
-			has_government = social_democrat
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+			has_government = radical_socialist
 		}
-		prerequisite = { focus = MON_MAN_dictators }
+		prerequisite = { focus = MON_gada_meiren_victory }
 		ai_will_do = {
 			factor = 10
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus MON_secure_dictatorship"
-			add_ideas = MON_secure_dictatorship_idea
-			add_popularity = {
-				ideology = social_democrat
-				popularity = 0.10
-			}
-			add_popularity = {
-				ideology = radical_socialist
-				popularity = 0.05
-			}
+			log = "[GetDateText]: [Root.GetName]: Focus MON_seize_wealth_from_the_chinese"
+			add_ideas = MON_seize_wealth_from_the_chinese
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	}
 	focus = {
-		id = MON_state_press
-		icon = GFX_goal_generic_seize_press
+		id = MON_peasant_revolt
+		icon = GFX_goal_SZC_improvised_farming_machinery
 		cost = 8
-		relative_position_id = MON_declare_the_mongolian_republic
-		x = 2
-		y = 7
+		relative_position_id = MON_gada_meiren_victory
+		x = 1
+		y = 2
 		available = {
-			has_country_flag = MON_democracy_in_power_flag
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
 			has_government = social_democrat
 		}
-		prerequisite = { focus = MON_secure_dictatorship }
+		prerequisite = { focus = MON_seize_wealth_from_the_chinese }
 		ai_will_do = {
 			factor = 10
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus MON_state_press"
-			swap_ideas = {
-				remove_idea = MON_secure_dictatorship_idea
-				add_idea = MON_secure_dictatorship_idea2
-			}
+			log = "[GetDateText]: [Root.GetName]: Focus MON_peasant_revolt"
+			add_political_power = 100
 			add_popularity = {
-				ideology = social_democrat
+				ideology = radical_socialist
 				popularity = 0.05
+			}
+			swap_ideas = {
+				remove_idea = MON_seize_wealth_from_the_chinese
+				add_idea = MON_peasant_revolt
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1342,14 +1479,17 @@ focus = {
 		id = MON_begin_welfare
 		icon = GFX_focus_generic_concessions
 		cost = 8
-		relative_position_id = MON_declare_the_mongolian_republic
-		x = 0
-		y = 6
+		relative_position_id = MON_MAN_win_election
+		x = 1
+		y = 1
 		available = {
-			has_country_flag = MON_democracy_in_power_flag
-			has_government = social_democrat
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+			OR = {
+				has_government = social_democrat
+				has_government = radical_socialist
+			}
 		}
-		prerequisite = { focus = MON_MAN_win_election focus = MON_MAN_dictators }
+		prerequisite = { focus = MON_MAN_win_election focus = MON_gada_meiren_victory }
 		ai_will_do = {
 			factor = 10
 		}
@@ -1363,12 +1503,15 @@ focus = {
 		id = MON_aid_poor_in_cities
 		icon = GFX_goal_conspiracy
 		cost = 8
-		relative_position_id = MON_declare_the_mongolian_republic
-		x = 0
-		y = 7
+		relative_position_id = MON_MAN_win_election
+		x = 1
+		y = 2
 		available = {
-			has_country_flag = MON_democracy_in_power_flag
-			has_government = social_democrat
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+			OR = {
+				has_government = social_democrat
+				has_government = radical_socialist
+			}
 		}
 		prerequisite = { focus = MON_begin_welfare }
 		ai_will_do = {
@@ -1391,11 +1534,11 @@ focus = {
 		id = MON_a_free_state
 		icon = GFX_goal_support_democracy
 		cost = 8
-		relative_position_id = MON_declare_the_mongolian_republic
-		x = -1
-		y = 8
+		relative_position_id = MON_MAN_win_election
+		x = 0
+		y = 3
 		available = {
-			has_country_flag = MON_democracy_in_power_flag
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
 			has_government = social_democrat
 		}
 		prerequisite = { focus = MON_equal_opportunity }
@@ -1405,79 +1548,211 @@ focus = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MON_a_free_state"
-			swap_ideas = {
-				remove_idea = MON_free_nation_idea2
-				add_idea = MON_free_nation_idea3
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = MON_MAN_dictatorship_flag
+					}
+				}
+				swap_ideas = {
+					remove_idea = MON_free_nation_idea2
+					add_idea = MON_free_nation_idea3
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = MON_MAN_dictatorship_flag
+				}
+				swap_ideas = {
+					remove_idea = MON_secure_dictatorship_idea2
+					add_idea = MON_secure_dictatorship_idea3
+				}
+				add_popularity = {
+					ideology = social_democrat
+					popularity = 0.1
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
 	}
 	focus = {
-		id = MON_an_organised_state
-		icon = GFX_focus_generic_strike_at_democracy2
+		id = MON_popular_revolution
+		icon = GFX_goal_revolution
 		cost = 8
-		relative_position_id = MON_declare_the_mongolian_republic
-		x = 1
-		y = 8
+		relative_position_id = MON_gada_meiren_victory
+		x = 0
+		y = 3
 		available = {
-			has_country_flag = MON_democracy_in_power_flag
-			has_government = social_democrat
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+			has_government = radical_socialist
 		}
-		prerequisite = { focus = MON_state_press }
+		prerequisite = { focus = MON_peasant_revolt }
 		prerequisite = { focus = MON_aid_poor_in_cities }
 		ai_will_do = {
 			factor = 10
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus MON_an_organised_state"
-			swap_ideas = {
-				remove_idea = MON_secure_dictatorship_idea2
-				add_idea = MON_secure_dictatorship_idea3
-			}
-			add_popularity = {
-				ideology = social_democrat
-				popularity = 0.1
-			}
+			log = "[GetDateText]: [Root.GetName]: Focus MON_popular_revolution"
 			add_popularity = {
 				ideology = radical_socialist
-				popularity = 0.10
+				popularity = 0.1
 			}
+			add_stability = 0.05
+			add_war_support = 0.1
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 	}
 	focus = {
-		id = MON_MLN_win_election
-		icon = GFX_goal_ideology_social_liberal
+		id = MON_ZMN_win_election
+		icon = GFX_goal_MON_Young_Mongolia_Party
 		cost = 1
-		relative_position_id = MON_declare_the_mongolian_republic
-		x = 5
-		y = 5
+		relative_position_id = MON_first_presidential_election
+		x = 6
+		y = 1
 		available = {
 			has_country_flag = MON_MLN_victory_flag
 			has_government = social_liberal
+		}
+		mutually_exclusive = {
+			focus = MON_MUK_win_election
 		}
 		prerequisite = { focus = MON_first_presidential_election }
 		ai_will_do = {
 			factor = 50
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus MON_MLN_win_election"
+			log = "[GetDateText]: [Root.GetName]: Focus MON_ZMN_win_election"
 			add_political_power = 25
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 	focus = {
+		id = MON_help_the_poor
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 8
+		relative_position_id = MON_ZMN_win_election
+		x = 1
+		y = 1
+		available = {
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+			has_government = social_liberal
+		}
+		prerequisite = { focus = MON_ZMN_win_election }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_help_the_poor"
+			add_stability = 0.08
+		}
+		search_filters = { FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = MON_education_support
+		icon = GFX_goal_double_research
+		cost = 8
+		relative_position_id = MON_ZMN_win_election
+		x = 1
+		y = 2
+		available = {
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+			has_government = social_liberal
+		}
+		prerequisite = { focus = MON_help_the_poor }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_education_support"
+			add_ideas = MON_education_support_idea
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MON_MUK_win_election
+		icon = GFX_goal_MON_mongol_national_committee
+		cost = 1
+		relative_position_id = MON_first_presidential_election
+		x = 4
+		y = 1
+		available = {
+			has_country_flag = MON_MUK_victory_flag
+			has_government = market_liberal
+		}
+		mutually_exclusive = {
+			focus = MON_ZMN_win_election
+		}
+		prerequisite = { focus = MON_first_presidential_election }
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_ZMN_win_election"
+			add_political_power = 25
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = MON_abolish_feudalism
+		icon = GFX_goal_tax_slave
+		cost = 8
+		relative_position_id = MON_MUK_win_election
+		x = -1
+		y = 1
+		available = {
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+			has_government = market_liberal
+		}
+		prerequisite = { focus = MON_MUK_win_election }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_freedom_for_all"
+			add_stability = 0.08
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = MON_buryat_allies
+		icon = GFX_focus_buryat_autonomy
+		cost = 8
+		relative_position_id = MON_MUK_win_election
+		x = -1
+		y = 2
+		available = {
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+			has_government = market_liberal
+		}
+		prerequisite = { focus = MON_abolish_feudalism }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_freedom_for_all"
+			add_manpower = 1000
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.05
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
 		id = MON_freedom_for_all
 		icon = GFX_goal_liberty
 		cost = 8
-		relative_position_id = MON_declare_the_mongolian_republic
-		x = 4
-		y = 6
+		relative_position_id = MON_ZMN_win_election
+		x = -1
+		y = 1
 		available = {
-			has_country_flag = MON_democracy_in_power_flag
-			has_government = social_liberal
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+			OR = {
+				has_government = market_liberal
+				has_government = social_liberal
+			}
 		}
-		prerequisite = { focus = MON_MLN_win_election }
+		prerequisite = { focus = MON_ZMN_win_election focus = MON_MUK_win_election }
 		ai_will_do = {
 			factor = 10
 		}
@@ -1494,12 +1769,15 @@ focus = {
 		id = MON_install_democratic_institutions
 		icon = GFX_goal_government_icon
 		cost = 8
-		relative_position_id = MON_declare_the_mongolian_republic
-		x = 4
-		y = 7
+		relative_position_id = MON_ZMN_win_election
+		x = -1
+		y = 2
 		available = {
-			has_country_flag = MON_democracy_in_power_flag
-			has_government = social_liberal
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+			OR = {
+				has_government = market_liberal
+				has_government = social_liberal
+			}
 		}
 		prerequisite = { focus = MON_freedom_for_all }
 		ai_will_do = {
@@ -1514,58 +1792,20 @@ focus = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	}
-	focus = {
-		id = MON_help_the_poor
-		icon = GFX_focus_generic_diplomatic_treaty
-		cost = 8
-		relative_position_id = MON_declare_the_mongolian_republic
-		x = 6
-		y = 6
-		available = {
-			has_country_flag = MON_democracy_in_power_flag
-			has_government = social_liberal
-		}
-		prerequisite = { focus = MON_MLN_win_election }
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus MON_help_the_poor"
-			add_stability = 0.08
-		}
-		search_filters = { FOCUS_FILTER_STABILITY }
-	}
-	focus = {
-		id = MON_education_support
-		icon = GFX_goal_double_research
-		cost = 8
-		relative_position_id = MON_declare_the_mongolian_republic
-		x = 6
-		y = 7
-		available = {
-			has_country_flag = MON_democracy_in_power_flag
-			has_government = social_liberal
-		}
-		prerequisite = { focus = MON_help_the_poor }
-		ai_will_do = {
-			factor = 10
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus MON_education_support"
-			add_ideas = MON_education_support_idea
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
+	
 	focus = {
 		id = MON_liberal_mongolia
 		icon = GFX_goal_constitutional_guarantees
 		cost = 8
-		relative_position_id = MON_declare_the_mongolian_republic
-		x = 5
-		y = 8
+		relative_position_id = MON_ZMN_win_election
+		x = 0
+		y = 3
 		available = {
-			has_country_flag = MON_democracy_in_power_flag
-			has_government = social_liberal
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+			OR = {
+				has_government = social_liberal
+				has_government = market_liberal
+			}
 		}
 		prerequisite = { focus = MON_install_democratic_institutions }
 		prerequisite = { focus = MON_education_support }
@@ -1582,10 +1822,36 @@ focus = {
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	}
+	
+	focus = {
+		id = MON_russian_influence
+		icon = GFX_goal_align_russia
+		cost = 8
+		relative_position_id = MON_MUK_win_election
+		x = 0
+		y = 3
+		available = {
+			OR = { has_country_flag = MON_democracy_in_power_flag has_country_flag = MON_gada_meiren_victory_flag }
+			has_government = market_liberal
+		}
+		prerequisite = { focus = MON_install_democratic_institutions }
+		prerequisite = { focus = MON_buryat_allies }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_liberal_mongolia"
+			add_war_support = 0.10
+			add_stability = 0.10
+			add_popularity = { ideology = market_liberal popularity = 0.06 }
+			add_popularity = { ideology = social_liberal popularity = 0.03 }
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
 			###Shared - Aristocratic
 focus = {
 	id = MON_nobles_take_power
-	icon = GFX_goal_ideology_authoritarian_democrat
+	icon = GFX_goal_MON_nobility
 	cost = 0
 	x = -27
 	y = 0
@@ -1597,7 +1863,6 @@ focus = {
 	available = {
 		has_country_flag = MON_nobles_in_power_flag
 		has_country_flag = MON_focus_starts_flag
-		has_government = authoritarian_democrat
 	}
 	bypass = {
 		has_country_flag = MON_nobles_in_power_flag
@@ -1619,8 +1884,7 @@ focus = {
 	x = -1
 	y = 1
 	available = {
-		has_country_flag = MON_nobles_in_power_flag
-		has_government = authoritarian_democrat
+		MON_nobles_in_power_check = yes
 	}
 	prerequisite = { focus = MON_nobles_take_power }
 	ai_will_do = {
@@ -1630,7 +1894,7 @@ focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MON_pander_to_buddhists"
 		add_stability = 0.02
 		add_popularity = {
-			ideology = national_populist popularity = -0.02
+			ideology = paternal_autocrat popularity = -0.02
 		}
 	}
 	search_filters = { FOCUS_FILTER_STABILITY }
@@ -1643,10 +1907,14 @@ focus = {
 	x = -2
 	y = 2
 	available = {
-		has_country_flag = MON_nobles_in_power_flag
-		has_government = authoritarian_democrat
-		is_subject = no
-		is_in_faction = no
+		MON_nobles_in_power_check = yes
+	}
+	bypass = {
+		has_country_leader = {
+			name = "Bogd Khan"
+			ruling_only = yes
+		}
+		has_government = paternal_autocrat
 	}
 	prerequisite = { focus = MON_pander_to_buddhists }
 	ai_will_do = {
@@ -1656,7 +1924,7 @@ focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MON_destroy_the_buddhist_council"
 		add_political_power = -100
 		add_popularity = {
-			ideology = national_populist popularity = -0.05
+			ideology = paternal_autocrat popularity = -0.05
 		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1669,10 +1937,7 @@ focus = {
 	x = 1
 	y = 1
 	available = {
-		has_country_flag = MON_nobles_in_power_flag
-		has_government = authoritarian_democrat
-		is_in_faction = no
-		is_subject = no
+		MON_nobles_in_power_check = yes
 	}
 	prerequisite = { focus = MON_nobles_take_power }
 	ai_will_do = {
@@ -1695,8 +1960,7 @@ focus = {
 	x = 2
 	y = 2
 	available = {
-		has_country_flag = MON_nobles_in_power_flag
-		has_government = authoritarian_democrat
+		MON_nobles_in_power_check = yes
 	}
 	prerequisite = { focus = MON_silence_poorer_citizens }
 	ai_will_do = {
@@ -1724,8 +1988,7 @@ focus = {
 	x = 0
 	y = 2
 	available = {
-		has_country_flag = MON_nobles_in_power_flag
-		has_government = authoritarian_democrat
+		MON_nobles_in_power_check = yes
 	}
 	prerequisite = { focus = MON_nobles_take_power }
 	ai_will_do = {
@@ -1748,8 +2011,7 @@ focus = {
 	x = -1
 	y = 3
 	available = {
-		has_country_flag = MON_nobles_in_power_flag
-		has_government = authoritarian_democrat
+		MON_nobles_in_power_check = yes
 	}
 	prerequisite = { focus = MON_destroy_the_buddhist_council }
 	prerequisite = { focus = MON_pay_off_officers }
@@ -1773,8 +2035,7 @@ focus = {
 	x = 1
 	y = 3
 	available = {
-		has_country_flag = MON_nobles_in_power_flag
-		has_government = authoritarian_democrat
+		MON_nobles_in_power_check = yes
 	}
 	prerequisite = { focus = MON_empower_landowners }
 	prerequisite = { focus = MON_pay_off_officers }
@@ -1798,8 +2059,7 @@ focus = {
 	x = 0
 	y = 4
 	available = {
-		has_country_flag = MON_nobles_in_power_flag
-		has_government = authoritarian_democrat
+		MON_nobles_in_power_check = yes
 		NOT = {
 			has_country_flag = MON_bandits_occupy_uliastai
 			has_country_flag = MON_bandits_occupy_tuva
@@ -1821,6 +2081,10 @@ focus = {
 		remove_unit_leader = 1153
 		remove_unit_leader = 1152
 		remove_unit_leader = 1151
+		remove_unit_leader = 11523
+		remove_unit_leader = 11524
+		remove_unit_leader = 11525
+		remove_unit_leader = 11526
 		hidden_effect = { # Authdem flavor
 			country_event = {
 				id = mon.446
@@ -1906,8 +2170,7 @@ focus = {
 		x = -5
 		y = 1
 		available = {
-			has_country_flag = MON_nobles_in_power_flag
-			has_government = authoritarian_democrat
+			MON_nobles_in_power_check = yes
 		}
 		prerequisite = { focus = MON_aristocratic_kingdom }
 		ai_will_do = {
@@ -1928,8 +2191,7 @@ focus = {
 		x = -6
 		y = 2
 		available = {
-			has_country_flag = MON_nobles_in_power_flag
-			has_government = authoritarian_democrat
+			MON_nobles_in_power_check = yes
 		}
 		prerequisite = { focus = MON_traditional_army }
 		ai_will_do = {
@@ -1949,8 +2211,7 @@ focus = {
 		x = -6
 		y = 3
 		available = {
-			has_country_flag = MON_nobles_in_power_flag
-			has_government = authoritarian_democrat
+			MON_nobles_in_power_check = yes
 		}
 		prerequisite = { focus = MON_private_prince_recruitment }
 		ai_will_do = {
@@ -1973,8 +2234,7 @@ focus = {
 		x = -4
 		y = 2
 		available = {
-			has_country_flag = MON_nobles_in_power_flag
-			has_government = authoritarian_democrat
+			MON_nobles_in_power_check = yes
 		}
 		prerequisite = { focus = MON_traditional_army }
 		ai_will_do = {
@@ -1997,8 +2257,7 @@ focus = {
 		x = -4
 		y = 3
 		available = {
-			has_country_flag = MON_nobles_in_power_flag
-			has_government = authoritarian_democrat
+			MON_nobles_in_power_check = yes
 		}
 		prerequisite = { focus = MON_organise_army_divisions }
 		ai_will_do = {
@@ -2021,8 +2280,7 @@ focus = {
 		x = -5
 		y = 4
 		available = {
-			has_country_flag = MON_nobles_in_power_flag
-			has_government = authoritarian_democrat
+			MON_nobles_in_power_check = yes
 		}
 		prerequisite = { focus = MON_unite_princes_recruitment }
 		prerequisite = { focus = MON_military_council_in_urga }
@@ -2047,8 +2305,7 @@ focus = {
 		x = -1
 		y = 1
 		available = {
-			has_country_flag = MON_nobles_in_power_flag
-			has_government = authoritarian_democrat
+			MON_nobles_in_power_check = yes
 		}
 		prerequisite = { focus = MON_aristocratic_kingdom }
 		ai_will_do = {
@@ -2068,8 +2325,7 @@ focus = {
 		x = 1
 		y = 1
 		available = {
-			has_country_flag = MON_nobles_in_power_flag
-			has_government = authoritarian_democrat
+			MON_nobles_in_power_check = yes
 		}
 		prerequisite = { focus = MON_aristocratic_kingdom }
 		ai_will_do = {
@@ -2092,8 +2348,7 @@ focus = {
 		x = -2
 		y = 2
 		available = {
-			has_country_flag = MON_nobles_in_power_flag
-			has_government = authoritarian_democrat
+			MON_nobles_in_power_check = yes
 		}
 		prerequisite = { focus = MON_review_the_budget }
 		ai_will_do = {
@@ -2117,8 +2372,7 @@ focus = {
 		x = 0
 		y = 2
 		available = {
-			has_country_flag = MON_nobles_in_power_flag
-			has_government = authoritarian_democrat
+			MON_nobles_in_power_check = yes
 		}
 		prerequisite = { focus = MON_review_the_budget }
 		prerequisite = { focus = MON_continue_status_quo }
@@ -2139,8 +2393,7 @@ focus = {
 		x = 2
 		y = 2
 		available = {
-			has_country_flag = MON_nobles_in_power_flag
-			has_government = authoritarian_democrat
+			MON_nobles_in_power_check = yes
 		}
 		prerequisite = { focus = MON_continue_status_quo }
 		ai_will_do = {
@@ -2163,8 +2416,7 @@ focus = {
 		x = -1
 		y = 3
 		available = {
-			has_country_flag = MON_nobles_in_power_flag
-			has_government = authoritarian_democrat
+			MON_nobles_in_power_check = yes
 		}
 		prerequisite = { focus = MON_cut_costs }
 		prerequisite = { focus = MON_landowners_rights_act }
@@ -2188,8 +2440,7 @@ focus = {
 		x = 1
 		y = 3
 		available = {
-			has_country_flag = MON_nobles_in_power_flag
-			has_government = authoritarian_democrat
+			MON_nobles_in_power_check = yes
 		}
 		prerequisite = { focus = MON_landowners_rights_act }
 		prerequisite = { focus = MON_encourage_nomadism }
@@ -2200,7 +2451,7 @@ focus = {
 			log = "[GetDateText]: [Root.GetName]: Focus MON_dissolve_organisations"
 			add_stability = 0.05
 			add_popularity = {
-				ideology = national_populist popularity = -0.05
+				ideology = paternal_autocrat popularity = -0.05
 			}
 			add_popularity = {
 				ideology = social_democrat popularity = -0.05
@@ -2219,8 +2470,7 @@ focus = {
 		x = 0
 		y = 4
 		available = {
-			has_country_flag = MON_nobles_in_power_flag
-			has_government = authoritarian_democrat
+			MON_nobles_in_power_check = yes
 		}
 		prerequisite = { focus = MON_encourage_foreign_business }
 		prerequisite = { focus = MON_dissolve_organisations }
@@ -2245,8 +2495,7 @@ focus = {
 		x = 5
 		y = 1
 		available = {
-			has_country_flag = MON_nobles_in_power_flag
-			has_government = authoritarian_democrat
+			MON_nobles_in_power_check = yes
 		}
 		prerequisite = { focus = MON_aristocratic_kingdom }
 		ai_will_do = {
@@ -2267,8 +2516,7 @@ focus = {
 		x = 4
 		y = 2
 		available = {
-			has_country_flag = MON_nobles_in_power_flag
-			has_government = authoritarian_democrat
+			MON_nobles_in_power_check = yes
 		}
 		prerequisite = { focus = MON_mongol_identity }
 		ai_will_do = {
@@ -2292,8 +2540,7 @@ focus = {
 		x = 4
 		y = 3
 		available = {
-			has_country_flag = MON_nobles_in_power_flag
-			has_government = authoritarian_democrat
+			MON_nobles_in_power_check = yes
 		}
 		prerequisite = { focus = MON_statue_of_genghis }
 		ai_will_do = {
@@ -2313,8 +2560,7 @@ focus = {
 		x = 6
 		y = 2
 		available = {
-			has_country_flag = MON_nobles_in_power_flag
-			has_government = authoritarian_democrat
+			MON_nobles_in_power_check = yes
 		}
 		prerequisite = { focus = MON_mongol_identity }
 		ai_will_do = {
@@ -2334,8 +2580,7 @@ focus = {
 		x = 6
 		y = 3
 		available = {
-			has_country_flag = MON_nobles_in_power_flag
-			has_government = authoritarian_democrat
+			MON_nobles_in_power_check = yes
 		}
 		prerequisite = { focus = MON_mongol_nationalism }
 		ai_will_do = {
@@ -2359,8 +2604,7 @@ focus = {
 		x = 5
 		y = 4
 		available = {
-			has_country_flag = MON_nobles_in_power_flag
-			has_government = authoritarian_democrat
+			MON_nobles_in_power_check = yes
 		}
 		prerequisite = { focus = MON_great_independence }
 		prerequisite = { focus = MON_remembering_our_history }
@@ -2373,13 +2617,51 @@ focus = {
 				remove_idea = MON_mongol_nationalism_idea2
 				add_idea = MON_mongol_nationalism_idea3
 			}
+			add_state_claim = 616
+			add_state_claim = 348
+			add_state_claim = 617
+			add_state_claim = 618
+			add_state_claim = 604
+			add_state_claim = 283
+			add_state_claim = 774
+			add_state_claim = 287
+			add_state_claim = 619
+			if = {
+				limit = {
+					is_subject = no
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = XSM
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = SIK
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = ETS
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = TAN
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = FNG
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = QIE
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER FOCUS_FILTER_RESEARCH }
 	}
 		###Shared - Buddhist
 	focus = {
 	id = MON_buddhist_mongolia
-	icon = GFX_goal_ideology_national_populist
+	icon = GFX_goal_MON_Bogd_Khan
 	cost = 0
 	x = -10
 	y = 0
@@ -2391,7 +2673,7 @@ focus = {
 	available = {
 		has_country_flag = MON_buddhists_in_power_flag
 		has_country_flag = MON_focus_starts_flag
-		has_government = national_populist
+		has_government = paternal_autocrat
 	}
 	bypass = {
 		has_country_flag = MON_buddhists_in_power_flag
@@ -2413,7 +2695,7 @@ focus = {
 	y = 1
 	available = {
 		has_country_flag = MON_buddhists_in_power_flag
-		has_government = national_populist
+		has_government = paternal_autocrat
 	}
 	prerequisite = { focus = MON_buddhist_mongolia }
 	ai_will_do = {
@@ -2437,7 +2719,7 @@ focus = {
 	y = 2
 	available = {
 		has_country_flag = MON_buddhists_in_power_flag
-		has_government = national_populist
+		has_government = paternal_autocrat
 	}
 	prerequisite = { focus = MON_declare_nobles_traitors }
 	ai_will_do = {
@@ -2461,7 +2743,7 @@ focus = {
 	y = 1
 	available = {
 		has_country_flag = MON_buddhists_in_power_flag
-		has_government = national_populist
+		has_government = paternal_autocrat
 	}
 	prerequisite = { focus = MON_buddhist_mongolia }
 	ai_will_do = {
@@ -2471,7 +2753,7 @@ focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MON_slander_sternbergs_buddhism"
 		add_political_power = -50
 		add_popularity = {
-			ideology = paternal_autocrat popularity = -0.02
+			ideology = national_populist popularity = -0.02
 		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2485,7 +2767,7 @@ focus = {
 	y = 2
 	available = {
 		has_country_flag = MON_buddhists_in_power_flag
-		has_government = national_populist
+		has_government = paternal_autocrat
 	}
 	prerequisite = { focus = MON_slander_sternbergs_buddhism }
 	ai_will_do = {
@@ -2495,7 +2777,7 @@ focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MON_end_russian_influence"
 		add_political_power = -75
 		add_popularity = {
-			ideology = paternal_autocrat popularity = -0.05
+			ideology = national_populist popularity = -0.05
 		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2509,7 +2791,7 @@ focus = {
 	y = 2
 	available = {
 		has_country_flag = MON_buddhists_in_power_flag
-		has_government = national_populist
+		has_government = paternal_autocrat
 	}
 	prerequisite = { focus = MON_buddhist_mongolia }
 	ai_will_do = {
@@ -2533,7 +2815,7 @@ focus = {
 	y = 3
 	available = {
 		has_country_flag = MON_buddhists_in_power_flag
-		has_government = national_populist
+		has_government = paternal_autocrat
 	}
 	prerequisite = { focus = MON_end_russian_influence }
 	prerequisite = { focus = MON_distribute_aid_through_monasteries }
@@ -2544,7 +2826,7 @@ focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus MON_empower_monasteries"
 		add_political_power = 50
 		add_popularity = {
-			ideology = national_populist popularity = 0.05
+			ideology = paternal_autocrat popularity = 0.05
 		}
 	}
 	search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2558,7 +2840,7 @@ focus = {
 	y = 3
 	available = {
 		has_country_flag = MON_buddhists_in_power_flag
-		has_government = national_populist
+		has_government = paternal_autocrat
 	}
 	prerequisite = { focus = MON_arrest_noble_council }
 	prerequisite = { focus = MON_distribute_aid_through_monasteries }
@@ -2568,7 +2850,7 @@ focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus MON_prosecute_non_buddhists"
 		add_popularity = {
-			ideology = paternal_autocrat popularity = -0.02
+			ideology = national_populist popularity = -0.02
 		}
 		add_popularity = {
 			ideology = authoritarian_democrat popularity = -0.02
@@ -2580,14 +2862,14 @@ focus = {
 }
 focus = {
 	id = MON_theocratic_state
-	icon = GFX_goal_ideology_national_populist
+	icon = GFX_goal_ideology_paternal_autocrat
 	cost = 1
 	relative_position_id = MON_buddhist_mongolia
 	x = 0
 	y = 4
 	available = {
 		has_country_flag = MON_buddhists_in_power_flag
-		has_government = national_populist
+		has_government = paternal_autocrat
 		NOT = {
 			has_country_flag = MON_bandits_occupy_uliastai
 			has_country_flag = MON_bandits_occupy_tuva
@@ -2609,6 +2891,10 @@ focus = {
 		remove_unit_leader = 1153
 		remove_unit_leader = 1152
 		remove_unit_leader = 1151
+		remove_unit_leader = 11523
+		remove_unit_leader = 11524
+		remove_unit_leader = 11525
+		remove_unit_leader = 11526
 		hidden_effect = { # Natpop flavor Events
 			country_event = {
 				id = mon.400
@@ -2660,6 +2946,16 @@ focus = {
 				days = 400
 				random = 50
 			}
+			country_event = {
+				id = mon.410
+				days = 360
+				random = 50
+			}
+			country_event = {
+				id = mon.410
+				days = 250
+				random = 50
+			}
 		}
 		hidden_effect = {
 			country_event = { id = mon.123 days = 1 }
@@ -2698,7 +2994,7 @@ focus = {
 		y = 1
 		available = {
 			has_country_flag = MON_buddhists_in_power_flag
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		prerequisite = { focus = MON_theocratic_state }
 		ai_will_do = {
@@ -2719,7 +3015,7 @@ focus = {
 		y = 2
 		available = {
 			has_country_flag = MON_buddhists_in_power_flag
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		prerequisite = { focus = MON_militant_buddhism }
 		ai_will_do = {
@@ -2743,7 +3039,7 @@ focus = {
 		y = 2
 		available = {
 			has_country_flag = MON_buddhists_in_power_flag
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		prerequisite = { focus = MON_militant_buddhism }
 		ai_will_do = {
@@ -2767,7 +3063,7 @@ focus = {
 		y = 3
 		available = {
 			has_country_flag = MON_buddhists_in_power_flag
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		prerequisite = { focus = MON_rally_for_buddhism }
 		ai_will_do = {
@@ -2789,7 +3085,7 @@ focus = {
 		y = 3
 		available = {
 			has_country_flag = MON_buddhists_in_power_flag
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		prerequisite = { focus = MON_rally_for_buddhism }
 		prerequisite = { focus = MON_purge_the_military }
@@ -2814,7 +3110,7 @@ focus = {
 		y = 3
 		available = {
 			has_country_flag = MON_buddhists_in_power_flag
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		prerequisite = { focus = MON_purge_the_military }
 		ai_will_do = {
@@ -2836,7 +3132,7 @@ focus = {
 		y = 1
 		available = {
 			has_country_flag = MON_buddhists_in_power_flag
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		prerequisite = { focus = MON_theocratic_state }
 		ai_will_do = {
@@ -2857,7 +3153,7 @@ focus = {
 		y = 2
 		available = {
 			has_country_flag = MON_buddhists_in_power_flag
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		prerequisite = { focus = MON_protect_the_jebtsundamba_khutughtu }
 		ai_will_do = {
@@ -2882,7 +3178,7 @@ focus = {
 		y = 1
 		available = {
 			has_country_flag = MON_buddhists_in_power_flag
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		prerequisite = { focus = MON_theocratic_state }
 		ai_will_do = {
@@ -2904,7 +3200,7 @@ focus = {
 		y = 1
 		available = {
 			has_country_flag = MON_buddhists_in_power_flag
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		prerequisite = { focus = MON_theocratic_state }
 		ai_will_do = {
@@ -2925,7 +3221,7 @@ focus = {
 		y = 2
 		available = {
 			has_country_flag = MON_buddhists_in_power_flag
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		prerequisite = { focus = MON_buddhist_education }
 		ai_will_do = {
@@ -2947,7 +3243,7 @@ focus = {
 		mutually_exclusive = { focus = MON_develop_other_religions }
 		available = {
 			has_country_flag = MON_buddhists_in_power_flag
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		prerequisite = { focus = MON_buddhist_law }
 		prerequisite = { focus = MON_protect_the_jebtsundamba_khutughtu }
@@ -2973,7 +3269,7 @@ focus = {
 		mutually_exclusive = { focus = MON_ban_all_other_religions }
 		available = {
 			has_country_flag = MON_buddhists_in_power_flag
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		prerequisite = { focus = MON_buddhist_education }
 		prerequisite = { focus = MON_buddhist_law }
@@ -2999,7 +3295,7 @@ focus = {
 		mutually_exclusive = { focus = MON_evolve_shamanism focus = MON_allow_shamanism }
 		available = {
 			has_country_flag = MON_buddhists_in_power_flag
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		prerequisite = { focus = MON_ban_all_other_religions }
 		ai_will_do = {
@@ -3022,7 +3318,7 @@ focus = {
 		mutually_exclusive = { focus = MON_destroy_shamanism focus = MON_allow_shamanism }
 		available = {
 			has_country_flag = MON_buddhists_in_power_flag
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		prerequisite = { focus = MON_ban_all_other_religions focus = MON_develop_other_religions }
 		ai_will_do = {
@@ -3045,7 +3341,7 @@ focus = {
 		mutually_exclusive = { focus = MON_destroy_shamanism focus = MON_evolve_shamanism }
 		available = {
 			has_country_flag = MON_buddhists_in_power_flag
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		prerequisite = { focus = MON_develop_other_religions }
 		ai_will_do = {
@@ -3067,7 +3363,7 @@ focus = {
 		y = 4
 		available = {
 			has_country_flag = MON_buddhists_in_power_flag
-			has_government = national_populist
+			has_government = paternal_autocrat
 			TIB = {
 				has_socialist_government = no
 			}
@@ -3078,7 +3374,10 @@ focus = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus MON_buddhist_brotherhood"
-			add_stability = 0.15
+			TIB = {
+				country_event = mongolia.3
+			}
+
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
@@ -3091,7 +3390,7 @@ focus = {
 		y = 4
 		available = {
 			has_country_flag = MON_buddhists_in_power_flag
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		prerequisite = { focus = MON_destroy_shamanism focus = MON_evolve_shamanism focus = MON_allow_shamanism }
 		ai_will_do = {
@@ -3118,6 +3417,14 @@ focus = {
 					add_idea = MON_buddhist_law_develop_others_idea2
 				}
 			}
+			create_wargoal = {
+					type = annex_everything
+					target = XSM
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = QIE
+				}
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 	}
@@ -3131,7 +3438,7 @@ focus = {
 		y = 1
 		available = {
 			has_country_flag = MON_buddhists_in_power_flag
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		prerequisite = { focus = MON_theocratic_state }
 		ai_will_do = {
@@ -3155,7 +3462,7 @@ focus = {
 		y = 2
 		available = {
 			has_country_flag = MON_buddhists_in_power_flag
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		prerequisite = { focus = MON_monastery_aid_program }
 		ai_will_do = {
@@ -3179,7 +3486,7 @@ focus = {
 		y = 2
 		available = {
 			has_country_flag = MON_buddhists_in_power_flag
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		prerequisite = { focus = MON_monastery_aid_program }
 		ai_will_do = {
@@ -3201,7 +3508,7 @@ focus = {
 		y = 3
 		available = {
 			has_country_flag = MON_buddhists_in_power_flag
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		prerequisite = { focus = MON_develop_rural_villages }
 		ai_will_do = {
@@ -3223,7 +3530,7 @@ focus = {
 		y = 3
 		available = {
 			has_country_flag = MON_buddhists_in_power_flag
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		prerequisite = { focus = MON_develop_rural_villages }
 		prerequisite = { focus = MON_construct_more_monasteries }
@@ -3248,7 +3555,7 @@ focus = {
 		y = 3
 		available = {
 			has_country_flag = MON_buddhists_in_power_flag
-			has_government = national_populist
+			has_government = paternal_autocrat
 		}
 		prerequisite = { focus = MON_construct_more_monasteries }
 		ai_will_do = {
@@ -3272,6 +3579,1996 @@ focus = {
 					instant_build = yes
 				}
 			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	
+	#### Ja Lama ###
+			###Shared - Ja Lama
+	focus = {
+		id = MON_ja_lama_in_power
+		icon = GFX_goal_MON_Ja_Lama
+		cost = 0
+		x = -55
+		y = 0
+		offset = {
+			x = 6
+			y = 0
+			
+		}
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_country_flag = MON_focus_starts_flag
+			has_government = national_populist
+		}
+		bypass = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_country_flag = MON_focus_starts_flag
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_ja_lama_in_power"
+
+		}
+	}
+	focus = {
+		id = MON_fuck_the_chinese
+		icon = GFX_goal_MON_anti_chinese_thought
+		cost = 1
+		relative_position_id = MON_ja_lama_in_power
+		x = -1
+		y = 1
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_government = national_populist
+		}
+		prerequisite = { focus = MON_ja_lama_in_power }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_fuck_the_chinese"
+			add_stability = 0.02
+			add_popularity = {
+				ideology = paternal_autocrat popularity = -0.02
+			}
+		}
+		search_filters = { FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = MON_commit_gamer_moments_on_chinese
+		icon = GFX_goal_MON_eradicate_the_gamin
+		cost = 1
+		relative_position_id = MON_ja_lama_in_power
+		x = -2
+		y = 2
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_government = national_populist
+		}
+		prerequisite = { focus = MON_fuck_the_chinese }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_commit_gamer_moments_on_chinese"
+			add_manpower = -500
+			add_popularity = {
+				ideology = national_populist popularity = 0.1
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = MON_drive_out_russians
+		icon = GFX_goal_MON_drive_out_russians
+		cost = 1
+		relative_position_id = MON_ja_lama_in_power
+		x = 1
+		y = 1
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_government = national_populist
+		}
+		prerequisite = { focus = MON_ja_lama_in_power }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_drive_out_russians"
+			add_war_support = 0.02
+			add_popularity = {
+				ideology = paternal_autocrat popularity = -0.02
+			}
+		}
+		search_filters = { FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = MON_start_myths
+		icon = GFX_goal_MON_tamper_with_divinations
+		cost = 1
+		relative_position_id = MON_ja_lama_in_power
+		x = 2
+		y = 2
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_government = national_populist
+		}
+		prerequisite = { focus = MON_drive_out_russians }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_start_myths"
+			add_popularity = {
+				ideology = national_populist popularity = 0.1
+			}
+			add_political_power = 100
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = MON_hunt_down_gada_meiren
+		icon = GFX_goal_MON_hunt_down_gada_meiren
+		cost = 1
+		relative_position_id = MON_ja_lama_in_power
+		x = 0
+		y = 2
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_government = national_populist
+		}
+		prerequisite = { focus = MON_ja_lama_in_power }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_hunt_down_gada_meiren"
+			add_popularity = {
+				ideology = radical_socialist popularity = -0.1
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = MON_raids_raids_raids
+		icon = GFX_goal_generic_execution
+		cost = 1
+		relative_position_id = MON_ja_lama_in_power
+		x = -1
+		y = 3
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_government = national_populist
+		}
+		prerequisite = { focus = MON_commit_gamer_moments_on_chinese }
+		prerequisite = { focus = MON_hunt_down_gada_meiren }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_raids_raids_raids"
+			add_manpower = -100
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = national_populist popularity = 0.05
+			}
+			XSM = {
+				add_manpower = -500
+			}
+			SIK = {
+				add_manpower = -500
+			}
+			TRM = {
+				add_manpower = -500
+			}
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	}
+	focus = {
+		id = MON_commit_more_gamer_moments
+		icon = GFX_goal_purge_opposition
+		cost = 1
+		relative_position_id = MON_ja_lama_in_power
+		x = 1
+		y = 3
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_government = national_populist
+		}
+		prerequisite = { focus = MON_start_myths }
+		prerequisite = { focus = MON_hunt_down_gada_meiren }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_commit_more_gamer_moments"
+			add_manpower = -50
+			add_stability = 0.06
+			add_popularity = {
+				ideology = national_populist popularity = 0.2
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = MON_lamas_fifedom
+		icon = GFX_goal_MON_realm_of_ja_lama
+		cost = 1
+		relative_position_id = MON_ja_lama_in_power
+		x = 0
+		y = 4
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_government = national_populist
+			NOT = {
+				has_country_flag = MON_bandits_occupy_uliastai
+				has_country_flag = MON_bandits_occupy_tuva
+			}
+		}
+		prerequisite = { focus = MON_raids_raids_raids }
+		prerequisite = { focus = MON_commit_more_gamer_moments }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_lamas_fifedom"
+			add_stability = 0.15
+			add_war_support = 0.15
+			set_country_flag = MON_nation_is_stabilised_flag
+			clr_country_flag = MON_other_factions_can_take_control_flag
+			remove_unit_leader = 1157
+			remove_unit_leader = 1159
+			remove_unit_leader = 1153
+			remove_unit_leader = 1152
+			remove_unit_leader = 1151
+			remove_unit_leader = 11523
+			remove_unit_leader = 11524
+			remove_unit_leader = 11525
+			remove_unit_leader = 11526
+			hidden_effect = { # natpop flavour
+				country_event = {
+					id = mon.446
+					days = 7
+				}
+				country_event = {
+					id = mon.447
+					days = 120
+					random = 10
+				}
+				country_event = {
+					id = mon.448
+					days = 150
+					random = 20
+				}
+
+				country_event = {
+					id = mon.450
+					days = 210
+					random = 30
+				}
+				country_event = {
+					id = mon.451
+					days = 240
+					random = 30
+				}
+				country_event = {
+					id = mon.452
+					days = 270
+					random = 40
+				}
+				country_event = {
+					id = mon.454
+					days = 330
+					random = 50
+				}
+				country_event = {
+					id = mon.455
+					days = 400
+					random = 50
+				}
+				country_event = {
+					id = mon.456
+					days = 450
+					random = 50
+				}
+				country_event = {
+					id = mon.4560
+					days = 180
+					random = 20
+				}
+			}
+			
+			hidden_effect = {
+				every_country = {
+					limit = {
+						OR = {
+							is_chinese_tag = yes
+							tag = RUS
+							tag = JAP
+							tag = TRM
+						}
+					}
+					news_event = { #
+						id = mon.655
+						days = 1
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+	
+	}
+	focus = {
+		id = MON_in_the_future_there_will_be_no_chinese
+		icon = GFX_goal_MON_in_the_future_there_will_be_no_chinese
+		
+		cost = 8
+		relative_position_id = MON_lamas_fifedom
+		x = -4
+		y = 1
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_government = national_populist
+		}
+		prerequisite = { focus = MON_lamas_fifedom }
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_in_the_future_there_will_be_no_chinese"
+			add_political_power = 100
+			add_war_support = 0.05
+			create_wargoal = {
+					type = annex_everything
+					target = SZC
+				}
+		create_wargoal = {
+					type = annex_everything
+					target = XSM
+				}	
+			create_wargoal = {
+					type = annex_everything
+					target = GXC
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = FNG
+				}
+		if = {
+			limit = {
+				CHI = {
+					exists = yes
+				}
+			}
+			create_wargoal = {
+					type = annex_everything
+					target = CHI
+				}
+		}
+		if = {
+			limit = {
+				HNN = {
+					exists = yes
+				}
+			}
+			create_wargoal = {
+					type = annex_everything
+					target = HNN
+				}
+		}
+		if = {
+			limit = {
+				QIE = {
+					exists = yes
+				}
+			}
+			create_wargoal = {
+					type = annex_everything
+					target = QIE
+				}
+		}
+		if = {
+			limit = {
+				LEP = {
+					exists = yes
+				}
+			}
+			create_wargoal = {
+					type = annex_everything
+					target = LEP
+				}
+		}
+		if = {
+			limit = {
+				SHX = {
+					exists = yes
+				}
+			}
+			create_wargoal = {
+					type = annex_everything
+					target = SHX
+				}
+		}
+		if = {
+			limit = {
+				ANQ = {
+					exists = yes
+				}
+			}
+			create_wargoal = {
+					type = annex_everything
+					target = ANQ
+				}
+		}
+		if = {
+			limit = {
+				SQI = {
+					exists = yes
+				}
+			}
+			create_wargoal = {
+					type = annex_everything
+					target = SQI
+				}
+		}
+		create_wargoal = {
+					type = annex_everything
+					target = AOG
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = LEC
+				}				
+
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+	focus = {
+		id = MON_agricultural_development
+		icon = GFX_goal_agrarian_soldiers
+		cost = 8
+		relative_position_id = MON_lamas_fifedom
+		x = -5
+		y = 2
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_government = national_populist
+		}
+		prerequisite = { focus = MON_in_the_future_there_will_be_no_chinese }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_agricultural_development"
+			330 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = MON_expanded_education
+		icon = GFX_MAF_divest_native_education
+		cost = 8
+		relative_position_id = MON_lamas_fifedom
+		x = -6
+		y = 3
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_government = national_populist
+		}
+		prerequisite = { focus = MON_agricultural_development }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_expanded_education"
+			add_research_slot = 1
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = MON_fight_corruption_clergy
+		icon = GFX_goal_MON_purge_the_clergy
+		cost = 8
+		relative_position_id = MON_lamas_fifedom
+		x = -3
+		y = 2
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_government = national_populist
+		}
+		prerequisite = { focus = MON_in_the_future_there_will_be_no_chinese }
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_fight_corruption_clergy"
+			330 = {
+				add_extra_state_shared_building_slots = 2
+			}
+			add_offsite_building = { type = infrastructure level = 1 }
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+	focus = {
+		id = MON_nomadic_primacy
+		icon = GFX_goal_SZC_improvised_farming_machinery
+		cost = 8
+		relative_position_id = MON_lamas_fifedom
+		x = -4
+		y = 3
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_government = national_populist
+		}
+		prerequisite = { focus = MON_fight_corruption_clergy }
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_nomadic_primacy"
+			if = {
+				limit = {
+					has_idea = MON_nomadic_society
+				}
+				swap_ideas = {
+					remove_idea = MON_nomadic_society
+					add_idea = MON_nomadic_society2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = MON_nomadic_society2
+				}
+				swap_ideas = {
+					remove_idea = MON_nomadic_society2
+					add_idea = MON_nomadic_society3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = MON_nomadic_society3
+				}
+				swap_ideas = {
+					remove_idea = MON_nomadic_society3
+					add_idea = MON_nomadic_society4
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS }
+	}
+	focus = {
+		id = MON_raid_economy
+		icon = GFX_goal_MON_mongol_plundernomics
+		cost = 8
+		relative_position_id = MON_lamas_fifedom
+		x = -5
+		y = 4
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_government = national_populist
+		}
+		prerequisite = { focus = MON_expanded_education }
+		prerequisite = { focus = MON_nomadic_primacy }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_raid_economy"
+			330 = {
+				add_extra_state_shared_building_slots = 2
+			}
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	}
+	focus = {
+		id = MON_oriat_larp
+		icon = GFX_goal_MON_heirs_to_amursana
+		cost = 8
+		relative_position_id = MON_lamas_fifedom
+		x = -1
+		y = 1
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_government = national_populist
+		}
+		prerequisite = { focus = MON_lamas_fifedom }
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_oriat_larp"
+			add_war_support = 0.3
+			add_popularity = {
+				ideology = national_populist popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = MON_local_prophecies
+		icon = GFX_goal_MON_myths_of_ja_lama
+		cost = 8
+		relative_position_id = MON_lamas_fifedom
+		x = 1
+		y = 1
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_government = national_populist
+		}
+		prerequisite = { focus = MON_lamas_fifedom }
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_local_prophecies"
+			add_popularity = {
+				ideology = national_populist popularity = 0.05
+			}
+			add_stability = 0.05
+			add_political_power = 100
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MON_deal_with_bogd_khan
+		icon = GFX_goal_MON_Bogd_Khan
+		cost = 8
+		relative_position_id = MON_lamas_fifedom
+		x = -1
+		y = 2
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_government = national_populist
+		}
+		prerequisite = { focus = MON_oriat_larp }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_deal_with_bogd_khan"
+			add_popularity = {
+				ideology = national_populist popularity = 0.05
+			}
+			swap_ideas = {
+				remove_idea = MON_jebtsundamba_khutuktu_NS_idea
+				add_idea = MON_9_jebtsundamba_khutuktu_idea
+			}
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = MON_burkhanism
+		icon = GFX_goal_MON_promote_black_faith
+		cost = 8
+		relative_position_id = MON_lamas_fifedom
+		x = 0
+		y = 3
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_government = national_populist
+		}
+		prerequisite = { focus = MON_deal_with_bogd_khan }
+		prerequisite = { focus = MON_embrace_nomadic_lifestyles }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_burkhanism"
+			add_ideas = MON_burkhanism
+		}
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = MON_embrace_nomadic_lifestyles
+		icon = GFX_goal_TEX_Power_to_Farmers
+		cost = 8
+		relative_position_id = MON_lamas_fifedom
+		x = 1
+		y = 2
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_government = national_populist
+		}
+		prerequisite = { focus = MON_local_prophecies }
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_embrace_nomadic_lifestyles"
+			if = {
+				limit = {
+					has_idea = MON_nomadic_society
+				}
+				swap_ideas = {
+					remove_idea = MON_nomadic_society
+					add_idea = MON_nomadic_society2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = MON_nomadic_society2
+				}
+				swap_ideas = {
+					remove_idea = MON_nomadic_society2
+					add_idea = MON_nomadic_society3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = MON_nomadic_society3
+				}
+				swap_ideas = {
+					remove_idea = MON_nomadic_society3
+					add_idea = MON_nomadic_society4
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = MON_skin_flaying
+		icon = GFX_goal_MON_new_mongolian_art
+		cost = 8
+		relative_position_id = MON_lamas_fifedom
+		x = -2
+		y = 3
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_government = national_populist
+		}
+		prerequisite = { focus = MON_deal_with_bogd_khan }
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_skin_flaying"
+			add_manpower = 500
+			add_stability = -0.04
+			add_command_power = 100
+			add_war_support = 0.05
+			country_event = {
+				id = mon.449
+				days = 5
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = MON_continue_raids
+		icon = GFX_ALA_great_raids
+		cost = 8
+		relative_position_id = MON_lamas_fifedom
+		x = 2
+		y = 3
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_government = national_populist
+		}
+		prerequisite = { focus = MON_embrace_nomadic_lifestyles }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_continue_raids"
+			if = {
+				limit = {
+					has_idea = MON_nomadic_society
+				}
+				swap_ideas = {
+					remove_idea = MON_nomadic_society
+					add_idea = MON_nomadic_society2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = MON_nomadic_society2
+				}
+				swap_ideas = {
+					remove_idea = MON_nomadic_society2
+					add_idea = MON_nomadic_society3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = MON_nomadic_society3
+				}
+				swap_ideas = {
+					remove_idea = MON_nomadic_society3
+					add_idea = MON_nomadic_society4
+				}
+			}
+			add_political_power = 100
+			add_command_power = 100
+			army_experience = 100
+		}
+		search_filters = { FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = MON_mahakala_larp
+		icon = GFX_goal_MON_mahakalas_rage
+		cost = 8
+		relative_position_id = MON_lamas_fifedom
+		x = 0
+		y = 4
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_government = national_populist
+		}
+		prerequisite = { focus = MON_skin_flaying }
+		prerequisite = { focus = MON_continue_raids }
+		prerequisite = { focus = MON_burkhanism }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_mahakala_larp"
+			swap_ideas = {
+				remove_idea = MON_burkhanism
+				add_idea = MON_mahakala_larp
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MON_expand_jas_army
+		icon = GFX_goal_MON_new_mongol_horde
+		cost = 8
+		relative_position_id = MON_lamas_fifedom
+		x = 4
+		y = 1
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_government = national_populist
+		}
+		prerequisite = { focus = MON_lamas_fifedom }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_expand_jas_army"
+			add_ideas = MON_ja_lama_army_idea
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = MON_horde_tactics
+		icon = GFX_goal_MON_legacy_of_genghis
+		cost = 8
+		relative_position_id = MON_lamas_fifedom
+		x = 3
+		y = 2
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_government = national_populist
+		}
+		prerequisite = { focus = MON_expand_jas_army }
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_horde_tactics"
+			swap_ideas = {
+				remove_idea = MON_ja_lama_army_idea
+				add_idea = MON_ja_lama_army_idea2
+			}
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = MON_guerilla_army
+		icon = GFX_GEA_counter_insurgency
+		cost = 8
+		relative_position_id = MON_lamas_fifedom
+		x = 4
+		y = 3
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_government = national_populist
+		}
+		prerequisite = { focus = MON_horde_tactics }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_guerilla_army"
+			add_ideas = MON_guerilla_army_idea
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	}
+	focus = {
+		id = MON_expand_recruitment
+		icon = MON_conscript_the_tribesmen
+		cost = 8
+		relative_position_id = MON_lamas_fifedom
+		x = 5
+		y = 2
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_government = national_populist
+		}
+		prerequisite = { focus = MON_expand_jas_army }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_expand_recruitment"
+			add_manpower = 1000
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER }
+	}
+	focus = {
+		id = MON_scavage_guns
+		icon = GFX_goal_BAN_arms_army
+		cost = 8
+		relative_position_id = MON_lamas_fifedom
+		x = 6
+		y = 3
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_government = national_populist
+		}
+		prerequisite = { focus = MON_expand_recruitment }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_scavage_guns"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 1000
+				producer = RUS
+			}
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = MON_raiding_army
+		icon = GFX_goal_generic_death
+		cost = 8
+		relative_position_id = MON_lamas_fifedom
+		x = 5
+		y = 4
+		available = {
+			has_country_flag = MON_ja_lama_in_power_flag
+			has_government = national_populist
+		}
+		prerequisite = { focus = MON_guerilla_army }
+		prerequisite = { focus = MON_scavage_guns }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_raiding_army"
+			swap_ideas = {
+				remove_idea = MON_ja_lama_army_idea2
+				add_idea = MON_ja_lama_army_idea3
+			}
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER FOCUS_FILTER_RESEARCH }
+	}
+	
+	###Shared - Foreign Rule
+	focus = {
+		id = MON_foreign_mongolia
+		icon = GFX_goal_MON_foreign_mongolia
+		cost = 0
+		x = -72
+		y = 0
+		
+		available = {
+			OR = { has_country_flag = MON_soyombo_in_power_flag has_country_flag = MON_anfu_in_power_flag }
+			has_country_flag = MON_focus_starts_flag
+			has_government = paternal_autocrat
+		}
+		bypass = {
+			OR = { has_country_flag = MON_soyombo_in_power_flag has_country_flag = MON_anfu_in_power_flag }
+			has_country_flag = MON_focus_starts_flag
+			has_government = paternal_autocrat
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_foreign_mongolia"
+		}
+	}
+	focus = {
+		id = MON_deal_with_bandits
+		icon = GFX_BBR_crush_ultraradicals
+		cost = 1
+		relative_position_id = MON_foreign_mongolia
+		x = -1
+		y = 1
+		available = {
+			OR = { has_country_flag = MON_soyombo_in_power_flag has_country_flag = MON_anfu_in_power_flag }
+			has_government = paternal_autocrat
+		}
+		prerequisite = { focus = MON_foreign_mongolia }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_deal_with_bandits"
+			add_popularity = {
+				ideology = national_populist popularity = -0.1
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = MON_control_the_monastaries
+		icon = GFX_goal_XSM_promoting_buddhism
+		cost = 1
+		relative_position_id = MON_foreign_mongolia
+		x = -2
+		y = 2
+		available = {
+			OR = { has_country_flag = MON_soyombo_in_power_flag has_country_flag = MON_anfu_in_power_flag }
+			has_government = paternal_autocrat
+		}
+		prerequisite = { focus = MON_deal_with_bandits }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_control_the_monastaries"
+			add_popularity = {
+				ideology = paternal_autocrat popularity = 0.1
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = MON_deal_with_democrats
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 1
+		relative_position_id = MON_foreign_mongolia
+		x = 1
+		y = 1
+		available = {
+			OR = { has_country_flag = MON_soyombo_in_power_flag has_country_flag = MON_anfu_in_power_flag }
+			has_government = paternal_autocrat
+		}
+		prerequisite = { focus = MON_foreign_mongolia }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_deal_with_democrats"
+			add_popularity = {
+				ideology = social_democrat popularity = -0.1
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = MON_nobility_problem
+		icon = GFX_goal_TEX_wealth_ceiling
+		cost = 1
+		relative_position_id = MON_foreign_mongolia
+		x = 2
+		y = 2
+		available = {
+			OR = { has_country_flag = MON_soyombo_in_power_flag has_country_flag = MON_anfu_in_power_flag }
+			has_government = paternal_autocrat
+		}
+		prerequisite = { focus = MON_deal_with_democrats }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_nobility_problem"
+			add_popularity = {
+				ideology = authoritarian_democrat popularity = -0.1
+			}
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = MON_end_gada_meiren
+		icon = GFX_goal_HOL_crackdown_radsoc
+		cost = 1
+		relative_position_id = MON_foreign_mongolia
+		x = 0
+		y = 2
+		available = {
+			OR = { has_country_flag = MON_soyombo_in_power_flag has_country_flag = MON_anfu_in_power_flag }
+			has_government = paternal_autocrat
+		}
+		prerequisite = { focus = MON_foreign_mongolia }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_end_gada_meiren"
+			add_popularity = {
+				ideology = radical_socialist popularity = -0.1
+			}
+		}
+		search_filters = { FOCUS_FILTER_STABILITY }
+	}
+	focus = {
+		id = MON_drive_out_the_russians
+		icon = GFX_goal_MON_we_dont_need_russia
+		cost = 1
+		relative_position_id = MON_foreign_mongolia
+		mutually_exclusive = {
+			focus = MON_drive_out_the_chinese
+		}
+		x = 1
+		y = 3
+		available = {
+			has_country_flag = MON_anfu_in_power_flag 
+			has_government = paternal_autocrat
+		}
+		prerequisite = { focus = MON_nobility_problem }
+		prerequisite = { focus = MON_end_gada_meiren }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_drive_out_the_russians"
+			add_popularity = {
+				ideology = paternal_autocrat popularity = 0.05
+			}
+			add_manpower = -500
+			add_political_power = 100
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	focus = {
+		id = MON_drive_out_the_chinese
+		icon = GFX_goal_generic_expel_people
+		cost = 1
+		relative_position_id = MON_foreign_mongolia
+		mutually_exclusive = {
+			focus = MON_drive_out_the_russians
+		}
+		x = -1
+		y = 3
+		available = {
+			has_country_flag = MON_soyombo_in_power_flag
+			has_government = paternal_autocrat
+		}
+		prerequisite = { focus = MON_control_the_monastaries }
+		prerequisite = { focus = MON_end_gada_meiren }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_drive_out_the_chinese"
+			add_popularity = {
+				ideology = paternal_autocrat popularity = 0.05
+			}
+			add_manpower = -500
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = MON_anfu
+		icon = GFX_goal_MON_Anfu_Club
+		cost = 1
+		relative_position_id = MON_foreign_mongolia
+		x = 1
+		y = 4
+		available = {
+			has_country_flag = MON_anfu_in_power_flag 
+			has_government = paternal_autocrat
+			NOT = {
+				has_country_flag = MON_bandits_occupy_uliastai
+				has_country_flag = MON_bandits_occupy_tuva
+			}
+		}
+		prerequisite = { focus = MON_drive_out_the_russians }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_anfu"
+			add_stability = 0.15
+			add_war_support = 0.15
+			set_country_flag = MON_nation_is_stabilised_flag
+			clr_country_flag = MON_other_factions_can_take_control_flag
+			remove_unit_leader = 1157
+			remove_unit_leader = 1159
+			remove_unit_leader = 1153
+			remove_unit_leader = 1152
+			remove_unit_leader = 1151
+			remove_unit_leader = 11523
+			remove_unit_leader = 11524
+			remove_unit_leader = 11525
+			remove_unit_leader = 11526
+			hidden_effect = {
+				country_event = {
+					id = mon.463
+					days = 120
+					random = 10
+				}
+				country_event = {
+					id = mon.464
+					days = 200
+					random = 10
+				}
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						OR = {
+							is_chinese_tag = yes
+							tag = RUS
+							tag = JAP
+							tag = TRM
+						}
+					}
+					news_event = { #
+						id = mon.656
+						days = 1
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = MON_srs
+		icon = GFX_goal_MON_soyombo_revival_society
+		cost = 1
+		relative_position_id = MON_foreign_mongolia
+		x = -1
+		y = 4
+		available = {
+			has_country_flag = MON_soyombo_in_power_flag
+			has_government = paternal_autocrat
+			NOT = {
+				has_country_flag = MON_bandits_occupy_uliastai
+				has_country_flag = MON_bandits_occupy_tuva
+			}
+		}
+		prerequisite = { focus = MON_drive_out_the_chinese }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_anfu"
+			add_stability = 0.15
+			add_war_support = 0.15
+			set_country_flag = MON_nation_is_stabilised_flag
+			clr_country_flag = MON_other_factions_can_take_control_flag
+			hidden_effect = {
+				country_event = {
+					id = mon.466
+					days = 75
+					random = 10
+				}
+				country_event = {
+					id = mon.467
+					days = 120
+					random = 10
+				}
+				country_event = {
+					id = mon.468
+					days = 200
+					random = 10
+				}
+				country_event = {
+					id = mon.469
+					days = 220
+					random = 20
+				}
+				country_event = {
+					id = mon.658
+					days = 330
+					random = 30
+				}
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						OR = {
+							is_chinese_tag = yes
+							tag = RUS
+							tag = JAP
+							tag = TRM
+						}
+					}
+					news_event = { #
+						id = mon.657
+						days = 1
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+	}
+
+	focus = {
+		id = MON_cuck_to_trm
+		icon = GFX_goal_MON_kneel_vladivistok
+		
+		cost = 8
+		relative_position_id = MON_end_gada_meiren
+		mutually_exclusive = {
+			focus = MON_cuck_to_russia
+		}
+		x = -6
+		y = 3
+		available = {
+			has_country_flag = MON_soyombo_in_power_flag 
+			has_government = paternal_autocrat
+			TRM = {
+				has_socialist_government = no
+			}
+		}
+		prerequisite = { focus = MON_srs }
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 10
+				has_game_rule = {
+					rule = MON_path
+					option = MON_UNGERN_DIES_SOYOMBO_TRM
+				}
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = MON_path
+					option = MON_UNGERN_DIES_SOYOMBO
+				}
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_cuck_to_trm"
+			get_current_government_type = yes
+			TRM = {
+				set_autonomy = {
+					target = MON
+					autonomy_state = kr_default_puppet
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
+	}
+		
+	focus = {
+		id = MON_russian_immigration
+		icon = GFX_NEE_immigrant_aid
+		cost = 8
+		relative_position_id = MON_end_gada_meiren
+		x = -7
+		y = 4
+		available = {
+			has_country_flag = MON_soyombo_in_power_flag 
+			has_government = paternal_autocrat
+		}
+		prerequisite = {
+			focus = MON_cuck_to_russia 
+			focus = MON_cuck_to_trm
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_russian_immigration"
+			330 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1084 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
+	}
+	
+	focus = {
+		id = MON_invite_cossacks
+		icon = MON_strike_at_the_cossaks
+		cost = 8
+		relative_position_id = MON_end_gada_meiren
+		x = -5
+		y = 4
+		available = {
+			has_country_flag = MON_soyombo_in_power_flag 
+			has_government = paternal_autocrat
+		}
+		prerequisite = {
+			focus = MON_cuck_to_russia 
+			focus = MON_cuck_to_trm
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_invite_cossacks"
+			add_ideas = MON_cossack_army_idea
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_POLITICAL }
+	}
+	
+	focus = {
+		id = MON_russian_colonization
+		icon = GFX_goal_PAL_Russian_Refugees
+		cost = 8
+		relative_position_id = MON_end_gada_meiren
+		x = -7
+		y = 6
+		available = {
+			has_country_flag = MON_soyombo_in_power_flag 
+			has_government = paternal_autocrat
+		}
+		prerequisite = { focus = MON_russian_alphabet }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_russian_colonization"
+			swap_ideas = {
+				remove_idea = MON_russian_colonization_idea
+				add_idea = MON_russian_colonization_idea2
+			}
+			country_event = {
+				id = mongolia.151
+				days = 5
+			}
+		}
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
+	}
+	
+	focus = {
+		id = MON_russian_alphabet
+		icon = GFX_goal_generic_enforced_beleifs
+		cost = 8
+		relative_position_id = MON_end_gada_meiren
+		x = -6
+		y = 5
+		available = {
+			has_country_flag = MON_soyombo_in_power_flag 
+			has_government = paternal_autocrat
+		}
+		prerequisite = { focus = MON_russian_immigration }
+		prerequisite = { focus = MON_invite_cossacks }
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_russian_alphabet"
+			remove_ideas = MON_russian_colonization_idea
+			swap_ideas = {
+				remove_idea = MON_cossack_army_idea
+				add_idea = MON_cossack_army_idea2
+			}
+			country_event = {
+				id = mongolia.152
+				days = 2
+			}
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
+	}
+		
+	focus = {
+		id = MON_take_care_of_khan
+		icon = GFX_goal_MON_Bogd_Khan
+		cost = 8
+		relative_position_id = MON_end_gada_meiren
+		x = -5
+		y = 6
+		available = {
+			has_country_flag = MON_soyombo_in_power_flag 
+			has_government = paternal_autocrat
+		}
+		prerequisite = { focus = MON_russian_alphabet }
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_take_care_of_khan"
+			add_popularity = {
+				ideology = paternal_autocrat popularity = 0.05
+			}
+			country_event = {
+				id = mon.469
+				days = 2
+			}
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_POLITICAL }
+	}
+		
+	focus = {
+		id = MON_foreign_research
+		icon = GFX_goal_double_research
+		
+		cost = 8
+		relative_position_id = MON_end_gada_meiren
+		x = 0
+		y = 3
+		available = {
+			OR = { has_country_flag = MON_soyombo_in_power_flag has_country_flag = MON_anfu_in_power_flag }
+			has_government = paternal_autocrat
+		}
+		prerequisite = { 
+			focus = MON_anfu 
+			focus = MON_srs 
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_foreign_research"
+			add_research_slot = 1
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+		
+	focus = {
+		id = MON_cuck_to_russia
+		icon = GFX_goal_MON_kneel_moscow
+		
+		cost = 8
+		relative_position_id = MON_end_gada_meiren
+		x = -2
+		y = 3
+		mutually_exclusive = {
+			focus = MON_cuck_to_trm
+		}
+		available = {
+			OR = { has_country_flag = MON_soyombo_in_power_flag has_country_flag = MON_anfu_in_power_flag }
+			has_government = paternal_autocrat
+			RUS = {
+				exists = yes
+				NOT = {
+					has_socialist_government = yes
+				}
+			}
+		}
+		bypass = {
+			NOT = {
+				country_exists = RUS
+			}
+			TRM = {
+				has_socialist_government = yes
+			}
+		}
+		prerequisite = { focus = MON_srs }
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 10
+				has_game_rule = {
+					rule = MON_path
+					option = MON_UNGERN_DIES_SOYOMBO
+				}
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = MON_path
+					option = MON_UNGERN_DIES_SOYOMBO_TRM
+				}
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_cuck_to_russia"
+			get_current_government_type = yes
+			RUS = {
+				set_autonomy = {
+					target = MON
+					autonomy_state = kr_default_puppet
+				}
+			}
+			restore_previous_government_type = yes
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_BONUS }
+	}
+		
+	focus = {
+		id = MON_rally_ungern_loyalists
+		icon = Mon_rus_not_watch
+		cost = 8
+		relative_position_id = MON_end_gada_meiren
+		x = -3
+		y = 4
+		available = {
+			OR = { has_country_flag = MON_soyombo_in_power_flag has_country_flag = MON_anfu_in_power_flag }
+			has_government = paternal_autocrat
+		}
+		prerequisite = {
+			focus = MON_cuck_to_russia 
+			focus = MON_cuck_to_trm
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_rally_ungern_loyalists"
+			add_manpower = 2500
+			add_command_power = 100
+			army_experience = 100
+			add_popularity = {
+				ideology = paternal_autocrat popularity = 0.05
+			}
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_POLITICAL }
+	}
+		
+	focus = {
+		id = MON_end_of_nomadicism
+		icon = GFX_goal_generic_industrial_planning
+		cost = 8
+		relative_position_id = MON_end_gada_meiren
+		x = -1
+		y = 4
+		mutually_exclusive = { focus = MON_grant_mongolian_rights }
+		available = {
+			OR = { has_country_flag = MON_soyombo_in_power_flag has_country_flag = MON_anfu_in_power_flag }
+			has_government = paternal_autocrat
+		}
+		prerequisite = { focus = MON_foreign_research }
+		prerequisite = {
+			focus = MON_cuck_to_russia 
+			focus = MON_cuck_to_trm
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_end_of_nomadicism"
+			remove_ideas = MON_nomadic_society
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
+	}
+	
+	focus = {
+		id = MON_revenge_on_japan
+		icon = GFX_goal_MON_Manchuria
+		cost = 5
+		relative_position_id = MON_end_gada_meiren
+		x = -1
+		y = 5
+		available = {
+			OR = { has_country_flag = MON_soyombo_in_power_flag has_country_flag = MON_anfu_in_power_flag }
+			has_government = paternal_autocrat
+		}
+		prerequisite = { focus = MON_end_of_nomadicism }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_revenge_on_japan"
+			unlock_decision_tooltip = MON_attack_the_fng_decision
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+	}
+		
+	focus = {
+		id = MON_yellow_russia
+		icon = GFX_goal_MON_white_zhelto
+		cost = 8
+		relative_position_id = MON_end_gada_meiren
+		x = -1
+		y = 6
+		available = {
+			OR = { has_country_flag = MON_soyombo_in_power_flag has_country_flag = MON_anfu_in_power_flag }
+			has_government = paternal_autocrat
+			NOT = {
+				country_exists = FNG
+			}
+		}
+		prerequisite = { focus = MON_revenge_on_japan }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_yellow_russia"
+			set_cosmetic_tag = MON_Yellow_RUS
+			add_popularity = {
+				ideology = paternal_autocrat popularity = 0.05
+			}
+			country_event = {
+				id = mon.470
+				days = 3
+			}
+		}
+		search_filters = { FOCUS_FILTER_STABILITY }
+	}
+		
+	focus = {
+		id = MON_promise_autonomy
+		icon = GFX_goal_MON_deal
+		
+		cost = 8
+		relative_position_id = MON_end_gada_meiren
+		mutually_exclusive = {
+			focus = MON_New_Administration
+		}
+		x = 2
+		y = 3
+		available = {
+			has_country_flag = MON_anfu_in_power_flag 
+			has_government = paternal_autocrat
+		}
+		prerequisite = { focus = MON_anfu }
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_promise_autonomy"
+			add_political_power = -100
+			add_stability = 0.05
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	
+	focus = {
+		id = MON_mondernize_mongolia
+		icon = GFX_goal_BUL_mechanize_farming
+		cost = 8
+		relative_position_id = MON_end_gada_meiren
+		x = 3
+		y = 4
+		available = {
+			has_country_flag = MON_anfu_in_power_flag 
+			has_government = paternal_autocrat
+		}
+		prerequisite = { 
+			focus = MON_promise_autonomy 
+			focus = MON_New_Administration
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_mondernize_mongolia"
+			remove_ideas = MON_nomadic_society
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+		
+	focus = {
+		id = MON_grant_mongolian_rights
+		icon = GFX_goal_goal_NGR_native_rights
+		cost = 8
+		relative_position_id = MON_end_gada_meiren
+		x = 1
+		y = 4
+		mutually_exclusive = { focus = MON_end_of_nomadicism }
+		available = {
+			has_country_flag = MON_anfu_in_power_flag 
+			has_government = paternal_autocrat
+		}
+		prerequisite = { focus = MON_promise_autonomy }
+		prerequisite = { focus = MON_foreign_research }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_grant_mongolian_rights"
+			add_ideas = MON_mongolian_accomidation
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+		
+	focus = {
+		id = MON_use_mongol_military
+		icon = GFX_focus_generic_military_equipment
+		cost = 5
+		relative_position_id = MON_end_gada_meiren
+		x = 1
+		y = 5
+		available = {
+			has_country_flag = MON_anfu_in_power_flag 
+			has_government = paternal_autocrat
+		}
+		prerequisite = { focus = MON_grant_mongolian_rights }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_use_mongol_military"
+			add_ideas = MON_mongol_chinese_army
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY }
+	}
+		
+	focus = {
+		id = MON_exchanges_for_independence
+		icon = GFX_goal_china_deal
+		cost = 8
+		relative_position_id = MON_end_gada_meiren
+		x = 1
+		y = 6
+		available = {
+			has_country_flag = MON_anfu_in_power_flag 
+			has_government = paternal_autocrat
+		}
+		prerequisite = { focus = MON_use_mongol_military }
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_exchanges_for_independence"
+			add_command_power = 100
+			army_experience = 100
+			add_political_power = 100
+			swap_ideas = {	
+				remove_idea = MON_mongol_chinese_army
+				add_idea = MON_mongol_chinese_army2
+			}
+			set_country_flag = MON_move_to_reclaim_china
+			set_country_flag = MON_gonna_free_MON
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+		
+	focus = {
+		id = MON_New_Administration
+		icon = GFX_goal_MON_new_administrationism
+		cost = 8
+		relative_position_id = MON_end_gada_meiren
+		x = 6
+		y = 3
+		available = {
+			has_country_flag = MON_anfu_in_power_flag 
+			has_government = paternal_autocrat
+		}
+		mutually_exclusive = {
+			focus = MON_promise_autonomy
+		}
+		prerequisite = { focus = MON_anfu }
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_New_Administration"
+			add_political_power = 100
+			add_stability = -0.05
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+	}
+	
+	focus = {
+		id = MON_chinese_colonization
+		icon = GFX_goal_generic_republic
+		cost = 8
+		relative_position_id = MON_end_gada_meiren
+		x = 5
+		y = 4
+		available = {
+			has_country_flag = MON_anfu_in_power_flag 
+			has_government = paternal_autocrat
+		}
+		prerequisite = { focus = MON_New_Administration }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_chinese_colonization"
+			add_manpower = 2500
+		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_STABILITY }
+	}
+		
+	focus = {
+		id = MON_forced_sinification
+		icon = GFX_goal_forced_res
+		cost = 8
+		relative_position_id = MON_end_gada_meiren
+		x = 7
+		y = 4
+		available = {
+			has_country_flag = MON_anfu_in_power_flag 
+			has_government = paternal_autocrat
+		}
+		prerequisite = { focus = MON_New_Administration }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_forced_sinification"
+			add_ideas = MON_forced_sinification
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+	
+	focus = {
+		id = MON_erode_faith
+		icon = GFX_focus_SAF_colonialist_crusade2
+		cost = 8
+		relative_position_id = MON_end_gada_meiren
+		x = 6
+		y = 5
+		available = {
+			has_country_flag = MON_anfu_in_power_flag 
+			has_government = paternal_autocrat
+		}
+		prerequisite = { focus = MON_chinese_colonization }
+		prerequisite = { focus = MON_forced_sinification }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_erode_faith"
+			add_stability = 0.05
+			add_ideas = MON_chinese_colonization_idea
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+	}
+		
+	focus = {
+		id = MON_control_the_khan
+		icon = GFX_goal_generic_controlled_board
+		cost = 8
+		relative_position_id = MON_end_gada_meiren
+		x = 5
+		y = 6
+		available = {
+			has_country_flag = MON_anfu_in_power_flag 
+			has_government = paternal_autocrat
+		}
+		prerequisite = { focus = MON_erode_faith }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_control_the_khan"
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.05
+			}
+			add_stability = 0.05
+			add_political_power = 100
+			add_command_power = 100
+			country_event = {
+				id = mon.465
+				days = 2
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+	}
+	
+	focus = {
+		id = MON_breed_out_mongols
+		icon = GFX_goal_CSA_green_fields_program
+		cost = 8
+		relative_position_id = MON_end_gada_meiren
+		x = 7
+		y = 6
+		available = {
+			has_country_flag = MON_anfu_in_power_flag 
+			has_government = paternal_autocrat
+		}
+		prerequisite = { focus = MON_erode_faith }
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus MON_breed_out_mongols"
+			swap_ideas = {
+				add_idea = MON_chinese_colonization_idea2
+				remove_idea = MON_chinese_colonization_idea
+			}
+			set_country_flag = MON_move_to_reclaim_china
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}

@@ -341,7 +341,7 @@ amcivwar.1.a:0 "The disaster has begun. Stand by the Republic"
 amcivwar.1.b:0 "The revolution has begun. Stand by the Workers (Play as the CSA)"
 
 amcivwar.1001.t:0 "Old Democrats Revolt"
-amcivwar.1001.d:0 "William H. Murray has given a speech that he will not stand for leftist tyranny, racial degeneration, and federal corruption that lead to the empowerment of the CSA and the rise of the anti-Klan MacArthur. On behalf of the Old Democrats and all 'fellow true-blooded Americans' he declared a formal revolt for libery, morality and white protestantism. Throughout the American Southeast the Old Democrat and White League aligned governors and militias are signing a Manifesto in favor of a fully 'Constitutional American Republic' that does not trample the heritage of the American people and fights against socialist immorality. White Leagues are currently attempting to maintain control of the border states that make up this new state before the Federal government, Minutemen and socialists attack."
+amcivwar.1001.d:0 "William H. Murray has given a speech that he will not stand for leftist tyranny, racial degeneration, and federal corruption that lead to the empowerment of the CSA and the rise of the anti-Klan MacArthur. On behalf of the Old Democrats and all 'fellow true-blooded Americans' he declared a formal revolt for liberty, morality and White protestantism. Throughout the American Southeast the Old Democrat and White League aligned governors and militias are signing a Manifesto in favor of a fully 'Constitutional American Republic' that does not trample the heritage of the American people and fights against socialist immorality. White Leagues are currently attempting to maintain control of the border states that make up this new state before the Federal government, Minutemen and socialists attack."
 amcivwar.1001.a:0 "The disaster has begun. Stand by the Republic"
 amcivwar.1001.b:0 "Stand by the Nation (Play as the CAR)"
 
@@ -464,7 +464,7 @@ amcivwar.4005.a:0 "Yes, send the offer"
 amcivwar.4005.b:0 "I don't trust snakes"
 
 amcivwar.4006.t:0 "Long's Demands"
-amcivwar.4006.d:0 "Long has received our offer and has agreed to be constrained by the Constitution. However he has demanded that a national election be held as soon as the region is reunited, desires benefits for the Share the Wealth Society within our territory and has called on the PSA leadership to announce that Long is doing all he can to save American Democracy and to allow recruitemnt within their territory. It seems even in a time of war the Kingfish still has political maneuvering on the mind."
+amcivwar.4006.d:0 "Long has received our offer and has agreed to be constrained by the Constitution. However he has demanded that a national election be held as soon as the region is reunited, desires benefits for the Share the Wealth Society within our territory and has called on the PSA leadership to announce that Long is doing all he can to save American Democracy and to allow recruitment within their territory. It seems even in a time of war the Kingfish still has political maneuvering on the mind."
 amcivwar.4006.a:0 "Still accept"
 amcivwar.4006.b:0 "Screw this, withdraw our offer"
 
@@ -1597,7 +1597,7 @@ amcivwar.616.d:0 "While the emergency reserves were called up for the war, now t
 amcivwar.616.a:0 "Time to rest, dear veterans"
 
 amcivwar.617.t:0 "The Vatican offers military aid to Huey Long"
-amcivwar.617.d:0 "In a rather surprising gesture of solidarity, the Vatican, under the auspices of the current Pope, has extended the offer of both weapons and supplies to the Union State. Even better, they have gone so far as to send fighting men, many of them formed from the ranks of French and Italian volunteers, to aid the Minutemen in freeing America from corruption and syndicalism. This has come as a shock to the Long administration; it's been well known that America is a largely Protestant with the Catholic population, whilst large as well, mostly residing in the greater area of New England, some of them only living as far south as southern Maryland, all well out of the reach of the American Union State at present. However, Texas has a significant Catholic population, and Louisiana has Catholic sympathies as well, making it a reasonable offer on the part of the Pope. While Huey Long personally would attribute this gesture to traditional Catholic virtues of charity and diligence, as most would, some among the upper echelons of the AFP, particularly the devout Protestant Gerald L. K. Smith, despise the notion of Roman Catholic intervention, urging Huey Long to refute any attempt by the Vatican to potentially expand their influence in North America. In particular, they cite the Catholic unrest in Mexico as an example of the Papacy's 'corrosive attempt to uproot the values of the Free World'. While one can easily dismiss Smith's ravings as unfair and bigoted, the ultimate decision rests with Huey Long."
+amcivwar.617.d:0 "In a rather surprising gesture of solidarity, the Vatican, under the auspices of the current Pope, has extended the offer of both weapons and supplies to the Union State. Even better, they have gone so far as to send fighting men, many of them formed from the ranks of French and Italian volunteers, to aid the Minutemen in freeing America from corruption and syndicalism. This has come as a shock to the Long administration; it's been well known that America is largely Protestant with the Catholic population, whilst large as well, mostly residing in the greater area of New England, some of them only living as far south as southern Maryland, all well out of the reach of the American Union State at present.\n\n However, Texas has a significant Catholic population, and Louisiana has Catholic sympathies as well, making it a reasonable offer on the part of the Pope. While Huey Long personally would attribute this gesture to traditional Catholic virtues of charity and diligence, as most would, some among the upper echelons of the AFP, particularly the devout Protestant Gerald L. K. Smith, despise the notion of Roman Catholic intervention, urging Huey Long to refute any attempt by the Vatican to potentially expand their influence in North America. In particular, they cite the Catholic unrest in Mexico as an example of the Papacy's 'corrosive attempt to uproot the values of the Free World'. While one can easily dismiss Smith's ravings as unfair and bigoted, the ultimate decision rests with Huey Long."
 amcivwar.617.a:0 "Send our thanks to His Holiness, but we have things under control."
 amcivwar.617.b:0 "Smith's just being paranoid, we need rifles, damn it!"
 
@@ -1793,9 +1793,9 @@ amcivwar.658.t:0 "Power of Organized Crime"
 amcivwar.658.d:0 "Criminals have grown only more powerful due to our recent woes and the countries chaotic states, with many citizens relying on them to gain black market goods and many internal policing and legislative services being in their pocket. As they have no loyalty to us they seemingly do not care how much they are costing us or that they undermine our citizens belief in their government. To deal with this level of organized crime will take time."
 amcivwar.658.a:0 "Mob Scum!"
 
-amcivwar.659.t:0 "Crime Falls"
-amcivwar.659.d:0 "Our recent investment at investigating and arresting criminals using what some call questionable means has borne fruit. The formally organized mobs have collapsed and returned to either being small-time operation or independent criminals who no longer cause major damage to society."
-amcivwar.659.a:0 ""
+amcivwar.663.t:0 "Crime Falls"
+amcivwar.663.d:0 "Our recent investment at investigating and arresting criminals using what some call questionable means has borne fruit. The formally organized mobs have collapsed and returned to either being small-time operation or independent criminals who no longer cause major damage to society."
+amcivwar.663.a:0 "Thank God"
 
 ##REBELS Black Nationalist
 

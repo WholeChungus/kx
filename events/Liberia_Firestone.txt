@@ -136,7 +136,7 @@ country_event = {
 		name = fire.6.a
 		create_country_leader = {
 			name = "Edwin Barclay"
-			desc = "POLITICS_BARCLAY_DESC"
+			desc = "POLITICS_EDWIN_BARCLAY_DESC"
 			picture = "Portrait_LIB_Edwin_Barclay_KR.tga"
 			expire = "1965.1.1"
 			ideology = paternal_autocrat_subtype
@@ -158,7 +158,7 @@ country_event = {
 		name = fire.6.b
 		create_country_leader = {
 			name = "Charles D. B. King"
-			desc = "POLITICS_KING_DESC"
+			desc = "POLITICS_CHARLES_KING_DESC"
 			picture = "Portrait_LIB_Charles_D_B_King.tga"
 			expire = "1965.1.1"
 			ideology = paternal_autocrat_subtype
@@ -400,7 +400,7 @@ country_event = { #Puppet Elections
 		add_political_power = 100
 		hidden_effect = {
 			add_ideas = {
-				LIB_Edwin_James_Barclay_hog_sco
+				LIB_Harvey_Firestone_hog_mli
 				LIB_George_S_Padmore_for_sco
 				LIB_J_A_Railey_eco_sco
 				LIB_Frank_Emmanuel_Tolbert_sec_sco

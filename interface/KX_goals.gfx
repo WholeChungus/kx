@@ -1,5 +1,113 @@
 SpriteTypes = {
 	SpriteType = {
+		name = "GFX_goal_YUN_byebye_whitey"
+		texturefile = "gfx/interface/goals/GFX_goal_YUN_byebye_whitey.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_COS_buy_all_of_ca"
+		texturefile = "gfx/interface/goals/GFX_goal_COS_buy_all_of_ca.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_COS_eat_ven"
+		texturefile = "gfx/interface/goals/GFX_goal_COS_eat_ven.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_COS_prussian_larpgang"
+		texturefile = "gfx/interface/goals/GFX_goal_COS_prussian_larpgang.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_COS_buy_canal"
+		texturefile = "gfx/interface/goals/GFX_goal_COS_buy_canal.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_COS_coffee_nic_gang"
+		texturefile = "gfx/interface/goals/GFX_goal_COS_coffee_nic_gang.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_COS_buy_ca_coffee"
+		texturefile = "gfx/interface/goals/GFX_goal_COS_buy_ca_coffee.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_COS_puerto_rico"
+		texturefile = "gfx/interface/goals/GFX_goal_COS_puerto_rico.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_COS_gayca"
+		texturefile = "gfx/interface/goals/GFX_goal_COS_gayca.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_COS_gaynic"
+		texturefile = "gfx/interface/goals/GFX_goal_COS_gaynic.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_COS_gayking"
+		texturefile = "gfx/interface/goals/GFX_goal_COS_gayking.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_COS_germsinaroom"
+		texturefile = "gfx/interface/goals/GFX_goal_COS_germsinaroom.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_COS_reichgang"
+		texturefile = "gfx/interface/goals/GFX_goal_COS_reichgang.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_COS_germancuck"
+		texturefile = "gfx/interface/goals/GFX_goal_COS_germancuck.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_YUN_opium_road"
+		texturefile = "gfx/interface/goals/GFX_goal_YUN_opium_road.tga"
+	}
+	SpriteType = {
+		name = "GFX_goals_YUN_epic_snek"
+		texturefile = "gfx/interface/goals/GFX_goals_YUN_epic_snek.tga"
+	}
+	SpriteType = {
+		name = "GFX_goals_crush_republicanism"
+		texturefile = "gfx/interface/goals/GFX_goals_crush_republicanism.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_YUN_this_is_acutally_art"
+		texturefile = "gfx/interface/goals/GFX_goal_YUN_this_is_acutally_art.tga"
+	}
+	SpriteType = {
+		name = "GFX_goals_YUN_poetry"
+		texturefile = "gfx/interface/goals/GFX_goals_YUN_poetry.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_YUN_actual_oldass_tang"
+		texturefile = "gfx/interface/goals/GFX_goal_YUN_actual_oldass_tang.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_YUN_legalism_gang"
+		texturefile = "gfx/interface/goals/GFX_goal_YUN_legalism_gang.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_YUN_mandate_restored"
+		texturefile = "gfx/interface/goals/GFX_goal_YUN_mandate_restored.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_YUN_gib_money_plz"
+		texturefile = "gfx/interface/goals/GFX_goal_YUN_gib_money_plz.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_YUN_great_tang_cool"
+		texturefile = "gfx/interface/goals/GFX_goal_YUN_great_tang_cool.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_YUN_tang_code"
+		texturefile = "gfx/interface/goals/GFX_goal_YUN_tang_code.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_YUN_tang_is_back"
+		texturefile = "gfx/interface/goals/GFX_goal_YUN_tang_is_back.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_YUN_tao_revival"
+		texturefile = "gfx/interface/goals/GFX_goal_YUN_tao_revival.tga"
+	}
+	SpriteType = {
 		name = "GFX_NEE_nonrosary_for_protestant_fucks"
 		texturefile = "gfx/interface/goals/GFX_NEE_nonrosary_for_protestant_fucks.tga"
 	}
@@ -3908,6 +4016,10 @@ SpriteTypes = {
 		name = "GFX_goal_ITA_dannunzio"
 		texturefile = "gfx/interface/goals/ITA_dannunzio.tga"
 	}
+	spriteType = {
+		name = "GFX_goal_ITA_italy"
+		texturefile = "gfx/interface/goals/ITA_italy.tga"
+	}
 	SpriteType = {
 	    name = "GFX_goal_SOV_tukhachevsky"
 	    texturefile= "gfx/interface/goals/SOV_tukhachevsky.dds"
@@ -6167,7 +6279,7 @@ SpriteTypes = {
 		texturefile = "gfx/interface/goals/MON_invasion_of_persia.tga"
 	}
 	SpriteType = {
-		name = "MON_put_an_end_to_qing_rule"
+		name = "goal_MON_put_an_end_to_qing_rule"
 		texturefile = "gfx/interface/goals/MON_put_an_end_to_qing_rule.tga"
 	}
 	
@@ -6372,6 +6484,42 @@ SpriteTypes = {
 	SpriteType = {# Conquer Colombia
 		name = "GFX_CAR_conquer_colombia"
 		texturefile = "gfx/interface/goals/GFX_CAR_conquer_colombia.tga"
+	}
+	SpriteType = {# Conquer Ecuador
+		name = "GFX_CAR_conquer_ecuador"
+		texturefile = "gfx/interface/goals/GFX_CAR_conquer_ecuador.tga"
+	}
+	SpriteType = {# Conquer Peru
+		name = "GFX_CAR_conquer_peru"
+		texturefile = "gfx/interface/goals/GFX_CAR_conquer_peru.tga"
+	}
+	SpriteType = {# Conquer Bolivia
+		name = "GFX_CAR_conquer_bolivia"
+		texturefile = "gfx/interface/goals/GFX_CAR_conquer_bolivia.tga"
+	}
+	SpriteType = {# Conquer Chile
+		name = "GFX_CAR_conquer_chile"
+		texturefile = "gfx/interface/goals/GFX_CAR_conquer_chile.tga"
+	}
+	SpriteType = {# Conquer La Plata
+		name = "GFX_CAR_conquer_la_plata"
+		texturefile = "gfx/interface/goals/GFX_CAR_conquer_la_plata.tga"
+	}
+	SpriteType = {# Conquer Yucatan
+		name = "GFX_CAR_conquer_yucatan"
+		texturefile = "gfx/interface/goals/GFX_CAR_conquer_yucatan.tga"
+	}
+	SpriteType = {# Conquer Florida
+		name = "GFX_CAR_conquer_florida"
+		texturefile = "gfx/interface/goals/GFX_CAR_conquer_florida.tga"
+	}
+	SpriteType = {# Conquer Philippines
+		name = "GFX_CAR_conquer_philippines"
+		texturefile = "gfx/interface/goals/GFX_CAR_conquer_philippines.tga"
+	}
+	SpriteType = {# Conquer California
+		name = "GFX_CAR_conquer_california"
+		texturefile = "gfx/interface/goals/GFX_CAR_conquer_california.tga"
 	}
 	SpriteType = {
 		name = "GFX_ITA_aid"

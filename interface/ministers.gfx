@@ -852,6 +852,41 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/ALG/ALG_Mostefa_Ben_Boulaid.tga"
 	}
 
+
+	spriteType = {
+		name = "GFX_idea_KYR_Mustafa_Shokay_hog_sli"
+		texturefile = "gfx/interface/ministers/ALO/ALO_Mustafa_Shokay.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_KYR_Seraly_Lapin_hog_ade"
+		texturefile = "gfx/interface/ministers/ALO/KYR_Seraly_Lapin.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_KYR_Makhmudov_Abidzhan_for_sli"
+		texturefile = "gfx/interface/ministers/ALO/ALO_Asanbey_Askarov.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_KYR_Koschegulov_Shaymardan_for_ade"
+		texturefile = "gfx/interface/ministers/ALO/KYR_Koschegulov_Shaymardan.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_KYR_Abdurakhman_Urazayev_eco_sli"
+		texturefile = "gfx/interface/ministers/ALO/KYR_Abdurakhman_Urazayev.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_KYR_Sanjar_Asfendiyarov_eco_ade"
+		texturefile = "gfx/interface/ministers/ALO/KYR_Sanjar_Asfendiyarov.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_KYR_Mukhamedzhan_Tynyshpaev_sec_sli"
+		texturefile = "gfx/interface/ministers/ALO/KYR_Mukhamedzhan_Tynyshpaev.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_KYR_Ergash_Kurbashi_sec_ade"
+		texturefile = "gfx/interface/ministers/ALO/KYR_Ergash_Kurbashi.tga"
+	}
+
+
   ################################################################################################################################################################################################
   ### ALO
   ################################################################################################################################################################################################
@@ -2798,6 +2833,112 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_AUS_Edmund_Glaise_von_Horstenau_hog_pau"
 		texturefile = "gfx/interface/ministers/AUS/AUS_Edmund_Glaise_von_Horstenau.tga"
+	}
+	
+	################################################################################################################################################################################################
+  ### ASY
+  ################################################################################################################################################################################################
+
+	### Head of Government
+	spriteType = {
+		name = "GFX_idea_ASY_Malik_Yosep_Khoshaba_hog_sco"
+		texturefile = "gfx/interface/ministers/ASY/ASY_Malik_Yosep_Khoshaba.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ASY_Mar_Yosip_Khnanisho_hog_ade"
+		texturefile = "gfx/interface/ministers/ASY/ASY_Mar_Yosip_Khnanisho.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ASY_Surma_D'Bait_Mar_Shimun_hog_npo"
+		texturefile = "gfx/interface/ministers/ASY/ASY_Surma_D'Bait_Mar_Shimun.tga"
+	}
+
+	### Person of Influence
+	# Foreign Minister
+	spriteType = {
+		name = "GFX_idea_ASY_Mar_Zaya_Sargis_for_sco"
+		texturefile = "gfx/interface/ministers/ASY/ASY_Mar_Zaya_Sargis.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ASY_Mar_Yosip_Khnanisho_for_npo"
+		texturefile = "gfx/interface/ministers/ASY/ASY_Mar_Yosip_Khnanisho.tga"
+	}
+
+	# Economy Minister
+	spriteType = {
+		name = "GFX_idea_ASY_Malik_Khammo_eco_sco"
+		texturefile = "gfx/interface/ministers/ASY/ASY_Malik_Khammo.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ASY_Yaqo_d'Malik_Ismael_eco_npo"
+		texturefile = "gfx/interface/ministers/ASY/ASY_Yaqo_d'Malik_Ismael.tga"
+	}
+
+	# Security Minister
+	spriteType = {
+		name = "GFX_idea_ASY_Malik_Chikko_sec_sco"
+		texturefile = "gfx/interface/ministers/ASY/ASY_Malik_Chikko.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ASY_Malik_Qambar_sec_npo"
+		texturefile = "gfx/interface/ministers/ASY/ASY_Malik_Qambar.tga"
+	}
+
+
+	### Chief of Staff
+	spriteType = {
+		name = "GFX_idea_ASY_Agha_Petros_cos"
+		texturefile = "gfx/interface/ministers/ASY/ASY_Agha_Petros.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ASY_Dawid_d'Mar_Shimun_cos"
+		texturefile = "gfx/interface/ministers/ASY/ASY_Dawid_d'Mar_Shimun.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ASY_Harold_Jones_cos"
+		texturefile = "gfx/interface/ministers/ASY/ASY_Harold_Jones.tga"
+	}
+
+	### Chief of Army
+	spriteType = {
+		name = "GFX_idea_ASY_Bayjan_Rohana_carm"
+		texturefile = "gfx/interface/ministers/ASY/ASY_Bayjan_Rohana.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ASY_Malik_Qambar_carm"
+		texturefile = "gfx/interface/ministers/ASY/ASY_Malik_Qambar.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ASY_Malik_Yosep_Khoshaba_carm"
+		texturefile = "gfx/interface/ministers/ASY/ASY_Malik_Yosep_Khoshaba.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ASY_Odisho_Moshe_carm"
+		texturefile = "gfx/interface/ministers/ASY/ASY_Odisho_Moshe.tga"
+	}
+
+	### Chief of Navy
+	spriteType = {
+		name = "GFX_idea_ASY_Allan_Poland_cnav"
+		texturefile = "gfx/interface/ministers/ASY/ASY_Allan_Poland.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ASY_Shayin_Giwargis_Kikkeh_cnav"
+		texturefile = "gfx/interface/ministers/ASY/ASY_Shayin_Giwargis_Kikkeh.tga"
+	}
+
+	### Chief of Air Force
+	spriteType = {
+		name = "GFX_idea_ASY_Harry_George_Smart_cair"
+		texturefile = "gfx/interface/ministers/ASY/ASY_Harry_George_Smart.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ASY_Lazar_Adam_cair"
+		texturefile = "gfx/interface/ministers/ASY/ASY_Lazar_Adam.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_ASY_Yacob_Khoshaba_Aboona_cair"
+		texturefile = "gfx/interface/ministers/ASY/ASY_Yacob_Khoshaba_Aboona.tga"
 	}
 
 	### Person of Influence
@@ -29389,6 +29530,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/LIB/LIB_Samuel_David_Coleman.tga"
 	}
 	spriteType = {
+		name = "GFX_idea_LIB_William_Tubman_for_pau"
+		texturefile = "gfx/interface/ministers/LIB/LIB_William_Tubman.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_LIB_Allen_Yancey_for_npo"
 		texturefile = "gfx/interface/ministers/LIB/LIB_Allen_Yancey.tga"
 	}
@@ -29435,6 +29580,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/LIB/LIB_Solomon_Carter_Fuller.tga"
 	}
 	spriteType = {
+		name = "GFX_idea_LIB_Lansdell_Christie_eco_pau"
+		texturefile = "gfx/interface/ministers/LIB/LIB_Lansdell_Christie.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_LIB_James_Agea_Himie_Jones_eco_npo"
 		texturefile = "gfx/interface/ministers/LIB/LIB_James_Agea_Himie_Jones.tga"
 	}
@@ -29471,6 +29620,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_LIB_William_Wade_Harris_sec_ade"
 		texturefile = "gfx/interface/ministers/LIB/LIB_William_Wade_Harris.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_LIB_Gerald_Ford_sec_pau"
+		texturefile = "gfx/interface/ministers/LIB/LIB_Gerald_Ford.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_LIB_Cornelius_Bosman_van_Oudkarspel_sec_npo"
@@ -31820,6 +31973,11 @@ spriteTypes = {
 		name = "GFX_idea_MON_Zhamsranzhavyn_Galsandash_for_npo"
 		texturefile = "gfx/interface/ministers/MON/MON_Zhamsranzhavyn_Galsandash.tga"
 	}
+	spriteType = {
+		name = "GFX_idea_MON_Manlaibaatar_Damdinsueren_for_npo"
+		texturefile = "gfx/interface/ministers/MON/MON_Manlaibaatar_Damdinsueren.tga"
+	}
+
 
 	# Economy Minister
 	spriteType = {
@@ -31870,6 +32028,10 @@ spriteTypes = {
 		name = "GFX_idea_MON_Yu_Pinqing_eco_pau"
 		texturefile = "gfx/interface/ministers/MON/MON_Yu_Pinqing.tga"
 	}
+	spriteType = {
+		name = "GFX_idea_MON_Anujiin_Goroncho_eco_npo"
+		texturefile = "gfx/interface/ministers/MON/MON_Anujiin_Goroncho.tga"
+	}
 
 	# Security Minister
 	spriteType = {
@@ -31901,10 +32063,17 @@ spriteTypes = {
 		texturefile = "gfx/interface/ministers/MON/MON_Bashluugin_Zhamsranzhav.tga"
 	}
 	spriteType = {
+		name = "GFX_idea_MON_Leonid_Sipaylov_sec_pau"
+		texturefile = "gfx/interface/ministers/MON/MON_Leonid_Sipaylov.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_MON_Sambadondogiin_Tserendorj_sec_npo"
 		texturefile = "gfx/interface/ministers/MON/MON_Sambadondogiin_Tserendorj.tga"
 	}
-
+	spriteType = {
+		name = "GFX_idea_MON_Montoiin_Ninjin_sec_npo"
+		texturefile = "gfx/interface/ministers/MON/MON_Montoiin_Ninjin.tga"
+	}
 
 	### Chief of Staff
 	spriteType = {
@@ -48997,6 +49166,26 @@ spriteTypes = {
 		name = "GFX_idea_UZB_Abdurahim_Martemyanov_hog_ade"
 		texturefile = "gfx/interface/ministers/UZB/UZB_Abdurahim_Martemyanov.tga"
 	}
+	spriteType = {
+		name = "GFX_idea_UZB_Bobo_Ahun_hog_sli"
+		texturefile = "gfx/interface/ministers/UZB/UZB_Bobooxun_Salimov.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_UZB_Palvan_Niyaz_hog_mli"
+		texturefile = "gfx/interface/ministers/UZB/UZB_Palvan_Niyaz.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_UZB_Junaid_Khan_hog_pau"
+		texturefile = "gfx/interface/ministers/UZB/UZB_Junaid_Khan.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_UZB_Muhammed_Gazi_hog_npo"
+		texturefile = "gfx/interface/ministers/UZB/UZB_Muhamad_Gazi.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_UZB_Sayid_Abdullah_hog_pau"
+		texturefile = "gfx/interface/ministers/UZB/UZB_Said_Abdullah.tga"
+	}
 
 	### Person of Influence
 	# Foreign Minister
@@ -51493,6 +51682,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_YUN_Gao_Yuhan_for_sde"
 		texturefile = "gfx/interface/ministers/YUN/YUN_Gao_Yuhan.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_YUN_Hu_Shih_for_sli"
+		texturefile = "gfx/interface/ministers/CHI/CHI_Hu_Shih.tga"
 	}
 	spriteType = {
 		name = "GFX_idea_YUN_Zhang_Weihan_for_sli"

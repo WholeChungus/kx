@@ -644,6 +644,7 @@ shared_focus = {
 					add_idea = RUS_minprom_3
 				}
 			}
+			RUS_reduce_industry_lack = yes 
 		}
 	}
 
@@ -692,6 +693,7 @@ shared_focus = {
 				}
 			}
 			add_stability = 0.04
+			RUS_reduce_industry_lack = yes 
 		}
 	}
 
@@ -1913,6 +1915,11 @@ shared_focus = {
 		y = 1
 		cost = 5
 
+		available = {
+			hidden_trigger = {
+				has_country_flag = RUS_Extensive_Planning_chosen
+			}
+		}
 		ai_will_do = {
 			factor = 3000
 			modifier = {
@@ -2070,6 +2077,11 @@ shared_focus = {
 		y = 1
 		cost = 5
 
+		available = {
+			hidden_trigger = {
+				has_country_flag = RUS_Overwhelming_Firepower_chosen
+			}
+		}
 		ai_will_do = {
 			factor = 2000
 			modifier = {
@@ -2143,7 +2155,11 @@ shared_focus = {
 			focus = RUS_Extensive_Planning
 			focus = RUS_War_Of_Numbers
 		}
-
+		available = {
+			hidden_trigger = {
+				has_country_flag = RUS_Spearhead_Doctrine_chosen
+			}
+		}
 		relative_position_id = RUS_russian_army
 		x = 7
 		y = 1
@@ -2258,6 +2274,11 @@ shared_focus = {
 		y = 1
 		cost = 5
 
+		available = {
+			hidden_trigger = {
+				has_country_flag = RUS_War_Of_Numbers_chosen
+			}
+		}
 		ai_will_do = {
 			factor = 3000
 			modifier = {
@@ -3695,13 +3716,27 @@ shared_focus = {
 				limit = {
 					country_exists = OTT
 				}
-				is_neighbor_of = OTT
+				OR = {
+					is_neighbor_of = OTT
+					OTT = {
+						any_neighbor_country = {
+							is_subject_of = ROOT
+						}
+					}
+				}
 			}
 			if = {
 				limit = {
 					country_exists = TUR
 				}
-				is_neighbor_of = TUR
+				OR = {
+					is_neighbor_of = TUR
+					TUR = {
+						any_neighbor_country = {
+							is_subject_of = ROOT
+						}
+					}
+				}
 			}
 		}
 		prerequisite = {

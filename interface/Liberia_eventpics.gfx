@@ -5,6 +5,10 @@ spriteTypes = {
 	### COUNTRY SPECIFIC PICS
 
 	spriteType = {
+		name = "GFX_report_event_LIB_candy_store"
+		texturefile = "gfx/event_pictures/Liberia/LIB_candy_store.dds"
+	}
+	spriteType = {
 		name = "GFX_report_event_LIB_ashmun_natives"
 		texturefile = "gfx/event_pictures/Liberia/LIB_ashmun_natives.dds"
 	}
@@ -87,6 +91,18 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_LIB_monrovia"
 		texturefile = "gfx/event_pictures/Liberia/report_event_LIB_monrovia.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_LIB_gerald_ford"
+		texturefile = "gfx/event_pictures/Liberia/report_event_LIB_gerald_ford.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_LIB_gerald_ford"
+		texturefile = "gfx/event_pictures/Liberia/report_event_LIB_gerald_ford.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_LIB_jimmy_carter"
+		texturefile = "gfx/event_pictures/Liberia/report_event_LIB_jimmy_carter.dds"
 	}
 	spriteType = {
 		name = "GFX_news_event_CIV_declaration_independence"

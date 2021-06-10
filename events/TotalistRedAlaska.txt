@@ -17,7 +17,14 @@ country_event = { # the Coup
 	option = { # Towner Lives!
 		name = REDAlaska.1.a
 		ai_chance = {
-			factor = 95
+			factor = 99
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = ALA_POLITICAL_PATH
+					option = ALA_DIXON
+				}
+			}
 		}
 		add_political_power = 50
 	}
@@ -25,7 +32,16 @@ country_event = { # the Coup
 	option = { 
 		name = REDAlaska.1.b
 		ai_chance = {
-			factor = 5
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					has_game_rule = {
+						rule = ALA_POLITICAL_PATH
+						option = ALA_DIXON
+					}
+				}
+			}
 		}
 		complete_national_focus = Alaska_true_red_braves
 		create_country_leader = {
@@ -385,6 +401,7 @@ country_event = { # Indianizing Canada
 
 			add_state_core = 484
 		}
+		set_country_flag = ALA_redman_superevent_flag
 		set_province_name = { id = 6882 name = "Lenapehoking"}
 		set_province_name = { id = 11782 name = "Sanhickan"}
 		set_province_name = { id = 9864 name = "Absegami"}

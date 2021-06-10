@@ -447,21 +447,21 @@ country_event = {
     desc = worldnews.13.d
     picture = GFX_news_event_their_finest_hour_hello_FR_if_you_read_this
 
-    fire_only_once = yes
+    is_triggered_only = yes
 
-    trigger = {
-        date > 1937.3.2
-        wants_world_news = yes
-    }
-
-    mean_time_to_happen = {
-        months = 2
-    }
-
-    immediate = { set_global_flag = althistory_is_cool }
 
     option = {
         name = worldnews.13.a
+		hidden_effect = {
+			for_each_scope_loop = {
+				array = global.players
+
+					country_event = {
+					id = worldnews.2454
+					months = 24
+					}
+			}
+		}
     }
 }
 
@@ -5050,6 +5050,37 @@ news_event = {
 	}
 }
 
+# Anti-Syndicalist Coup in Venezuela
+news_event = {
+	id = worldnews.2560
+	immediate = { log = "[GetDateText]: [Root.GetName]: event worldnews.2560" }
+	title = worldnews.2560.t
+	desc = worldnews.2560.d
+	picture = GFX_news_event_VEN_coup
+
+	major = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		wants_world_news = yes
+	}
+
+	show_major = {
+		NOT = {
+			tag = VEN
+		}
+		OR = {
+			regional_north_america_news = yes
+			regional_south_america_news = yes
+		}
+	}
+
+	option = {
+		name = worldnews.2560.a
+	}
+}
+
 # Alsace Ultimatum
 news_event = {
 	id = worldnews.175
@@ -8832,6 +8863,22 @@ news_event = { #The birth of the democratic CSA
 			has_socialist_government = no
 		}
 	}
+	option = {
+		name = worldnews.2050.a
+		trigger = {
+			NEE = {
+			has_government = radical_socialist
+			}
+		}
+	}
+	option = {
+		name = worldnews.2050.b
+		trigger = {
+			NOT = {
+			country_exists = NEE
+			}
+		}
+	}
 }
 
 news_event = { #William Zebulon Foster is named President
@@ -8972,11 +9019,6 @@ news_event = {
 	major = yes
 
 	is_triggered_only = yes
-	fire_only_once = yes
-
-	trigger = {
-		wants_world_news = yes
-	}
 
 	option = {
 		name = worldnews.2204.a
@@ -8994,11 +9036,7 @@ news_event = {
 	major = yes
 
 	is_triggered_only = yes
-	fire_only_once = yes
 
-	trigger = {
-		wants_world_news = yes
-	}
 
 	option = {
 		name = worldnews.2202.a
@@ -9016,11 +9054,6 @@ news_event = {
 	major = yes
 
 	is_triggered_only = yes
-	fire_only_once = yes
-
-	trigger = {
-		wants_world_news = yes
-	}
 
 	option = {
 		name = worldnews.2203.a
@@ -10497,21 +10530,13 @@ country_event = {
     picture = GFX_tnodam
 
 	fire_only_once = yes
+	is_triggered_only = yes
 
-   trigger = {
-        date > 1940.2.3
-		has_global_flag = althistory_is_cool
-        wants_world_news = yes
-    }
-
-   mean_time_to_happen = {
-        months = 3
-    }
 
 
    option = {
        name = worldnews.2454.a
-   }
+  	 }
 }
 
 #british-german war in afrika

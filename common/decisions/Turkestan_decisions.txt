@@ -689,14 +689,7 @@ TRK_unite_central_asia = {
 		}
 		available = {
 			OR = {
-				AND = {
-					ROOT = { has_democratic_government = no }
-					ALO = { 
-						NOT = {
-							has_government = social_liberal
-						}
-					}
-				}
+				ROOT = { has_democratic_government = no }
 				has_country_flag = ALO_declined_alliance
 			}
 		}
@@ -966,6 +959,9 @@ ALO_unite_central_asia = {
 			country_exists = KYR
 		}
 		available = {
+			NOT = {
+				is_subject = yes
+			}
 			OR = {
 				AND = {
 					ALO = {
@@ -1029,6 +1025,9 @@ ALO_unite_central_asia = {
 			country_exists = UZB
 		}
 		available = {
+			NOT = {
+				is_subject = yes
+			}
 			OR = {
 				AND = {
 					ALO = {
@@ -1077,6 +1076,9 @@ ALO_unite_central_asia = {
 			country_exists = TRK
 		}
 		available = {
+			NOT = {
+				is_subject = yes
+			}
 			OR = {
 				AND = {
 					ALO = {
@@ -1141,6 +1143,9 @@ ALO_unite_central_asia = {
 			country_exists = KYR
 		}
 		available = {
+			NOT = {
+				is_subject = yes
+			}
 			OR = {
 				AND = {
 					ALO = {
@@ -1227,6 +1232,9 @@ ALO_unite_central_asia = {
 			country_exists = UZB
 		}
 		available = {
+			NOT = {
+				is_subject = yes
+			}
 			OR = {	
 				ALO = {
 					custom_trigger_tooltip = {
@@ -1297,6 +1305,9 @@ ALO_unite_central_asia = {
 			country_exists = TRK
 		}
 		available = {
+			NOT = {
+				is_subject = yes
+			}
 			OR = {
 				AND = {
 					ALO = {
@@ -1380,6 +1391,7 @@ ALO_unite_central_asia = {
 			FROM = { 
 				is_in_faction_with = ROOT
 				is_ai = yes
+				is_subject = no
 			}
 		}
 		targets = { TRK KYR UZB }

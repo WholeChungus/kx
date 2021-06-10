@@ -222,6 +222,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
+		available = {
+			has_idea = LIB_firestone_bailout
+		}
 
 		available_if_capitulated = yes
 
@@ -250,6 +253,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 3
+		}
+
+		available = {
+			has_idea = LIB_firestone_bailout
 		}
 
 		available_if_capitulated = yes
@@ -295,6 +302,10 @@ focus_tree = {
 		}
 
 		available_if_capitulated = yes
+
+		available = {
+			has_idea = LIB_firestone_bailout
+		}
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LIB_repair_railway"
@@ -1409,10 +1420,10 @@ focus_tree = {
 				name = LIB_national_populist2_party
 			}
 			 set_party_name = {
-            ideology = social_democrat
-            long_name = LIB_radical_socialist2_party_long
-            name = LIB_radical_socialist2_party
-        }
+            	ideology = social_democrat
+            	long_name = LIB_social_democrat2_party_long
+            	name = LIB_social_democrat2_party
+        	}
 		}
 	}
 
@@ -2231,7 +2242,7 @@ focus_tree = {
 		y = 1
 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 			modifier = {
 				factor = 2
 				OR = {
@@ -2268,7 +2279,7 @@ focus_tree = {
 
 	focus = {
 		id = LIB_trade_connections
-		icon = GFX_goal_bag_of_money
+		icon = GFX_goal_LIB_gerald_ford
 		cost = 7.20
 		prerequisite = { focus = LIB_ambassador_lessons }
 		available = {
@@ -2282,7 +2293,7 @@ focus_tree = {
 		y = 1
 
 		ai_will_do = {
-			factor = 1
+			factor = 100
 			modifier = {
 				factor = 2
 				OR = {
@@ -2291,13 +2302,19 @@ focus_tree = {
 				}
 			}
 		}
+		
+		bypass = {
+			has_country_flag = LIB_monrovia_incident
+		}
 
 		available_if_capitulated = yes
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LIB_trade_connections"
 			navy_experience = 20
+			add_manpower = 1000
 			add_ideas = LIB_trade_connections_idea
+			add_ideas = LIB_James_F_Cooper_cnav_sco
 		}
 	}
 
@@ -3198,7 +3215,6 @@ focus_tree = {
 			700 = { is_owned_and_controlled_by = LIB }
 			807 = { is_owned_and_controlled_by = LIB }
 			NOT = {
-				has_idea = LIB_ger_bailout
 				has_government = national_populist
 			}
 		}
@@ -4797,6 +4813,7 @@ focus_tree = {
 				name = "Herbert Hoover"
 				ruling_only = yes
 			}
+			has_country_flag = LIB_delt_with_exile_shrekregation
 		}
 		
 		prerequisite = {
@@ -5372,6 +5389,8 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus LIB_african_homestead_act"
+			add_political_power = 150
+			increase_ruling_party_popularity_by_5 = yes	
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -5386,6 +5405,7 @@ focus_tree = {
 		available = {
 			NOT = {
 				has_government = social_liberal
+				has_government = radical_socialist
 			}
 		}
 		prerequisite = {
@@ -5552,7 +5572,6 @@ focus_tree = {
 				OR = {
 					has_government = totalist
 					has_government = syndicalist
-					has_government = radical_socialist
 				}
 			}
 			OR = {
@@ -5625,7 +5644,6 @@ focus_tree = {
 				OR = {
 					has_government = totalist
 					has_government = syndicalist
-					has_government = radical_socialist
 				}
 			}
 			OR = {
@@ -5699,6 +5717,9 @@ focus_tree = {
 		available = {
 			NOT = {
 				has_country_flag = LIB_exile_segregation
+			}
+			NOT = {
+				has_idea = LIB_exiles_are_america
 			}
 		}
 

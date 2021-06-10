@@ -83,7 +83,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SRI_army
-		icon = GFX_SRI_red_army
+		icon = GFX_SRI_army
 		cost = 6.00
 		x = 33
 		y = 0
@@ -110,7 +110,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SRI_aeronautica_rossa
-		icon = GFX_goal_air_red
+		icon = GFX_SRI_air_force
 		cost = 6.00
 		x = 42
 		y = 0
@@ -135,7 +135,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SRI_red_navy
-		icon = GFX_goal_bluewater_navy
+		icon = GFX_SRI_navy
 		cost = 6.00
 		x = 49
 		y = 0
@@ -164,7 +164,7 @@ focus_tree = {
 		icon = GFX_SIC_messe
 		cost = 5.00
 		ai_will_do = {
-			factor = 5000
+			factor = 1
 		}
 		x = 37
 		y = 9
@@ -277,7 +277,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SRI_stregthen_the_republic
-		icon = GFX_goal_NOR_syndicalist
+		icon = GFX_goal_ideology_syndicalist
 		cost = 0.00
 		prerequisite = {
 			focus = SRI_4th_congress
@@ -291,23 +291,13 @@ focus_tree = {
 		relative_position_id = SRI_4th_congress
 			available = {
 					has_country_flag = SRI_fourth_congress_done
-					hidden_trigger = {
-							NOT = {
-									has_country_flag = SRI_fifth_congress_done
-								}
-						}
 					has_government = syndicalist
 				}
 			ai_will_do = {
-					factor = 100
+					factor = 1
 				}
 			bypass = {
 					has_country_flag = SRI_fourth_congress_done
-					hidden_trigger = {
-							NOT = {
-									has_country_flag = SRI_fifth_congress_done
-								}
-						}
 					has_government = syndicalist
 				}
 			completion_reward = {
@@ -648,23 +638,13 @@ focus_tree = {
 		relative_position_id = SRI_4th_congress
 			available = {
 					has_country_flag = SRI_fourth_congress_done
-					hidden_trigger = {
-							NOT = {
-									has_country_flag = SRI_fifth_congress_done
-								}
-						}
 					has_government = totalist
 				}
 			ai_will_do = {
-					factor = 100
+					factor = 1
 				}
 			bypass = {
 					has_country_flag = SRI_fourth_congress_done
-					hidden_trigger = {
-							NOT = {
-									has_country_flag = SRI_fifth_congress_done
-								}
-						}
 					has_government = totalist
 				}
 			completion_reward = {
@@ -1217,11 +1197,6 @@ focus_tree = {
 		relative_position_id = SRI_4th_congress
 			available = {
 					has_country_flag = SRI_fourth_congress_done
-					hidden_trigger = {
-							NOT = {
-									has_country_flag = SRI_fifth_congress_done
-								}
-						}
 					has_government = radical_socialist
 					NOT = {
 						has_country_leader = {
@@ -1230,13 +1205,11 @@ focus_tree = {
 						}
 					}
 				}
+                                ai_will_do = {
+					factor = 1
+				}
 			bypass = {
 					has_country_flag = SRI_fourth_congress_done
-					hidden_trigger = {
-							NOT = {
-									has_country_flag = SRI_fifth_congress_done
-								}
-						}
 					has_government = radical_socialist
 				}
 			completion_reward = {
@@ -1959,7 +1932,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SRI_revitalized_economy
-		icon = GFX_goal_FRA_develop_SRI
+		icon = GFX_SRI_economic_miracle
 		cost = 6.00
 		prerequisite = {
 			focus = SRI_mass_production

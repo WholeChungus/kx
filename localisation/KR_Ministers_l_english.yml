@@ -818,6 +818,46 @@
 	 AST_William_FL_Owen_cair_npo:0 "William F.L. Owen"
 
   ################################################################################################################################################################################################
+  ### ASY
+  ################################################################################################################################################################################################
+
+	### Head of Government ###
+	 ASY_Malik_Yosep_Khoshaba_hog_sco:0 "Malik Yosep Khoshaba"
+	 ASY_Mar_Yosip_Khnanisho_hog_ade:0 "Mar Yosip Khnanisho"
+	 ASY_Surma_D'Bait_Mar_Shimun_hog_npo:0 "Surma D'Bait Mar Shimun"
+
+	### Person of Influence ###
+	## Foreign Minister
+	 ASY_Mar_Zaya_Sargis_for_sco:0 "Mar Zaya Sargis"
+	 ASY_Mar_Yosip_Khnanisho_for_npo:0 "Mar Yosip Khnanisho"
+	## Economy Minister
+	 ASY_Malik_Khammo_eco_sco:0 "Malik Khammo"
+	 ASY_Yaqo_d'Malik_Ismael_eco_npo:0 "Yaqo d'Malik Ismael"
+	## Security Minister
+	 ASY_Malik_Chikko_sec_sco:0 "Malik Chikko"
+	 ASY_Malik_Qambar_sec_npo:0 "Malik Qambar"
+
+	### Chief of Staff ###
+	 ASY_Agha_Petros_cos:0 "Agha Petros"
+	 ASY_Dawid_d'Mar_Shimun_cos:0 "Dawid d'Mar Shimun"
+	 ASY_Harold_Jones_cos:0 "Harold Jones"
+
+	### Chief of Army ###
+	 ASY_Bayjan_Rohana_carm:0 "Bayjan Rohana"
+	 ASY_Malik_Qambar_carm:0 "Malik Qambar"
+	 ASY_Malik_Yosep_Khoshaba_carm:0 "Malik Yosep Khoshaba"
+	 ASY_Odisho_Moshe_carm:0 "Odisho Moshe"
+
+	### Chief of Navy ###
+	 ASY_Allan_Poland_cnav:0 "Allan Poland"
+	 ASY_Shayin_Giwargis_Kikkeh_cnav:0 "Shayin Giwargis Kikkeh"
+
+	### Chief of Air Force ###
+	 ASY_Harry_George_Smart_cair:0 "Harry George Smart"
+	 ASY_Lazar_Adam_cair:0 "Lazar Adam"
+	 ASY_Yacob_Khoshaba_Aboona_cair:0 "Yacob Khoshaba Aboona"
+
+  ################################################################################################################################################################################################
   ### AUS
   ################################################################################################################################################################################################
 
@@ -9018,7 +9058,7 @@
 	 LIB_Albert_Porte_hog_rso:0 "Albert Porte"
 	 LIB_F_E_R_Johnson_hog_sde:0 "F E R Johnson"
 	 LIB_Clarence_Simpson_hog_sli:0 "Clarence Simpson"
-     LIB_Harvey_Firestone_hog_mli:0 "Harvey Firestone"
+     LIB_Harvey_Firestone_hog_mli:0 "Harvey Firestone Jr."
 	 LIB_Clarence_Lorenzo_Simpson_hog_mli:0 "Clarence Lorenzo Simpson"
 	 LIB_William_Tubman_hog_mli:0 "William Tubman"
 	 LIB_Edwin_James_Barclay_hog_sco:0 "Edwin James Barclay"
@@ -9037,6 +9077,7 @@
 	 LIB_James_Norman_Anderson_for_sco:0 "James Norman Anderson"
 	 LIB_Momolu_Dukuly_for_ade:0 "Momolu Dukuly"
 	 LIB_Samuel_David_Coleman_for_ade:0 "Samuel David Coleman"
+	 LIB_William_Tubman_for_pau:0 "William Tubman"
 	 LIB_Allen_Yancey_for_npo:0 "Allen Yancey"
 	## Economy Minister
 	 LIB_Gbaflen_Davies_eco_tot:0 "Gbaflen Davies"
@@ -9049,6 +9090,7 @@
 	 LIB_Jayah_Massaquoi_eco_ade:0 "Jayah Massaquoi"
 	 LIB_Major_Mackay_Cadell_eco_ade:0 "Major Mackay Cadell"
 	 LIB_Solomon_Carter_Fuller_eco_ade:0 "Solomon Carter Fuller"
+	 LIB_Lansdell_Christie_eco_pau:0 "Lansdell Christie"
 	 LIB_James_Agea_Himie_Jones_eco_npo:0 "James Agea Himie Jones"
 	## Security Minister
 	 LIB_S_Raymond_Horace_sec_tot:0 "S Raymond Horace"
@@ -9059,6 +9101,7 @@
 	 LIB_Frank_Emmanuel_Tolbert_sec_sco:0 "Frank Emmanuel Tolbert"
 	 LIB_Joseph_Dennis_sec_sco:0 "Joseph Dennis"
 	 LIB_William_Wade_Harris_sec_ade:0 "William Wade Harris"
+	 LIB_Gerald_Ford_sec_pau:0 "Gerald Ford"
 	 LIB_Cornelius_Bosman_van_Oudkarspel_sec_npo:0 "Cornelius-Bosman van Oudkarspel"
 
 	### Chief of Staff ###
@@ -9076,8 +9119,8 @@
 	 LIB_James_Agea_Himie_Jones_carm_npo:0 "James Agea Himie Jones"
 
 	### Chief of Navy ###
-	 LIB_James_F_Cooper_cnav_sco:0 "James F Cooper"
-	 LIB_William_H_Carter_cnav_sco:0 "William H. Carter"
+	 LIB_James_F_Cooper_cnav_sco:0 "Gerald Ford"
+	 LIB_William_H_Carter_cnav_sco:0 "James E. Carter"
 
 	### Chief of Air Force ###
 	 LIB_Thomas_Nimene_Botoe_cair_tot:0 "Thomas Nimene Botoe"
@@ -9807,6 +9850,7 @@
 	 MON_Ferdynand_Ossendowski_for_pau:0 "Ferdynand Ossendowski"
 	 MON_Xia_Gong_for_pau:0 "Xia Gong"
 	 MON_Zhamsranzhavyn_Galsandash_for_npo:0 "Zhamsranzhavyn Galsandash"
+	 MON_Manlaibaatar_Damdinsueren_for_npo:0 "Manlaibaatar Damdinsueren"     
 	## Economy Minister
 	 MON_Zolbingiin_Shijee_eco_tot:0 "Zolbingiin Shijee"
 	 MON_Dansranbilegiin_Dogsom_eco_syn:0 "Dansranbilegiin Dogsom"
@@ -9820,6 +9864,7 @@
 	 MON_Rinchen_Sengge_eco_ade:0 "Rinchen Sengge"
 	 MON_Gombozhavyn_Luvsantseveen_eco_pau:0 "Gombozhavyn Luvsantseveen"
 	 MON_Yu_Pinqing_eco_pau:0 "Yu Pinqing"
+	 MON_Anujiin_Goroncho_eco_npo:0 "Anujiin Goroncho"
 	## Security Minister
 	 MON_Gonchigiin_Bumtsend_sec_tot:0 "Gonchigiin Bumtsend"
 	 MON_Bat_Ochiryn_Eldev_Ochir_sec_rso:0 "Bat-Ochiryn Eldev-Ochir"
@@ -9827,8 +9872,10 @@
 	 MON_Bayan_Dalay_sec_ade:0 "Bayan Dalay"
 	 MON_Shagdurjab_sec_ade:0 "Shagdurjab"
 	 MON_Songjin_Wangchucg_sec_ade:0 "Songjin Wangchucg"
+	 MON_Leonid_Sipaylov_sec_pau:0 "Leonid Sipaylov"     
 	 MON_Bashluugin_Zhamsranzhav_sec_pau:0 "Bashluugin Zhamsranzhav"
 	 MON_Sambadondogiin_Tserendorj_sec_npo:0 "Sambadondogiin Tserendorj"
+	 MON_Montoiin_Ninjin_sec_npo:0 "Montoiin Ninjin"
 
 	### Chief of Staff ###
 	 MON_Darijaya_cos_sco:0 "Darijaya"
@@ -10022,6 +10069,7 @@
   ################################################################################################################################################################################################
 
 	### Head of Government ###
+     NEE_Allan_Louis_Benson_hog_rso:0 "Allan Louis Benson"
 	 NEE_George_Aiken_hog_sde:0 "George Aiken"
 	 NEE_Charles_Poletti_hog_sli:0 "Charles Poletti"
 	 NEE_Dennis_J_Roberts_hog_sli:0 "Dennis J. Roberts"
@@ -10049,6 +10097,7 @@
      
 	### Person of Influence ###
 	## Foreign Minister
+     NEE_John_Harvey_Lovell_for_rso:0 "John Harvey Lovell"
 	 NEE_Frederick_Hale_for_sde:0 "Frederick Hale"
 	 NEE_Herbert_Claiborne_Pell_Jr_for_sde:0 "Herbert Claiborne Pell Jr."
 	 NEE_George_Higgins_Moses_for_sli:0 "George Higgins Moses"
@@ -10066,6 +10115,7 @@
 	 NEE_Charles_Benedict_Davenport_for_npo:0 "Charles Benedict Davenport"
      
 	## Economy Minister
+     NEE_James_Carey_eco_rso:0 "James Francis Carey"
 	 NEE_Scott_Nearing_eco_sde:0 "Scott Nearing"
 	 NEE_Charles_Russell_Clason_eco_sli:0 "Charles Russell Clason"
 	 NEE_Donald_L_Harlow_eco_sli:0 "Donald L. Harlow"
@@ -10083,6 +10133,7 @@
 	 NEE_Harry_H_Laughlin_eco_npo:0 "Harry H. Laughlin"
      
 	## Security Minister
+     NEE_Alfred_Baker_Louis_sec_rso:0 "Alfred Baker Lewis"
 	 NEE_Edith_Nourse_Rogers_sec_sde:0 "Edith Nourse Rogers"
 	 NEE_Ruth_Baker_Pratt_sec_sli:0 "Ruth Baker Pratt"
 	 NEE_Wallace_Humphrey_White_Jr_sec_sli:0 "Wallace Humphrey White Jr."

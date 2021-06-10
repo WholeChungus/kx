@@ -93,6 +93,10 @@ TRK_united_totalist:0 "People's Repubic of Turkestan"
 TRK_united_totalist_ADJ:0 "Turkestani"
 TRK_united_totalist_DEF:0 "The People's Republic of Turkestan"
 
+TRK_ILK:0 "Ilkhanate"
+TRK_ILK_ADJ:0 "Ilkhanid"
+TRK_ILK_DEF:0 "The Ilkhanate"
+
 
 ## Turkestan ##
 POLITICS_MOHAMMED_ALIM_DESC:0 "Emir Said Mir Mohammed Alim Khan is the last ruler of a royal title inherited from the empire of Genghis Khan, the Khanate of Bukhara, and the nominal ruler of the Islamic Federation of Turkestan. His rule, from 1911 onwards, initially began with promise - the emir enacted reforms in taxation and administration, and some believed that he may be the reformist whom Bukhara needs to become an independent state again. It turned out that his reforms were only there to strengthen his power, however, and the reformers present within the Khanate were exiled or repressed. As the Russian Civil War began, Bukhara, like its sister Khanate of Khiva, broke ties with the government in Moscow and declared its independence - during the conflict, they successfully defeated the Bolsheviks, evicted the British-supported Transcaspian Autonomy, and united the Central Asian lands under a traditionalist Muslim federation.\n\nAs time went on, the Emir has become increasingly influenced by the thought of Ibrahim Bek, a lower class Uzbek tribesman who rapidly ranked up in the Bukharan army during the Russian Civil War. A talented guerrilla warrior, Ibrahim Bek is also a religious conservative opposed to the Jadid movement and speaks to the Emir with the promise of a unified, rightfully Islamic Central Asia. And it seems the Emir is sympathetic."
@@ -198,6 +202,7 @@ trk.14.a:0 "Mukhitdinov fled the pit like a rat."
 
 trk.15.t:0 "Basmachi Raids in Pamir"
 trk.15.d:0 "In the aftermath of the fall of the Emir and his puppeteers, the former rulers of Bukhara, have been rather quiet...perhaps too quiet. These former rulers are mainly made up of the leadership of the Basmachi movement, and it is unclear what they are planning next. In the past few weeks, sightings of Basmachi activity were reported around the border with Afghanistan. Now, that activity has culminated in an insurgency. The Basmachi leaders have announced to the world the creation of a new Islamic Federation “destined to retake noble Bukhara in the name of Islam.” Acting fast, our leaders have already begun to ready their forces for an offensive to wipe out these fundamentalists. However, with the insurgency centered in the treacherous Pamir Mountains, eliminating the Islamic Federation may not be so easy. Some argue that it would be better to lure them out into more open ground, and eliminate them that way. Either way, a choice must be made to deal with the resurgent reactionaries before they get too threatening."
+trk.15.a:0 "Fight them in the Pamir Mountains!"
 trk.15.b:0 "We shall defend our home and repel them on our own ground."
 
 trk.16.t:0 "Basmachi Crushed Us in Pamir"
@@ -233,7 +238,7 @@ trk.22.d.rep:0 "The First Bukharan Elections are to be held now. The Young Bukha
 trk.22.d.mon:0 "The First Bukharan Elections are to be held now. The Young Bukhara Party is represented by two main factions: the Socialists, led by Usman Hodzha and the Conservatives, led by Mirzo Abdulvokhid Munzim."
 trk.22.a:0 "Usman Hodzha's Socialists."
 trk.22.b:0 "Young Bukhara Moderates."
-trk.22.b:0 "Young Bukhara Conservatives."
+trk.22.c:0 "Young Bukhara Conservatives."
 
 trk.23.t:0 "Constitution of Bukhara"
 trk.23.d:0 "The dark ages have ended and Bukhara emerges from the shadows a new and modern state!. The source of authority will now be people of our fine lands. People of different religions, political views, ethnicities, and cultures shall all be united under one single banner - the flag of Bukhara. This is a monumental and historic step for our people and our hallowed states towards the future and modernity!."

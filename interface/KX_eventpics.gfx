@@ -4,8 +4,48 @@
 
 spriteTypes = {
 	spriteType = {
+		name = "GFX_report_event_YUN_mongol_larp"
+		texturefile = "gfx/event_pictures/East_Asia/China/Yunnan/GFX_report_event_YUN_mongol_larp.tga"
+	}
+	spriteType = {
+		name = "GFX_report_event_YUN_li_larp"
+		texturefile = "gfx/event_pictures/East_Asia/China/Yunnan/GFX_report_event_YUN_li_larp.tga"
+	}
+	spriteType = {
+		name = "GFX_report_event_YUN_larp_baby"
+		texturefile = "gfx/event_pictures/East_Asia/China/Yunnan/GFX_report_event_YUN_larp_baby.tga"
+	}
+	spriteType = {
+		name = "GFX_report_event_YUN_stone_forest"
+		texturefile = "gfx/event_pictures/East_Asia/China/Yunnan/GFX_report_event_YUN_stone_forest.tga"
+	}
+	spriteType = {
+		name = "GFX_report_event_YUN_wedding_thing"
+		texturefile = "gfx/event_pictures/East_Asia/China/Yunnan/GFX_report_event_YUN_wedding_thing.tga"
+	}
+	spriteType = {
+		name = "GFX_report_event_YUN_tang_bro_andor_cus"
+		texturefile = "gfx/event_pictures/East_Asia/China/Yunnan/GFX_report_event_YUN_tang_bro_andor_cus.tga"
+	}
+	spriteType = {
+		name = "GFX_report_event_YUN_poetry_larp"
+		texturefile = "gfx/event_pictures/East_Asia/China/Yunnan/GFX_report_event_YUN_poetry_larp.tga"
+	}
+	spriteType = {
+		name = "GFX_report_event_YUN_tangart"
+		texturefile = "gfx/event_pictures/East_Asia/China/Yunnan/GFX_report_event_YUN_tangart.tga"
+	}
+	spriteType = {
+		name = "GFX_report_event_YUN_opiumlarp"
+		texturefile = "gfx/event_pictures/East_Asia/China/Yunnan/GFX_report_event_YUN_opiumlarp.tga"
+	}
+	spriteType = {
 		name = "GFX_dumb_fucks_who_cant_read"
 		texturefile = "gfx/event_pictures/dumb_fucks_who_cant_read.tga"
+	}
+	spriteType = {
+		name = "GFX_report_event_YUN_throne"
+		texturefile = "gfx/event_pictures/YUN_throne.tga"
 	}
 	spriteType = {
 		name = "INTRO_main"
@@ -431,6 +471,14 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_LEC_opium"
 		texturefile = "gfx/event_pictures/Asia/Legation_Cities/LEC_opium.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_LEC_ming_restoration"
+		texturefile = "gfx/event_pictures/Asia/Legation_Cities/LEC_ming_restoration.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_LEC_triad_china"
+		texturefile = "gfx/event_pictures/Asia/Legation_Cities/LEC_triad_china.dds"
 	}
 	spriteType = {
 		name = "profits"
@@ -1725,6 +1773,16 @@ spriteTypes = {
 	spriteType  = {
 		name = "GFX_MON_Yuan"
 		texturefile = "gfx/event_pictures/Asia/Mongolia/report_event_MON_Yuan.dds"
+	}
+	
+	spriteType  = {
+		name = "GFX_report_event_MON_skin_flaying"
+		texturefile = "gfx/event_pictures/Asia/Mongolia/report_event_MON_skin_flaying.dds"
+	}
+	
+	spriteType  = {
+		name = "GFX_report_event_MON_tallguy"
+		texturefile = "gfx/event_pictures/Asia/Mongolia/report_event_MON_tallguy.dds"
 	}	
     ###Fiume###
 	SpriteType = {
@@ -2349,6 +2407,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_rus_gorguloff_vozhd"
 		texturefile = "gfx/event_pictures/Europe/Russia/rus_gorguloff_vozhd.dds"
+	}
+	SpriteType = {
+		name = "GFX_Savinkov_Portrait_Event"
+		texturefile = "gfx/event_pictures/Europe/Russia/Savinkov_Portrait_Event.dds"
 	}
 	###SERBIA###
 	spriteType  = {
